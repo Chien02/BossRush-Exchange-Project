@@ -19,8 +19,8 @@ config/icon="res://Sprites/Icons/Exchange Icon.png"
 
 [display]
 
-window/size/viewport_width=800
-window/size/viewport_height=450
+window/size/viewport_width=1440
+window/size/viewport_height=810
 
 [editor_plugins]
 
