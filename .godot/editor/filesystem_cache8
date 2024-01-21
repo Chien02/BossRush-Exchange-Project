@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1705764410
+::res://::1705821406
 icon.svg::CompressedTexture2D::6149685259880282722::1705067649::1705067660::1::::<><>::
 ::res://addons/::1705764399
 ::res://addons/AS2P/::1705764400
@@ -17,23 +17,41 @@ plugin.cfg::TextFile::-1::1705764333::0::1::::<><>::
 plugin.gd::GDScript::-1::1705764333::0::1::::<>EditorPlugin<>::
 ::res://Palletes/::1705248063
 endesga-32-1x.png::CompressedTexture2D::3639393376254256906::1704479831::1705248063::1::::<><>::
-::res://Scenes/::1705768634
+::res://Scenes/::1705821365
+AnimationControl.gd::GDScript::-1::1705771760::0::1::::Animation_Control<>Node2D<>::
 base_item.gd::GDScript::-1::1705427194::0::1::::Item<>Area2D<>::
-base_item.tscn::PackedScene::7438615742306104775::1705768634::0::1::::<><>::res://Scenes/base_item.gd<>uid://b4v3ojgs7iad::::res://Sprites/Components/Test Card.png
+base_item.tscn::PackedScene::7438615742306104775::1705817867::0::1::::<><>::res://Scenes/base_item.gd<>uid://b4v3ojgs7iad::::res://Sprites/Components/Test Card.png
 base_slot.gd::GDScript::-1::1705426277::0::1::::Slot<>Node2D<>::
-base_slot.tscn::PackedScene::6622856713799915615::1705768634::0::1::::<><>::res://Scenes/base_slot.gd
+base_slot.tscn::PackedScene::6622856713799915615::1705817867::0::1::::<><>::res://Scenes/base_slot.gd
+base_state.tscn::PackedScene::3192913120487289838::1705818645::0::1::::<><>::res://Scenes/StateMachine Manage/base_state.gd
 Item.gd::GDScript::-1::1705426597::0::1::::<>RefCounted<>::
-map.tscn::PackedScene::3930656566134431109::1705768634::0::1::::<><>::uid://ceys7mm7ulb2s::::res://Sprites/Tile set/Environment/TX Tileset Grass.png<>uid://dd27s4pdxlxy8::::res://Sprites/Tile set/Environment/TX Tileset Stone Ground.png<>uid://cvn5ubyc6fkh2::::res://Sprites/Tile set/Environment/TX Plant.png<>uid://dv8i8kd260by1::::res://Sprites/Tile set/Environment/TX Shadow Plant.png
-Player.gd::GDScript::-1::1705767987::0::1::::<>CharacterBody2D<>::
-Player.tscn::PackedScene::217374126445323869::1705768634::0::1::::<><>::res://Scenes/Player.gd<>uid://c8w5c01pmgme6::::res://Sprites/Characters/Player/Shadow_player.png<>uid://wd1uux7es58i::::res://Sprites/Characters/Player/Character_Down-sheet.png<>uid://c1mfqny2dfurv::::res://Scenes/base_slot.tscn<>uid://c1mxfl3us1cld::::res://Sprites/Characters/Player/Character_RollDown.png<>uid://cfkhr2higqe15::::res://Sprites/Characters/Player/Character_SlashDownLeft.png<>uid://bgaywgdrj6nmu::::res://Sprites/Characters/Player/Character_SlashUpLeft.png<>uid://bc3mi72hxdd70::::res://Sprites/Characters/Player/Character_SlashDownRight.png<>uid://dlqv8pkvr483m::::res://Sprites/Characters/Player/Character_Left.png<>uid://mw8ntw8p2poi::::res://Sprites/Characters/Player/Character_SlashUpRight.png<>uid://bw2uwikbovhcb::::res://Sprites/Characters/Player/Character_Right.png<>uid://wnshgen6irhs::::res://Sprites/Characters/Player/Character_Up.png<>uid://33dxjc8npxha::::res://Sprites/Characters/Player/Character_RollLeft.png<>uid://cougx22t66riw::::res://Sprites/Characters/Player/Character_RollRight.png<>uid://b3w0d23hxo2co::::res://Sprites/Characters/Player/Character_RollUp.png<>res://Scenes/AnimationControl.gd
-AnimationControl.gd::GDScript::-1::1705767374::0::1::::Animation_Control<>Node2D<>::
-test_scene.tscn::PackedScene::4369463670585559749::1705768634::0::1::::<><>::uid://ddkec3ta7hkn::::res://Scenes/Player.tscn<>uid://bwablskr3sujt::::res://Scenes/map.tscn<>uid://dd8k6de0dvxwh::::res://Scenes/base_item.tscn
+map.tscn::PackedScene::3930656566134431109::1705817867::0::1::::<><>::uid://ceys7mm7ulb2s::::res://Sprites/Tile set/Environment/TX Tileset Grass.png<>uid://dd27s4pdxlxy8::::res://Sprites/Tile set/Environment/TX Tileset Stone Ground.png<>uid://cvn5ubyc6fkh2::::res://Sprites/Tile set/Environment/TX Plant.png<>uid://dv8i8kd260by1::::res://Sprites/Tile set/Environment/TX Shadow Plant.png
+Player.gd::GDScript::-1::1705821365::0::1::::Player<>CharacterBody2D<>::
+Player.tscn::PackedScene::217374126445323869::1705821365::0::1::::<><>::res://Scenes/Player.gd<>uid://c8w5c01pmgme6::::res://Sprites/Characters/Player/Shadow_player.png<>uid://wd1uux7es58i::::res://Sprites/Characters/Player/Character_Down-sheet.png<>uid://c1mfqny2dfurv::::res://Scenes/base_slot.tscn<>uid://c1mxfl3us1cld::::res://Sprites/Characters/Player/Character_RollDown.png<>uid://cfkhr2higqe15::::res://Sprites/Characters/Player/Character_SlashDownLeft.png<>uid://bgaywgdrj6nmu::::res://Sprites/Characters/Player/Character_SlashUpLeft.png<>uid://bc3mi72hxdd70::::res://Sprites/Characters/Player/Character_SlashDownRight.png<>uid://dlqv8pkvr483m::::res://Sprites/Characters/Player/Character_Left.png<>uid://mw8ntw8p2poi::::res://Sprites/Characters/Player/Character_SlashUpRight.png<>uid://bw2uwikbovhcb::::res://Sprites/Characters/Player/Character_Right.png<>uid://wnshgen6irhs::::res://Sprites/Characters/Player/Character_Up.png<>uid://33dxjc8npxha::::res://Sprites/Characters/Player/Character_RollLeft.png<>uid://cougx22t66riw::::res://Sprites/Characters/Player/Character_RollRight.png<>uid://b3w0d23hxo2co::::res://Sprites/Characters/Player/Character_RollUp.png<>res://Scenes/AnimationControl.gd<>uid://de2k2witts1wp::::res://Scenes/StateMachine Manage/state_machine.tscn
+state_factory.tscn::PackedScene::4641380559366970543::1705818645::0::1::::<><>::res://Scenes/StateMachine Manage/State_factory.gd
+state_machine.tscn::PackedScene::3158412105435379133::1705818644::0::1::::<><>::res://Scenes/StateMachine Manage/State_machine.gd
+test_scene.tscn::PackedScene::4369463670585559749::1705817867::0::1::::<><>::uid://ddkec3ta7hkn::::res://Scenes/Player.tscn<>uid://bwablskr3sujt::::res://Scenes/map.tscn<>uid://dd8k6de0dvxwh::::res://Scenes/base_item.tscn
 weapon_base.gd::GDScript::-1::1705255668::0::1::::<>Node2D<>::
 weapon_base.tscn::PackedScene::7316097922730094169::1705421733::0::1::::<><>::res://Scenes/weapon_base.gd
+::res://Scenes/StateMachine Manage/::1705821392
+attack_state.gd::GDScript::-1::1705819367::0::1::::<>BaseState<>::
+attack_state.tscn::PackedScene::227939962807900741::1705820973::0::1::::<><>::uid://hqxikqctx60j::::res://Scenes/StateMachine Manage/base_state.tscn<>res://Scenes/StateMachine Manage/attack_state.gd
+base_state.gd::GDScript::-1::1705821131::0::1::::BaseState<>Node2D<>::
+base_state.tscn::PackedScene::525763276783624959::1705821392::0::1::::<><>::res://Scenes/StateMachine Manage/base_state.gd
+dash_state.gd::GDScript::-1::1705819227::0::1::::<>BaseState<>::
+dash_state.tscn::PackedScene::100975481238290794::1705820973::0::1::::<><>::uid://hqxikqctx60j::::res://Scenes/StateMachine Manage/base_state.tscn<>res://Scenes/StateMachine Manage/dash_state.gd
+idle_state.gd::GDScript::-1::1705821156::0::1::::<>BaseState<>::
+idle_state.tscn::PackedScene::1267454268126713914::1705821156::0::1::::<><>::uid://hqxikqctx60j::::res://Scenes/StateMachine Manage/base_state.tscn<>res://Scenes/StateMachine Manage/idle_state.gd
+run_state.gd::GDScript::-1::1705819188::0::1::::<>BaseState<>::
+run_state.tscn::PackedScene::4040016299598135330::1705820973::0::1::::<><>::uid://hqxikqctx60j::::res://Scenes/StateMachine Manage/base_state.tscn<>res://Scenes/StateMachine Manage/run_state.gd
+State_factory.gd::GDScript::-1::1705820886::0::1::::StateFactory<>Node2D<>::
+state_factory.tscn::PackedScene::2808429056760469466::1705820974::0::1::::<><>::res://Scenes/StateMachine Manage/State_factory.gd<>uid://sb710li3ncy1::::res://Scenes/StateMachine Manage/idle_state.tscn<>uid://bxtaqi2gxur3w::::res://Scenes/StateMachine Manage/run_state.tscn<>uid://bo6b0pe2c5k5::::res://Scenes/StateMachine Manage/dash_state.tscn<>uid://dioexnoxqdrh::::res://Scenes/StateMachine Manage/attack_state.tscn
+State_machine.gd::GDScript::-1::1705821173::0::1::::StateMachine<>Node2D<>::
+state_machine.tscn::PackedScene::7496412180115683715::1705821371::0::1::::<><>::res://Scenes/StateMachine Manage/State_machine.gd<>uid://hqxikqctx60j::::res://Scenes/StateMachine Manage/base_state.tscn<>uid://bgaoofghqts2e::::res://Scenes/StateMachine Manage/state_factory.tscn
 ::res://Script/::1705250163
 ::res://Sprites/::1705734658
 ::res://Sprites/Characters/::1705734572
-::res://Sprites/Characters/Player/::1705768618
+::res://Sprites/Characters/Player/::1705772495
 Character_Down-sheet-sheet.png::CompressedTexture2D::7551091546390735678::1705744339::1705744455::1::::<><>::
 Character_Down-sheet.png::CompressedTexture2D::1551963138446444402::1705764586::1705764607::1::::<><>::
 Character_Down.png::CompressedTexture2D::3653722583367906596::1705744029::1705744060::1::::<><>::

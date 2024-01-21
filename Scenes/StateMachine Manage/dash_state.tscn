@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://bo6b0pe2c5k5"]
+
+[ext_resource type="PackedScene" uid="uid://hqxikqctx60j" path="res://Scenes/StateMachine Manage/base_state.tscn" id="1_ebeel"]
+[ext_resource type="Script" path="res://Scenes/StateMachine Manage/dash_state.gd" id="2_flexm"]
+
+[node name="Dash state" instance=ExtResource("1_ebeel")]
+script = ExtResource("2_flexm")

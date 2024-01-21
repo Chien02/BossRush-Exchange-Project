@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name Player
+
 @onready var slot = $BaseSlot
 @onready var animation_tree = $AnimationTree
 @onready var animation_control = $AnimationControl
