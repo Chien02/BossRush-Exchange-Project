@@ -1,4 +1,4 @@
-[gd_scene load_steps=126 format=3 uid="uid://ddkec3ta7hkn"]
+[gd_scene load_steps=125 format=3 uid="uid://ddkec3ta7hkn"]
 
 [ext_resource type="Script" path="res://Scenes/Player.gd" id="1_un0f3"]
 [ext_resource type="Texture2D" uid="uid://c8w5c01pmgme6" path="res://Sprites/Characters/Player/Shadow_player.png" id="2_1usuy"]
@@ -16,7 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://cougx22t66riw" path="res://Sprites/Characters/Player/Character_RollRight.png" id="9_3bk3h"]
 [ext_resource type="Texture2D" uid="uid://b3w0d23hxo2co" path="res://Sprites/Characters/Player/Character_RollUp.png" id="10_f5wgx"]
 [ext_resource type="Script" path="res://Scenes/AnimationControl.gd" id="15_1kay1"]
-[ext_resource type="PackedScene" uid="uid://de2k2witts1wp" path="res://Scenes/StateMachine Manage/state_machine.tscn" id="17_ku3rw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mfw66"]
 atlas = ExtResource("3_8piex")
@@ -1192,7 +1191,3 @@ shape = SubResource("RectangleShape2D_73a1f")
 script = ExtResource("15_1kay1")
 
 [node name="BaseSlot" parent="." instance=ExtResource("2_fmsaf")]
-
-[node name="State Machine" parent="." node_paths=PackedStringArray("player", "animator") instance=ExtResource("17_ku3rw")]
-player = NodePath("..")
-animator = NodePath("../AnimationControl")
