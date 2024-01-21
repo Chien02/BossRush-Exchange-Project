@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3iuotcv3go5b"]
+
+[ext_resource type="PackedScene" uid="uid://ddkec3ta7hkn" path="res://Scenes/Player.tscn" id="1_2iv6k"]
+[ext_resource type="PackedScene" uid="uid://bwablskr3sujt" path="res://Scenes/map.tscn" id="1_pck5k"]
+[ext_resource type="PackedScene" uid="uid://dd8k6de0dvxwh" path="res://Scenes/base_item.tscn" id="2_mvblk"]
+
+[node name="Test Scene" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Map" parent="." instance=ExtResource("1_pck5k")]
+
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("1_2iv6k")]
+z_index = 1
+position = Vector2(113, 142)
+scale = Vector2(1.25, 1.25)
+item = "Sword"
+
+[node name="Base Item" parent="." instance=ExtResource("2_mvblk")]
+position = Vector2(99, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(254, 154)
+zoom = Vector2(2.005, 2.005)
