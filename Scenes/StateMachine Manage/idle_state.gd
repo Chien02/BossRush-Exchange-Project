@@ -2,17 +2,19 @@ extends BaseState
 # Idle_state.gd
 
 func enter():
-	print("Idle hello")
+	print("Hello i'm idle")
 	
 func exit():
-	pass
+	print("Idle goodbye")
 
 func update():
+	if (!player): return
+	handle_ilde()
 	check_for_switch()
-	pass
 
 func check_for_switch():
-	pass
+	if (player.direction != Vector2.ZERO):
+		switch(state_factory.get_state("run"))
 
-func switch(_new_state):
-	pass
+func handle_ilde():
+	print("U r in ilde")
