@@ -1,8 +1,15 @@
-res://Scenes/Player.tscn
-res://Scenes/StateMachine Manage/base_state.tscn
-res://Scenes/StateMachine Manage/state_factory.tscn
-res://Scenes/StateMachine Manage/idle_state.tscn
-res://Scenes/StateMachine Manage/run_state.tscn
-res://Scenes/StateMachine Manage/dash_state.tscn
-res://Scenes/StateMachine Manage/attack_state.tscn
-res://Scenes/StateMachine Manage/state_machine.tscn
+res://Scenes/StateMachine Manage/attack_state.gd
+res://Scenes/Enemy/StateMachine.gd
+res://Scenes/Enemy/enemy.gd
+res://Scenes/StateMachine Manage/State_machine.gd
+res://Scenes/weapon_base.gd
+res://Scenes/StateMachine Manage/dash_state.gd
+res://Scenes/StateMachine Manage/idle_state.gd
+res://Scenes/Enemy/State.gd
+res://Scenes/StateMachine Manage/run_state.gd
+res://Scenes/base_item.gd
+res://Scenes/StateMachine Manage/State_factory.gd
+res://Scenes/Player.gd
+res://Scenes/StateMachine Manage/base_state.gd
+res://Scenes/AnimationControl.gd
+res://Scenes/base_slot.gd
