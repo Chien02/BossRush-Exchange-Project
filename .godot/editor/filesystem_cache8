@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1705890985
+::res://::1705895230
 icon.svg::CompressedTexture2D::6149685259880282722::1705890167::1705890167::1::::<><>::
 ::res://addons/::1705890167
 ::res://addons/AS2P/::1705890167
@@ -17,7 +17,7 @@ plugin.cfg::TextFile::-1::1705890167::0::1::::<><>::
 plugin.gd::GDScript::-1::1705890167::0::1::::<>EditorPlugin<>::
 ::res://Palletes/::1705890167
 endesga-32-1x.png::CompressedTexture2D::3639393376254256906::1705890167::1705890167::1::::<><>::
-::res://Scenes/::1705890559
+::res://Scenes/::1705895194
 AnimationControl.gd::GDScript::-1::1705890167::0::1::::Animation_Control<>Node2D<>::
 base_item.gd::GDScript::-1::1705890167::0::1::::Item<>Area2D<>::
 base_item.tscn::PackedScene::7438615742306104775::1705890167::0::1::::<><>::res://Scenes/base_item.gd<>uid://b4v3ojgs7iad::::res://Sprites/Components/Test Card.png
@@ -27,36 +27,37 @@ base_state.tscn::PackedScene::3192913120487289838::1705890167::0::1::::<><>::res
 Item.gd::GDScript::-1::1705890167::0::1::::<>RefCounted<>::
 map.tscn::PackedScene::3930656566134431109::1705890167::0::1::::<><>::uid://ceys7mm7ulb2s::::res://Sprites/Tile set/Environment/TX Tileset Grass.png<>uid://dd27s4pdxlxy8::::res://Sprites/Tile set/Environment/TX Tileset Stone Ground.png<>uid://cvn5ubyc6fkh2::::res://Sprites/Tile set/Environment/TX Plant.png<>uid://dv8i8kd260by1::::res://Sprites/Tile set/Environment/TX Shadow Plant.png
 Player.gd::GDScript::-1::1705890167::0::1::::Player<>CharacterBody2D<>::
-Player.tscn::PackedScene::217374126445323869::1705890167::0::1::::<><>::res://Scenes/Player.gd<>uid://c8w5c01pmgme6::::res://Sprites/Characters/Player/Shadow_player.png<>uid://wd1uux7es58i::::res://Sprites/Characters/Player/Character_Down-sheet.png<>uid://c1mfqny2dfurv::::res://Scenes/base_slot.tscn<>uid://c1mxfl3us1cld::::res://Sprites/Characters/Player/Character_RollDown.png<>uid://cfkhr2higqe15::::res://Sprites/Characters/Player/Character_SlashDownLeft.png<>uid://bgaywgdrj6nmu::::res://Sprites/Characters/Player/Character_SlashUpLeft.png<>uid://bc3mi72hxdd70::::res://Sprites/Characters/Player/Character_SlashDownRight.png<>uid://mw8ntw8p2poi::::res://Sprites/Characters/Player/Character_SlashUpRight.png<>uid://wnshgen6irhs::::res://Sprites/Characters/Player/Character_Up.png<>uid://33dxjc8npxha::::res://Sprites/Characters/Player/Character_RollLeft.png<>uid://cougx22t66riw::::res://Sprites/Characters/Player/Character_RollRight.png<>uid://b3w0d23hxo2co::::res://Sprites/Characters/Player/Character_RollUp.png<>uid://djrpm27lwjj2r::::res://Sprites/Characters/Thief Rabbit/idle_left.png<>uid://de2dk2br3isoh::::res://Sprites/Characters/Thief Rabbit/idle_right.png<>res://Scenes/AnimationControl.gd<>uid://dp6kbk151vioq::::res://Sprites/Characters/Thief Rabbit/run _left.png<>uid://bk5dicyw4ygwu::::res://Sprites/Characters/Thief Rabbit/run _right.png<>uid://de2k2witts1wp::::res://Scenes/StateMachine Manage/state_machine.tscn
+Player.tscn::PackedScene::217374126445323869::1705895194::0::1::::<><>::res://Scenes/Player.gd<>uid://c8w5c01pmgme6::::res://Sprites/Characters/Player/Shadow_player.png<>uid://wd1uux7es58i::::res://Sprites/Characters/Player/Character_Down-sheet.png<>uid://c1mfqny2dfurv::::res://Scenes/base_slot.tscn<>uid://c1mxfl3us1cld::::res://Sprites/Characters/Player/Character_RollDown.png<>uid://cfkhr2higqe15::::res://Sprites/Characters/Player/Character_SlashDownLeft.png<>uid://bgaywgdrj6nmu::::res://Sprites/Characters/Player/Character_SlashUpLeft.png<>uid://bc3mi72hxdd70::::res://Sprites/Characters/Player/Character_SlashDownRight.png<>uid://mw8ntw8p2poi::::res://Sprites/Characters/Player/Character_SlashUpRight.png<>uid://wnshgen6irhs::::res://Sprites/Characters/Player/Character_Up.png<>uid://33dxjc8npxha::::res://Sprites/Characters/Player/Character_RollLeft.png<>uid://cougx22t66riw::::res://Sprites/Characters/Player/Character_RollRight.png<>uid://b3w0d23hxo2co::::res://Sprites/Characters/Player/Character_RollUp.png<>uid://djrpm27lwjj2r::::res://Sprites/Characters/Thief Rabbit/idle_left.png<>uid://cj28548wwvd7p::::res://Sprites/Characters/Thief Rabbit/n_ilde_right.png<>res://Scenes/AnimationControl.gd<>uid://dp6kbk151vioq::::res://Sprites/Characters/Thief Rabbit/run _left.png<>uid://bk5dicyw4ygwu::::res://Sprites/Characters/Thief Rabbit/run _right.png<>uid://de2k2witts1wp::::res://Scenes/StateMachine Manage/state_machine.tscn
 state_factory.tscn::PackedScene::4641380559366970543::1705890167::0::1::::<><>::res://Scenes/StateMachine Manage/State_factory.gd
 state_machine.tscn::PackedScene::3158412105435379133::1705890167::0::1::::<><>::res://Scenes/StateMachine Manage/State_machine.gd
-test_scene.tscn::PackedScene::4369463670585559749::1705890167::0::1::::<><>::uid://ddkec3ta7hkn::::res://Scenes/Player.tscn<>uid://bwablskr3sujt::::res://Scenes/map.tscn<>uid://dd8k6de0dvxwh::::res://Scenes/base_item.tscn
+test_scene.tscn::PackedScene::4369463670585559749::1705894624::0::1::::<><>::uid://ddkec3ta7hkn::::res://Scenes/Player.tscn<>uid://bwablskr3sujt::::res://Scenes/map.tscn<>uid://dd8k6de0dvxwh::::res://Scenes/base_item.tscn<>uid://dbvtp426ut13o::::res://Scenes/enemy/enemy.tscn
 weapon_base.gd::GDScript::-1::1705890167::0::1::::<>Node2D<>::
 weapon_base.tscn::PackedScene::7316097922730094169::1705890167::0::1::::<><>::res://Scenes/weapon_base.gd
-::res://Scenes/enemy/::1705890203
+::res://Scenes/enemy/::1705894702
 enemy.gd::GDScript::-1::1705886945::0::1::::TestEnemy<>CharacterBody2D<>::
-enemy.tscn::PackedScene::7273984803646603174::1705889339::0::1::::<><>::res://Scenes/enemy/State Machine.gd<>res://Scenes/enemy/enemyIdle.gd<>uid://bq0c7nmpleaw5::::res://Sprites/Components/ThiefRabbit.png
-enemyIdle.gd::GDScript::-1::1705889238::0::1::::EnemyIdle<>State<>::
+enemy.tscn::PackedScene::7273984803646603174::1705894624::0::1::::<><>::res://Scenes/enemy/enemy.gd<>res://Scenes/enemy/State Machine.gd<>res://Scenes/enemy/enemyIdle.gd<>uid://bq0c7nmpleaw5::::res://Sprites/Components/ThiefRabbit.png<>res://Scenes/enemy/enemy_follow.gd
+enemyIdle.gd::GDScript::-1::1705894702::0::1::::EnemyIdle<>State<>::
+enemy_follow.gd::GDScript::-1::1705894695::0::1::::EnemyFollow<>State<>::
 State Machine.gd::GDScript::-1::1705886735::0::1::::<>Node<>::
 State.gd::GDScript::-1::1705887129::0::1::::State<>Node<>::
-::res://Scenes/StateMachine Manage/::1705890167
+::res://Scenes/StateMachine Manage/::1705890995
 attack_state.gd::GDScript::-1::1705890167::0::1::::<>BaseState<>::
-attack_state.tscn::PackedScene::227939962807900741::1705890167::0::1::::<><>::uid://hqxikqctx60j::::res://Scenes/StateMachine Manage/base_state.tscn<>res://Scenes/StateMachine Manage/attack_state.gd
+attack_state.tscn::PackedScene::227939962807900741::1705890995::0::1::::<><>::uid://hqxikqctx60j::::res://Scenes/StateMachine Manage/base_state.tscn<>res://Scenes/StateMachine Manage/attack_state.gd
 base_state.gd::GDScript::-1::1705890167::0::1::::BaseState<>Node2D<>::
-base_state.tscn::PackedScene::525763276783624959::1705890167::0::1::::<><>::res://Scenes/StateMachine Manage/base_state.gd
+base_state.tscn::PackedScene::525763276783624959::1705890995::0::1::::<><>::res://Scenes/StateMachine Manage/base_state.gd
 dash_state.gd::GDScript::-1::1705890167::0::1::::<>BaseState<>::
-dash_state.tscn::PackedScene::100975481238290794::1705890167::0::1::::<><>::uid://hqxikqctx60j::::res://Scenes/StateMachine Manage/base_state.tscn<>res://Scenes/StateMachine Manage/dash_state.gd
+dash_state.tscn::PackedScene::100975481238290794::1705890995::0::1::::<><>::uid://hqxikqctx60j::::res://Scenes/StateMachine Manage/base_state.tscn<>res://Scenes/StateMachine Manage/dash_state.gd
 idle_state.gd::GDScript::-1::1705890167::0::1::::<>BaseState<>::
-idle_state.tscn::PackedScene::1267454268126713914::1705890167::0::1::::<><>::uid://hqxikqctx60j::::res://Scenes/StateMachine Manage/base_state.tscn<>res://Scenes/StateMachine Manage/idle_state.gd
+idle_state.tscn::PackedScene::1267454268126713914::1705890995::0::1::::<><>::uid://hqxikqctx60j::::res://Scenes/StateMachine Manage/base_state.tscn<>res://Scenes/StateMachine Manage/idle_state.gd
 run_state.gd::GDScript::-1::1705890167::0::1::::<>BaseState<>::
-run_state.tscn::PackedScene::4040016299598135330::1705890167::0::1::::<><>::uid://hqxikqctx60j::::res://Scenes/StateMachine Manage/base_state.tscn<>res://Scenes/StateMachine Manage/run_state.gd
+run_state.tscn::PackedScene::4040016299598135330::1705890995::0::1::::<><>::uid://hqxikqctx60j::::res://Scenes/StateMachine Manage/base_state.tscn<>res://Scenes/StateMachine Manage/run_state.gd
 State_factory.gd::GDScript::-1::1705890167::0::1::::StateFactory<>Node2D<>::
-state_factory.tscn::PackedScene::2808429056760469466::1705890167::0::1::::<><>::res://Scenes/StateMachine Manage/State_factory.gd<>uid://sb710li3ncy1::::res://Scenes/StateMachine Manage/idle_state.tscn<>uid://bxtaqi2gxur3w::::res://Scenes/StateMachine Manage/run_state.tscn<>uid://bo6b0pe2c5k5::::res://Scenes/StateMachine Manage/dash_state.tscn<>uid://dioexnoxqdrh::::res://Scenes/StateMachine Manage/attack_state.tscn
+state_factory.tscn::PackedScene::2808429056760469466::1705890995::0::1::::<><>::res://Scenes/StateMachine Manage/State_factory.gd<>uid://sb710li3ncy1::::res://Scenes/StateMachine Manage/idle_state.tscn<>uid://bxtaqi2gxur3w::::res://Scenes/StateMachine Manage/run_state.tscn<>uid://bo6b0pe2c5k5::::res://Scenes/StateMachine Manage/dash_state.tscn<>uid://dioexnoxqdrh::::res://Scenes/StateMachine Manage/attack_state.tscn
 State_machine.gd::GDScript::-1::1705890167::0::1::::StateMachine<>Node2D<>::
-state_machine.tscn::PackedScene::7496412180115683715::1705890167::0::1::::<><>::res://Scenes/StateMachine Manage/State_machine.gd<>uid://hqxikqctx60j::::res://Scenes/StateMachine Manage/base_state.tscn<>uid://bgaoofghqts2e::::res://Scenes/StateMachine Manage/state_factory.tscn
+state_machine.tscn::PackedScene::7496412180115683715::1705890995::0::1::::<><>::res://Scenes/StateMachine Manage/State_machine.gd<>uid://hqxikqctx60j::::res://Scenes/StateMachine Manage/base_state.tscn<>uid://bgaoofghqts2e::::res://Scenes/StateMachine Manage/state_factory.tscn
 ::res://Sprites/::1705890167
 ::res://Sprites/Characters/::1705890167
-::res://Sprites/Characters/Player/::1705890167
+::res://Sprites/Characters/Player/::1705895194
 Character_Down-sheet-sheet.png::CompressedTexture2D::7551091546390735678::1705890167::1705890167::1::::<><>::
 Character_Down-sheet.png::CompressedTexture2D::1551963138446444402::1705890167::1705890167::1::::<><>::
 Character_Down.png::CompressedTexture2D::3653722583367906596::1705890167::1705890167::1::::<><>::
@@ -81,9 +82,10 @@ Character_Up.png::CompressedTexture2D::1572097199218359956::1705890167::17058901
 Character_UpLeft.png::CompressedTexture2D::2688634513133122920::1705890167::1705890167::1::::<><>::
 Character_UpRight.png::CompressedTexture2D::8266585439593108854::1705890167::1705890167::1::::<><>::
 Shadow_player.png::CompressedTexture2D::7136315953347875239::1705890167::1705890167::1::::<><>::
-::res://Sprites/Characters/Thief Rabbit/::1705890167
+::res://Sprites/Characters/Thief Rabbit/::1705895194
 idle_left.png::CompressedTexture2D::7826989718152715859::1705890167::1705890167::1::::<><>::
 idle_right.png::CompressedTexture2D::7495957054393808651::1705890167::1705890167::1::::<><>::
+n_ilde_right.png::CompressedTexture2D::5462337969252056291::1705895194::1705895194::1::::<><>::
 run _left.png::CompressedTexture2D::8276699938544270356::1705890167::1705890167::1::::<><>::
 run _right.png::CompressedTexture2D::3150437033186047080::1705890167::1705890167::1::::<><>::
 ::res://Sprites/Components/::1705890167

@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 EnemyFollow
 Sprite2D
+=======
+>>>>>>> feef0de628eeadd1cf631857ea004f647b79ea7c
 Node2D
+Sprite2D
 AnimatedSprite2D
 AnimationTree
 AnimationPlayer
