@@ -1,4 +1,4 @@
-[gd_scene load_steps=142 format=3 uid="uid://ddkec3ta7hkn"]
+[gd_scene load_steps=137 format=3 uid="uid://ddkec3ta7hkn"]
 
 [ext_resource type="Script" path="res://Scenes/Player.gd" id="1_un0f3"]
 [ext_resource type="Texture2D" uid="uid://c8w5c01pmgme6" path="res://Sprites/Characters/Player/Shadow_player.png" id="2_1usuy"]
@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cougx22t66riw" path="res://Sprites/Characters/Player/Character_RollRight.png" id="9_3bk3h"]
 [ext_resource type="Texture2D" uid="uid://b3w0d23hxo2co" path="res://Sprites/Characters/Player/Character_RollUp.png" id="10_f5wgx"]
 [ext_resource type="Texture2D" uid="uid://djrpm27lwjj2r" path="res://Sprites/Characters/Thief Rabbit/idle_left.png" id="12_a62qe"]
-[ext_resource type="Texture2D" uid="uid://de2dk2br3isoh" path="res://Sprites/Characters/Thief Rabbit/idle_right.png" id="13_queer"]
+[ext_resource type="Texture2D" uid="uid://cj28548wwvd7p" path="res://Sprites/Characters/Thief Rabbit/n_ilde_right.png" id="13_hscws"]
 [ext_resource type="Script" path="res://Scenes/AnimationControl.gd" id="15_1kay1"]
 [ext_resource type="Texture2D" uid="uid://dp6kbk151vioq" path="res://Sprites/Characters/Thief Rabbit/run _left.png" id="15_2qa4e"]
 [ext_resource type="Texture2D" uid="uid://bk5dicyw4ygwu" path="res://Sprites/Characters/Thief Rabbit/run _right.png" id="16_ar7yb"]
@@ -192,29 +192,9 @@ region = Rect2(128, 0, 32, 32)
 atlas = ExtResource("12_a62qe")
 region = Rect2(160, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_y7gr8"]
-atlas = ExtResource("13_queer")
+[sub_resource type="AtlasTexture" id="AtlasTexture_5oxgw"]
+atlas = ExtResource("13_hscws")
 region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8p1gd"]
-atlas = ExtResource("13_queer")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kinio"]
-atlas = ExtResource("13_queer")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0waw5"]
-atlas = ExtResource("13_queer")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hvdg5"]
-atlas = ExtResource("13_queer")
-region = Rect2(128, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0m8jb"]
-atlas = ExtResource("13_queer")
-region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xv3qs"]
 atlas = ExtResource("7_yh4w8")
@@ -483,22 +463,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_y7gr8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8p1gd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kinio")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0waw5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hvdg5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0m8jb")
+"texture": SubResource("AtlasTexture_5oxgw")
 }],
 "loop": true,
 "name": &"idle_right",
@@ -871,7 +836,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_qf7we"]
-length = 0.75
+length = 0.125
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -880,10 +845,10 @@ tracks/0/path = NodePath("AnimatedSprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.625),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5]
+"values": [0]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1266,7 +1231,7 @@ scale = Vector2(1.50092, 1.08382)
 texture = ExtResource("2_1usuy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -7)
+position = Vector2(-2, -2)
 scale = Vector2(1, 0.979)
 sprite_frames = SubResource("SpriteFrames_yfune")
 animation = &"idle_right"
