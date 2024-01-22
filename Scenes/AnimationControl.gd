@@ -1,13 +1,13 @@
 extends Node2D
 
 class_name Animation_Control
-
+@onready var state_machine = $"../State Machine"
 @onready var animation_tree : AnimationTree = $"../AnimationTree"
 
 func update_paramater_animation(direction):
-	var walk = true if (direction != Vector2.ZERO) else false
-	var dash = true if (Input.is_action_just_pressed("ui_accept")) else false
-	var attack = true if (Input.is_action_just_pressed("ui_cancel")) else false
+	var walk = true if (state_machine.current_state == state_machine.state_factory.get_state("run")) else false
+	var dash = true if (state_machine.current_state == state_machine.state_factory.get_state("dash")) else false
+	var attack = true if (state_machine.current_state == state_machine.state_factory.get_state("attack")) else false
 	set_up_walk(walk)
 	set_up_dash(dash)
 	set_up_attack(attack)

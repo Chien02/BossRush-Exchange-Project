@@ -5,7 +5,7 @@ class_name StateMachine
 
 @export var animator : Animation_Control
 
-@onready var player = $".."
+@onready var player = $".." #relative
 @onready var base_state  = $"Base State"
 @onready var state_factory = $StateFactory
 

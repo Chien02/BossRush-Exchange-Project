@@ -5,3 +5,7 @@
 
 [node name="Attack state" instance=ExtResource("1_46cld")]
 script = ExtResource("2_7kra6")
+
+[node name="Timer" type="Timer" parent="." index="0"]
+one_shot = true
+autostart = true

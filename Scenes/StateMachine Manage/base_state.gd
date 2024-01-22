@@ -11,7 +11,7 @@ class_name BaseState
 @export var player : CharacterBody2D
 
 func enter():
-	print(player)
+	pass
 	
 func exit():
 	pass

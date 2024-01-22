@@ -1,2 +1,20 @@
 res://Scenes/test_scene.tscn
+res://Scenes/enemy/enemy.gd
 res://Scenes/enemy/enemy.tscn
+res://Scenes/StateMachine Manage/idle_state.tscn
+res://Scenes/StateMachine Manage/idle_state.gd
+res://Scenes/StateMachine Manage/base_state.tscn
+res://Scenes/StateMachine Manage/base_state.gd
+res://Scenes/StateMachine Manage/state_machine.tscn
+res://Scenes/StateMachine Manage/State_factory.gd
+res://Scenes/Player.tscn
+res://Scenes/StateMachine Manage/State_machine.gd
+res://Scenes/StateMachine Manage/state_factory.tscn
+res://Scenes/StateMachine Manage/run_state.tscn
+res://Scenes/StateMachine Manage/run_state.gd
+res://Scenes/StateMachine Manage/dash_state.tscn
+res://Scenes/StateMachine Manage/dash_state.gd
+res://Scenes/enemy/enemy_follow.gd
+res://Scenes/AnimationControl.gd
+res://Scenes/StateMachine Manage/attack_state.tscn
+res://Scenes/StateMachine Manage/attack_state.gd
