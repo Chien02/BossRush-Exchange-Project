@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b3iuotcv3go5b"]
+[gd_scene load_steps=5 format=3 uid="uid://b3iuotcv3go5b"]
 
 [ext_resource type="PackedScene" uid="uid://ddkec3ta7hkn" path="res://Scenes/Player.tscn" id="1_2iv6k"]
 [ext_resource type="PackedScene" uid="uid://bwablskr3sujt" path="res://Scenes/map.tscn" id="1_pck5k"]
 [ext_resource type="PackedScene" uid="uid://dd8k6de0dvxwh" path="res://Scenes/base_item.tscn" id="2_mvblk"]
+[ext_resource type="PackedScene" uid="uid://dbvtp426ut13o" path="res://Scenes/enemy/enemy.tscn" id="4_oqlle"]
 
 [node name="Test Scene" type="Node2D"]
 y_sort_enabled = true
@@ -21,3 +22,7 @@ position = Vector2(99, 1)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(254, 154)
 zoom = Vector2(2.315, 2.315)
+
+[node name="enemy" parent="." instance=ExtResource("4_oqlle")]
+z_index = 1
+position = Vector2(226, 153)

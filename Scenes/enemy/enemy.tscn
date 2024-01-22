@@ -1,34 +1,45 @@
-[gd_scene load_steps=6 format=3 uid="uid://dbvtp426ut13o"]
+[gd_scene load_steps=8 format=3 uid="uid://dbvtp426ut13o"]
 
+[ext_resource type="Script" path="res://Scenes/enemy/enemy.gd" id="1_kfuye"]
 [ext_resource type="Script" path="res://Scenes/enemy/State Machine.gd" id="1_yxiwt"]
 [ext_resource type="Script" path="res://Scenes/enemy/enemyIdle.gd" id="2_34dfc"]
 [ext_resource type="Texture2D" uid="uid://bq0c7nmpleaw5" path="res://Sprites/Components/ThiefRabbit.png" id="3_gq2w2"]
+[ext_resource type="Script" path="res://Scenes/enemy/enemy_follow.gd" id="4_i72m5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tbgid"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ayvyd"]
 radius = 60.0333
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_kfuye")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_tbgid")
+disabled = true
 
 [node name="Area2D" type="Area2D" parent="."]
+visible = false
 collision_mask = 0
 
 [node name="Detect zone" type="CollisionShape2D" parent="Area2D"]
+visible = false
 shape = SubResource("CircleShape2D_ayvyd")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="State Machine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("1_yxiwt")
-initial_state = NodePath("EnemyIdle")
+initial_state = NodePath("EnemyFollow")
 
 [node name="EnemyIdle" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
 script = ExtResource("2_34dfc")
 enemy = NodePath("../..")
+
+[node name="EnemyFollow" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("4_i72m5")
+enemy = NodePath("../..")
+distance = 100
 
 [node name="ThiefRabbit" type="Sprite2D" parent="."]
 texture_filter = 1
