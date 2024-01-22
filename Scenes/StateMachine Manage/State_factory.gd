@@ -6,11 +6,12 @@ class_name StateFactory
 	"idle" : $"Idle state",
 	"run" : $"Run state",
 	"dash" : $"Dash state",
-	"attack" : $"Attack state"
+	"attack" : $"Attack state",
+	"eidle" : $EIdle,
+	"echase" : $EChase,
+	"eattack" : $EAttack,
+	"edead" : $E_dead
 }
 
 func get_state(state : String):
 	return states[state]
-
-func init_state():
-	return states["idle"]

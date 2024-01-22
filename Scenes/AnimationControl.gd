@@ -29,3 +29,5 @@ func set_up_dash(value):
 
 func set_up_attack(value):
 	animation_tree["parameters/conditions/is_attacking"] = value
+
+

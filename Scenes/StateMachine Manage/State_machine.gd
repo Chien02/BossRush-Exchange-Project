@@ -13,7 +13,10 @@ var current_state : BaseState
 
 func _ready():
 	# Set the default state for current state
-	current_state = state_factory.init_state()
+	print(player.name)
+	current_state = state_factory.get_state("idle")
+	#if (player.name == "Player"):
+		#current_state = state_factory.get_state("idle") #player is playe
 	get_info()
 	current_state.enter()
 
@@ -25,3 +28,4 @@ func get_info():
 	current_state.state_factory = state_factory
 	current_state.state_machine = self
 	current_state.player = player
+
