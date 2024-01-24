@@ -6,7 +6,6 @@ var attacking : bool = false
 
 func enter():
 	_name = "e_chase"
-	print(_name)
 	
 func exit():
 	character.velocity = Vector2.ZERO

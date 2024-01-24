@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1706056194
+::res://::1706092664
 icon.svg::CompressedTexture2D::6149685259880282722::1705931508::1705931508::1::::<><>::
 ::res://addons/::1706045510
 ::res://addons/AS2P/::1705931508
@@ -7,10 +7,10 @@ InspectorConvertor.gd::GDScript::-1::1705931508::0::1::::<>EditorInspectorPlugin
 NodeSelectorProperty.gd::GDScript::-1::1705931508::0::1::::<>EditorProperty<>::
 plugin.cfg::TextFile::-1::1705931508::0::1::::<><>::
 plugin.gd::GDScript::-1::1705931508::0::1::::<>EditorPlugin<>::
-::res://addons/shaker/::1706056227
+::res://addons/shaker/::1706088827
 plugin.cfg::TextFile::-1::1706045510::0::1::::<><>::
 plugin.gd::GDScript::-1::1706045510::0::1::::<>EditorPlugin<>::
-shaker.gd::GDScript::-1::1706056227::0::1::::Shaker<>Node<>res://addons/shaker/shaker.svg::
+shaker.gd::GDScript::-1::1706088827::0::1::::Shaker<>Node<>res://addons/shaker/shaker.svg::
 shaker.svg::CompressedTexture2D::4284292724571158551::1706045510::1706045510::1::::<><>::
 ::res://addons/tw/::1706037929
 icon.png::CompressedTexture2D::401056332513307300::1706037928::1706037929::1::::<><>::
@@ -21,53 +21,54 @@ tw.gd::GDScript::-1::1706037928::0::1::::<>Node<>::
 ::res://Aseprite/::1705931508
 ::res://Palletes/::1705931508
 endesga-32-1x.png::CompressedTexture2D::3639393376254256906::1705931508::1705931508::1::::<><>::
-::res://Scenes/::1706056431
+::res://Scenes/::1706088865
 Temp.gd::GDScript::-1::1706016389::0::1::::<>Node2D<>::
 Temp.tscn::PackedScene::8380060991620820788::1706016389::0::1::::<><>::res://Scenes/Temp.gd
-test_scene.tscn::PackedScene::4369463670585559749::1706056431::0::1::::<><>::uid://bwablskr3sujt::::res://Scenes/Map/map.tscn<>uid://hbifr4gss77a::::res://Scenes/enemy_v2/enemy_v2.tscn<>uid://ddkec3ta7hkn::::res://Scenes/Player/Player.tscn
+test_scene.tscn::PackedScene::4369463670585559749::1706088865::0::1::::<><>::uid://bwablskr3sujt::::res://Scenes/Map/map.tscn<>uid://hbifr4gss77a::::res://Scenes/enemy_v2/enemy_v2.tscn<>uid://ddkec3ta7hkn::::res://Scenes/Player/Player.tscn
 ::res://Scenes/Components/::1706046936
-::res://Scenes/Components/Global variables/::1706049434
-Global.gd::GDScript::-1::1706049434::0::1::::<>Node<>::
+::res://Scenes/Components/Global variables/::1706058643
+Global.gd::GDScript::-1::1706058643::0::1::::<>Node<>::
 ::res://Scenes/Components/Item/::1706012464
 base_item.gd::GDScript::-1::1705931508::0::1::::Item<>Area2D<>::
 base_item.tscn::PackedScene::7438615742306104775::1706012457::0::1::::<><>::res://Scenes/Components/Item/base_item.gd<>uid://b4v3ojgs7iad::::res://Sprites/Components/Test Card.png
 Item.gd::GDScript::-1::1705931508::0::1::::<>RefCounted<>::
-::res://Scenes/Components/Slot/::1706012451
-base_slot.gd::GDScript::-1::1705931508::0::1::::Slot<>Node2D<>::
+::res://Scenes/Components/Slot/::1706058749
+base_slot.gd::GDScript::-1::1706058749::0::1::::Slot<>Node2D<>::
 base_slot.tscn::PackedScene::6622856713799915615::1706012451::0::1::::<><>::res://Scenes/Components/Slot/base_slot.gd
-::res://Scenes/Components/Weapon/::1706012479
-weapon_base.gd::GDScript::-1::1705931508::0::1::::<>Node2D<>::
-weapon_base.tscn::PackedScene::7316097922730094169::1706012479::0::1::::<><>::res://Scenes/Components/Weapon/weapon_base.gd
+::res://Scenes/Components/Weapon/::1706088866
+weapon_base.gd::GDScript::-1::1706059124::0::1::::<>Node2D<>::
+weapon_base.tscn::PackedScene::7316097922730094169::1706088866::0::1::::<><>::res://Scenes/Components/Weapon/weapon_base.gd<>uid://c421jtmjkx5ol::::res://Sprites/Weapons/Sword_DownLeft-sheet.png
 ::res://Scenes/Effects/::1706049878
 CameraShake.gd::GDScript::-1::1706049876::0::1::::<>Camera2D<>::
 camera_shake.tscn::PackedScene::8473474909478063207::1706049878::0::1::::<><>::res://Scenes/Effects/CameraShake.gd
 shadow_clone.gd::GDScript::-1::1706043615::0::1::::<>Node2D<>::
 shadow_clone.tscn::PackedScene::5122819383485883743::1706045164::0::1::::<><>::res://Scenes/Effects/shadow_clone.gd<>uid://b6c6f3apxy42w::::res://Sprites/Characters/Player/Character_RollDownRight.png
-::res://Scenes/enemy_v2/::1706056431
+::res://Scenes/enemy_v2/::1706088865
 enemy_v2.gd::GDScript::-1::1706056370::0::1::::<>CharacterBody2D<>::
-enemy_v2.tscn::PackedScene::493881886125635312::1706056431::0::1::::<><>::res://Scenes/enemy_v2/enemy_v2.gd<>uid://cco83gospa7dd::::res://Scenes/StateMachine Manage/e_state_machine.tscn<>res://Scenes/enemy_v2/E_AnimationControl.gd<>uid://b3yj8isspfda::::res://Sprites/Characters/Enemy/momo_idle_shadow-sheet.png
+enemy_v2.tscn::PackedScene::493881886125635312::1706088865::0::1::::<><>::res://Scenes/enemy_v2/enemy_v2.gd<>uid://cco83gospa7dd::::res://Scenes/StateMachine Manage/e_state_machine.tscn<>res://Scenes/enemy_v2/E_AnimationControl.gd<>uid://b3yj8isspfda::::res://Sprites/Characters/Enemy/momo_idle_shadow-sheet.png
 E_AnimationControl.gd::GDScript::-1::1706056244::0::1::::<>Node2D<>::
 ::res://Scenes/Map/::1705932368
 map.tscn::PackedScene::3930656566134431109::1705931508::0::1::::<><>::uid://ceys7mm7ulb2s::::res://Sprites/Tile set/Environment/TX Tileset Grass.png<>uid://dd27s4pdxlxy8::::res://Sprites/Tile set/Environment/TX Tileset Stone Ground.png<>uid://cvn5ubyc6fkh2::::res://Sprites/Tile set/Environment/TX Plant.png<>uid://dv8i8kd260by1::::res://Sprites/Tile set/Environment/TX Shadow Plant.png
-::res://Scenes/Player/::1706056431
+::res://Scenes/Player/::1706088866
 AnimationControl.gd::GDScript::-1::1706036669::0::1::::Animation_Control<>Node2D<>::
 Camera2D.gd::GDScript::-1::1706046121::0::1::::<>Shaker<>::
+Hitbox.gd::GDScript::-1::1706059842::0::1::::<>Area2D<>::
 Player.gd::GDScript::-1::1706045374::0::1::::Player<>CharacterBody2D<>::
-Player.tscn::PackedScene::217374126445323869::1706056431::0::1::::<><>::res://Scenes/Player/Player.gd<>uid://dft2my77k4abu::::res://Sprites/Characters/Player/Character_Down-sheet-sheet.png<>uid://c8w5c01pmgme6::::res://Sprites/Characters/Player/Shadow_player.png<>uid://de2k2witts1wp::::res://Scenes/StateMachine Manage/state_machine.tscn<>uid://dsyu5ngxudyy6::::res://Scenes/Effects/camera_shake.tscn<>res://Scenes/Player/AnimationControl.gd
-::res://Scenes/StateMachine Manage/::1706056431
+Player.tscn::PackedScene::217374126445323869::1706088866::0::1::::<><>::res://Scenes/Player/Player.gd<>uid://dft2my77k4abu::::res://Sprites/Characters/Player/Character_Down-sheet-sheet.png<>uid://c8w5c01pmgme6::::res://Sprites/Characters/Player/Shadow_player.png<>uid://de2k2witts1wp::::res://Scenes/StateMachine Manage/state_machine.tscn<>uid://dsyu5ngxudyy6::::res://Scenes/Effects/camera_shake.tscn<>res://Scenes/Components/Slot/base_slot.gd<>res://Scenes/Player/Hitbox.gd<>res://Scenes/Player/AnimationControl.gd
+::res://Scenes/StateMachine Manage/::1706057079
 base_state.gd::GDScript::-1::1706051217::0::1::::BaseState<>Node2D<>::
 base_state.tscn::PackedScene::525763276783624959::1706045164::0::1::::<><>::res://Scenes/StateMachine Manage/base_state.gd
 e_state_machine.gd::GDScript::-1::1706052685::0::1::::<>StateMachine<>::
-e_state_machine.tscn::PackedScene::4944174343815016601::1706056431::0::1::::<><>::res://Scenes/StateMachine Manage/e_state_machine.gd<>uid://hqxikqctx60j::::res://Scenes/StateMachine Manage/base_state.tscn<>uid://bgaoofghqts2e::::res://Scenes/StateMachine Manage/state_factory.tscn
+e_state_machine.tscn::PackedScene::4944174343815016601::1706057078::0::1::::<><>::res://Scenes/StateMachine Manage/e_state_machine.gd<>uid://hqxikqctx60j::::res://Scenes/StateMachine Manage/base_state.tscn<>uid://bgaoofghqts2e::::res://Scenes/StateMachine Manage/state_factory.tscn
 State_factory.gd::GDScript::-1::1706017248::0::1::::StateFactory<>Node2D<>::
-state_factory.tscn::PackedScene::2808429056760469466::1706056431::0::1::::<><>::res://Scenes/StateMachine Manage/State_factory.gd<>uid://rvyhcobloaro::::res://Scenes/StateMachine Manage/States/E_Idle.tscn<>uid://sb710li3ncy1::::res://Scenes/StateMachine Manage/States/P_idle.tscn<>uid://bxtaqi2gxur3w::::res://Scenes/StateMachine Manage/States/P_run.tscn<>uid://chlp7p1b0wggb::::res://Scenes/StateMachine Manage/States/E_chase.tscn<>uid://b4h3epwkefxcu::::res://Scenes/StateMachine Manage/States/E_Attack.tscn<>uid://dioexnoxqdrh::::res://Scenes/StateMachine Manage/States/P_attack.tscn<>uid://d1kd8xe8pktd3::::res://Scenes/StateMachine Manage/States/E_dead.tscn<>uid://bo6b0pe2c5k5::::res://Scenes/StateMachine Manage/States/P_dash.tscn
+state_factory.tscn::PackedScene::2808429056760469466::1706057079::0::1::::<><>::res://Scenes/StateMachine Manage/State_factory.gd<>uid://rvyhcobloaro::::res://Scenes/StateMachine Manage/States/E_Idle.tscn<>uid://sb710li3ncy1::::res://Scenes/StateMachine Manage/States/P_idle.tscn<>uid://bxtaqi2gxur3w::::res://Scenes/StateMachine Manage/States/P_run.tscn<>uid://chlp7p1b0wggb::::res://Scenes/StateMachine Manage/States/E_chase.tscn<>uid://b4h3epwkefxcu::::res://Scenes/StateMachine Manage/States/E_Attack.tscn<>uid://dioexnoxqdrh::::res://Scenes/StateMachine Manage/States/P_attack.tscn<>uid://d1kd8xe8pktd3::::res://Scenes/StateMachine Manage/States/E_dead.tscn<>uid://bo6b0pe2c5k5::::res://Scenes/StateMachine Manage/States/P_dash.tscn
 State_machine.gd::GDScript::-1::1706054968::0::1::::StateMachine<>Node2D<>::
-state_machine.tscn::PackedScene::7496412180115683715::1706056431::0::1::::<><>::res://Scenes/StateMachine Manage/State_machine.gd<>uid://hqxikqctx60j::::res://Scenes/StateMachine Manage/base_state.tscn<>uid://bgaoofghqts2e::::res://Scenes/StateMachine Manage/state_factory.tscn
-::res://Scenes/StateMachine Manage/States/::1706056431
-E_Attack.gd::GDScript::-1::1706055052::0::1::::<>BaseState<>::
-E_Attack.tscn::PackedScene::4438055834743411292::1706056431::0::1::::<><>::res://Scenes/StateMachine Manage/States/E_Attack.gd
-E_chase.gd::GDScript::-1::1706055560::0::1::::<>BaseState<>::
-E_chase.tscn::PackedScene::5287840156538422597::1706056431::0::1::::<><>::res://Scenes/StateMachine Manage/States/E_chase.gd
+state_machine.tscn::PackedScene::7496412180115683715::1706057078::0::1::::<><>::res://Scenes/StateMachine Manage/State_machine.gd<>uid://hqxikqctx60j::::res://Scenes/StateMachine Manage/base_state.tscn<>uid://bgaoofghqts2e::::res://Scenes/StateMachine Manage/state_factory.tscn
+::res://Scenes/StateMachine Manage/States/::1706088866
+E_Attack.gd::GDScript::-1::1706059617::0::1::::<>BaseState<>::
+E_Attack.tscn::PackedScene::4438055834743411292::1706088866::0::1::::<><>::res://Scenes/StateMachine Manage/States/E_Attack.gd
+E_chase.gd::GDScript::-1::1706059622::0::1::::<>BaseState<>::
+E_chase.tscn::PackedScene::5287840156538422597::1706088866::0::1::::<><>::res://Scenes/StateMachine Manage/States/E_chase.gd
 E_dead.gd::GDScript::-1::1705931508::0::1::::<>BaseState<>::
 E_dead.tscn::PackedScene::9005058061122004014::1706013602::0::1::::<><>::uid://hqxikqctx60j::::res://Scenes/StateMachine Manage/base_state.tscn<>res://Scenes/StateMachine Manage/States/E_dead.gd
 E_Idle.gd::GDScript::-1::1706014354::0::1::::<>BaseState<>::
@@ -83,7 +84,7 @@ P_run.tscn::PackedScene::4040016299598135330::1706037430::0::1::::<><>::uid://hq
 ::res://Sprites/::1705931508
 ::res://Sprites/Characters/::1706050526
 ::res://Sprites/Characters/Boss/::1706050525
-::res://Sprites/Characters/Enemy/::1706056718
+::res://Sprites/Characters/Enemy/::1706056840
 momo_idle_shadow-sheet.png::CompressedTexture2D::129466447194722514::1706056839::1706056840::1::::<><>::
 momo_idle_shadow.png::CompressedTexture2D::9178274599864940264::1706056837::1706056840::1::::<><>::
 ::res://Sprites/Characters/Player/::1705931508
@@ -136,8 +137,9 @@ TX Struct.png::CompressedTexture2D::7973585502072704891::1705931508::1705931508:
 TX Tileset Grass.png::CompressedTexture2D::5104292509609468740::1705931508::1705931508::1::::<><>::
 TX Tileset Stone Ground.png::CompressedTexture2D::7427543415928551445::1705931508::1705931508::1::::<><>::
 TX Tileset Wall.png::CompressedTexture2D::3052314159488151932::1705931508::1705931508::1::::<><>::
-::res://Sprites/Weapons/::1705931508
-Sword_DownLeft.png::CompressedTexture2D::5195432285254939052::1705931508::1705931508::1::::<><>::
+::res://Sprites/Weapons/::1706058480
+Sword_DownLeft-sheet.png::CompressedTexture2D::6865651763110354391::1706058477::1706058480::1::::<><>::
+Sword_DownLeft.png::CompressedTexture2D::5195432285254939052::1706058482::1706058480::1::::<><>::
 Sword_DownRight.png::CompressedTexture2D::6062249580690642202::1705931508::1705931508::1::::<><>::
 Sword_UpLeft.png::CompressedTexture2D::7913261570734059096::1705931508::1705931508::1::::<><>::
 Sword_UpRight.png::CompressedTexture2D::9597086984753450::1705931508::1705931508::1::::<><>::

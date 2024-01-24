@@ -2,12 +2,15 @@ extends Node2D
 class_name Slot
 
 @export var item : String
-signal current_item(item_name)
+var slots = {
+	"weapon" : "null",
+	"item" : "null",
+}
 
-# Function that tell user that character is having weapon or not
-func is_null():
-	if (!item): return true
-	else: return false
+
+func _ready():
+	Global.bag = self
+
 
 # Function that receive other item and switch it to current item
 # There are two cases: when character are not have any weapon yet

@@ -5,7 +5,6 @@ var attack : bool = false
 
 func enter():
 	_name = "e_attack"
-	print(_name)
 	attack = true
 	$Timer.start()
 	

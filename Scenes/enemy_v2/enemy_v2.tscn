@@ -651,7 +651,7 @@ animation_tree = NodePath("../AnimationTree")
 position = Vector2(0, -3)
 sprite_frames = SubResource("SpriteFrames_sfirk")
 animation = &"idle_down"
-frame = 2
+frame = 1
 
 [connection signal="body_entered" from="Detecting Zone" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Detecting Zone" to="." method="_on_area_2d_body_exited"]
