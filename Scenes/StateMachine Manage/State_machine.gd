@@ -3,20 +3,16 @@ extends Node2D
 # để truyền cho các current state phục vụ mục đích của nó
 class_name StateMachine
 
-@export var animator : Animation_Control
+@export var animator : Node2D
+@export var character : CharacterBody2D # người dùng State Machine
 
-@onready var player = $".." #relative
-@onready var base_state  = $"Base State"
 @onready var state_factory = $StateFactory
+@onready var base_state = $"Base State"
 
 var current_state : BaseState
 
 func _ready():
-	# Set the default state for current state
-	print(player.name)
-	current_state = state_factory.get_state("idle")
-	#if (player.name == "Player"):
-		#current_state = state_factory.get_state("idle") #player is playe
+	current_state = state_factory.get_state("p_idle")
 	get_info()
 	current_state.enter()
 
@@ -27,5 +23,5 @@ func _process(_delta):
 func get_info():
 	current_state.state_factory = state_factory
 	current_state.state_machine = self
-	current_state.player = player
+	current_state.character = character
 

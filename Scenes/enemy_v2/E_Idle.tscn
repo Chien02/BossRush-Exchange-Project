@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://rvyhcobloaro"]
-
-[ext_resource type="Script" path="res://Scenes/enemy_v2/E_Idle.gd" id="1_plymv"]
-
-[node name="EIdle" type="Node2D"]
-script = ExtResource("1_plymv")

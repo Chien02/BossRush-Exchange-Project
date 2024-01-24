@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1mfqny2dfurv"]
+
+[ext_resource type="Script" path="res://Scenes/Components/Slot/base_slot.gd" id="1_rkkaf"]
+
+[node name="BaseSlot" type="Node2D"]
+script = ExtResource("1_rkkaf")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsyu5ngxudyy6"]
+
+[ext_resource type="Script" path="res://Scenes/Effects/CameraShake.gd" id="1_x5vgy"]
+
+[node name="CameraShake" type="Camera2D"]
+script = ExtResource("1_x5vgy")

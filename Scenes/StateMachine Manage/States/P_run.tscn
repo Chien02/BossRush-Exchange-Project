@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxtaqi2gxur3w"]
+
+[ext_resource type="PackedScene" uid="uid://hqxikqctx60j" path="res://Scenes/StateMachine Manage/base_state.tscn" id="1_3dyrn"]
+[ext_resource type="Script" path="res://Scenes/StateMachine Manage/States/P_run.gd" id="2_8jkqs"]
+
+[node name="Run state" instance=ExtResource("1_3dyrn")]
+script = ExtResource("2_8jkqs")
+_name = "run"

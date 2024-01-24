@@ -1,27 +1,12 @@
+res://Scenes/enemy_v2/enemy_v2.tscn
+res://addons/shaker/shaker.gd
+res://Scenes/enemy_v2/E_AnimationControl.gd
+res://Scenes/test_scene.tscn
+res://Scenes/Player/Player.tscn
+res://Scenes/StateMachine Manage/e_state_machine.tscn
 res://Scenes/StateMachine Manage/state_machine.tscn
 res://Scenes/StateMachine Manage/state_factory.tscn
-res://Scenes/StateMachine Manage/idle_state.tscn
-res://Scenes/StateMachine Manage/run_state.tscn
-res://Scenes/StateMachine Manage/dash_state.tscn
-res://Scenes/StateMachine Manage/base_state.tscn
-res://Scenes/Player.tscn
-res://Scenes/enemy/enemy.tscn
-res://Scenes/StateMachine Manage/attack_state.tscn
-res://Scenes/test_scene.tscn
-res://Scenes/enemy_v2/enemy.tscn
+res://Scenes/StateMachine Manage/States/E_chase.tscn
+res://Scenes/StateMachine Manage/States/E_Attack.tscn
 res://Scenes/enemy_v2/enemy_v2.gd
-res://Scenes/enemy_v2/E_AnimationControl.gd
-res://Scenes/enemy_v2/E_Idle.gd
-res://Scenes/StateMachine Manage/base_state.gd
-res://Scenes/enemy_v2/E_chase.gd
-res://Scenes/enemy_v2/E_Attack.tscn
-res://Scenes/enemy_v2/E_Idle.tscn
-res://Scenes/base_state.tscn
-res://Scenes/enemy_v2/E_chase.tscn
-res://Scenes/enemy_v2/E_Attack.gd
-res://Scenes/StateMachine Manage/State_factory.gd
-res://Scenes/StateMachine Manage/State_machine.gd
-res://Scenes/AnimationControl.gd
-res://Scenes/enemy_v2/enemy_v2.tscn
-res://E_dead.gd
-res://Scenes/enemy_v2/e_dead.tscn
+res://Scenes/StateMachine Manage/States/E_Attack.gd

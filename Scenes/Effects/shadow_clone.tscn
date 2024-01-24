@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce8sc7lkiwjed"]
+
+[ext_resource type="Script" path="res://Scenes/Effects/shadow_clone.gd" id="1_nqwqc"]
+[ext_resource type="Texture2D" uid="uid://b6c6f3apxy42w" path="res://Sprites/Characters/Player/Character_RollDownRight.png" id="1_s1iib"]
+
+[node name="Shadow_clone" type="Sprite2D"]
+self_modulate = Color(0.12549, 0.0823529, 0.858824, 1)
+texture = ExtResource("1_s1iib")
+hframes = 4
+frame = 2
+script = ExtResource("1_nqwqc")

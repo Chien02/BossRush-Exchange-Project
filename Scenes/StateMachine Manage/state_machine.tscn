@@ -7,8 +7,6 @@
 [node name="State Machine" type="Node2D"]
 script = ExtResource("1_u6u47")
 
-[node name="Base State" parent="." node_paths=PackedStringArray("state_machine", "state_factory") instance=ExtResource("2_evq1k")]
-state_machine = NodePath("..")
-state_factory = NodePath("../StateFactory")
+[node name="Base State" parent="." instance=ExtResource("2_evq1k")]
 
 [node name="StateFactory" parent="." instance=ExtResource("3_ld5ba")]

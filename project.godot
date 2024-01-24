@@ -17,6 +17,11 @@ boot_splash/image="res://Sprites/Icons/Exchange Blush.png"
 boot_splash/use_filter=false
 config/icon="res://Sprites/Icons/Exchange Icon.png"
 
+[autoload]
+
+tw="*res://addons/tw/tw.gd"
+Global="*res://Scenes/Components/Global variables/Global.gd"
+
 [display]
 
 window/size/viewport_width=1440
@@ -24,7 +29,7 @@ window/size/viewport_height=810
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/AS2P/plugin.cfg")
+enabled=PackedStringArray("res://addons/AS2P/plugin.cfg", "res://addons/shaker/plugin.cfg", "res://addons/tw/plugin.cfg")
 
 [input]
 
@@ -63,6 +68,11 @@ ui_down={
 attack={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":74,"key_label":0,"unicode":106,"echo":false,"script":null)
+]
+}
+dash={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"echo":false,"script":null)
 ]
 }
 

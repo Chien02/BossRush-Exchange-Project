@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1kd8xe8pktd3"]
+
+[ext_resource type="PackedScene" uid="uid://hqxikqctx60j" path="res://Scenes/StateMachine Manage/base_state.tscn" id="1_hmgxl"]
+[ext_resource type="Script" path="res://Scenes/StateMachine Manage/States/E_dead.gd" id="2_v8xsv"]
+
+[node name="E_dead" instance=ExtResource("1_hmgxl")]
+script = ExtResource("2_v8xsv")

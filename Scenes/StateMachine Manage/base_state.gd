@@ -2,16 +2,18 @@ extends Node2D
 
 class_name BaseState
 
-@export var state_machine : StateMachine
-@export var state_factory : StateFactory
+@export var state_machine : Node2D
+@export var state_factory : Node2D
 
 # Các state khác như idle sẽ lấy thông tin của người chơi từ trong Base để làm việc
 # input của player trong base sẽ được cung cấp từ state machine, do state machine giao tiếp với
 # player
-@export var player : CharacterBody2D
+@export var character : CharacterBody2D
+@export var _name : String = "base"
 
 func enter():
-	pass
+	if (_name):
+		pass
 	
 func exit():
 	pass

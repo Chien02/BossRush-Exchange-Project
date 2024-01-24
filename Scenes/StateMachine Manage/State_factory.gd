@@ -3,14 +3,12 @@ extends Node2D
 class_name StateFactory
 
 @onready var states = {
-	"idle" : $"Idle state",
-	"run" : $"Run state",
-	"dash" : $"Dash state",
-	"attack" : $"Attack state",
-	"eidle" : $EIdle,
-	"echase" : $EChase,
-	"eattack" : $EAttack,
-	"edead" : $E_dead
+	"p_idle": $P_idle,
+	"p_run": $P_run,
+	"p_dash": $P_dash,
+	"p_attack": $P_attack,
+	"e_chase": $E_chase,
+	"e_attack": $E_attack
 }
 
 func get_state(state : String):
