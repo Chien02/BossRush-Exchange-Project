@@ -15,4 +15,4 @@ position = Vector2(193, 128)
 [node name="Enemy Manager" type="Node2D" parent="."]
 
 [node name="Enemy" parent="Enemy Manager" instance=ExtResource("1_jq5q1")]
-position = Vector2(83, 68)
+position = Vector2(245, 95)

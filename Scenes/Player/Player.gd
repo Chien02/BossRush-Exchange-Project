@@ -10,6 +10,8 @@ class_name Player
 @export var FRICTION := 500
 @export var item : String
 
+@export var maxHealth = 100
+@export var currentHealth = maxHealth
 func _process(_delta):
 	# Nếu đang dash hoặc attack thì ko nhận input
 	if (block_direction == false):
