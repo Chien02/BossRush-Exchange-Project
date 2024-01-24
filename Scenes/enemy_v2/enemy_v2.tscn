@@ -1,9 +1,10 @@
-[gd_scene load_steps=65 format=3 uid="uid://hbifr4gss77a"]
+[gd_scene load_steps=66 format=3 uid="uid://hbifr4gss77a"]
 
 [ext_resource type="Script" path="res://Scenes/enemy_v2/enemy_v2.gd" id="1_c6xud"]
 [ext_resource type="PackedScene" uid="uid://cco83gospa7dd" path="res://Scenes/StateMachine Manage/e_state_machine.tscn" id="2_itkql"]
 [ext_resource type="Script" path="res://Scenes/enemy_v2/E_AnimationControl.gd" id="3_7xo3l"]
 [ext_resource type="Texture2D" uid="uid://b3yj8isspfda" path="res://Sprites/Characters/Enemy/momo_idle_shadow-sheet.png" id="3_r5kw7"]
+[ext_resource type="PackedScene" uid="uid://2jlr7s1shdjm" path="res://Scenes/Health/E_HealthBar.tscn" id="5_y6wsu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oogo7"]
 size = Vector2(13, 16)
@@ -651,7 +652,12 @@ animation_tree = NodePath("../AnimationTree")
 position = Vector2(0, -3)
 sprite_frames = SubResource("SpriteFrames_sfirk")
 animation = &"idle_down"
-frame = 1
+
+[node name="E_HealthBar" parent="." instance=ExtResource("5_y6wsu")]
+offset_left = -18.0
+offset_top = -21.0
+offset_right = 17.0
+offset_bottom = -19.0
 
 [connection signal="body_entered" from="Detecting Zone" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Detecting Zone" to="." method="_on_area_2d_body_exited"]
