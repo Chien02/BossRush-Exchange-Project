@@ -1,7 +1,2 @@
 res://Scenes/test_scene.tscn
 res://addons/shaker/shaker.gd
-res://Scenes/enemy_v2/enemy_v2.tscn
-res://Scenes/Player/Player.tscn
-res://Scenes/StateMachine Manage/States/E_chase.tscn
-res://Scenes/StateMachine Manage/States/E_Attack.tscn
-res://Scenes/Components/Weapon/weapon_base.tscn
