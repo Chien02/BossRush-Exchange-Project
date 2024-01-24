@@ -1,12 +1,8 @@
+res://Scenes/enemy_v2/enemy_v2.gd
 res://Scenes/enemy_v2/enemy_v2.tscn
 res://addons/shaker/shaker.gd
-res://Scenes/enemy_v2/E_AnimationControl.gd
 res://Scenes/test_scene.tscn
 res://Scenes/Player/Player.tscn
-res://Scenes/StateMachine Manage/e_state_machine.tscn
-res://Scenes/StateMachine Manage/state_machine.tscn
-res://Scenes/StateMachine Manage/state_factory.tscn
 res://Scenes/StateMachine Manage/States/E_chase.tscn
 res://Scenes/StateMachine Manage/States/E_Attack.tscn
-res://Scenes/enemy_v2/enemy_v2.gd
-res://Scenes/StateMachine Manage/States/E_Attack.gd
+res://Scenes/Components/Health Bar/HealthBar.tscn

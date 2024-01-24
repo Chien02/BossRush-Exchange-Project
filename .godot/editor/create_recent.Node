@@ -1,8 +1,9 @@
+Timer
+ProgressBar
 Node2D
 CollisionShape2D
 Area2D
 Sprite2D
-Timer
 Node
 Camera2D
 AnimationTree
