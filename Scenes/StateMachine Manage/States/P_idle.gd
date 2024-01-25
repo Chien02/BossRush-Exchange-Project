@@ -2,7 +2,7 @@ extends BaseState
 # Idle_state.gd
 
 func enter():
-	print("I'm idle")
+	pass
 	
 func exit():
 	pass
@@ -16,11 +16,9 @@ func check_for_switch():
 	# If do to dash or go to attack, then block the direction
 	#dash
 	if (Input.is_action_just_pressed("ui_accept")):
-		character.block_direction = true
 		switch(state_factory.get_state("p_dash"))
 	# attack
-	if (Input.is_action_just_pressed("attack")): #esc
-		character.block_direction = true
+	elif (Input.is_action_just_pressed("attack")): #esc
 		switch(state_factory.get_state("p_attack"))
 		
 	if (character.velocity != Vector2.ZERO):

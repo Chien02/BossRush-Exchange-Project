@@ -12,14 +12,9 @@ class_name Player
 
 @export var maxHealth = 100
 @export var currentHealth = maxHealth
+
 func _process(_delta):
-	# Nếu đang dash hoặc attack thì ko nhận input
-	if (block_direction == false):
-		direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down").normalized()
-	else:
-		# Khi bị chặn hướng do đang trong state dash hoặc attack thì sẽ lấy lại hướng đã có trước
-		# có trong animation_tree, cụ thể là state idle
-		direction = animation_control.animation_tree["parameters/Idle/blend_position"]
+	direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down").normalized()
 	animation_control.update_paramater_animation(direction)
 	
 func _physics_process(delta):

@@ -1,5 +1,7 @@
 extends Node
 
+var p_healthbar : Control
+var player_dead : bool = false
 var camera : Camera2D
 var tween : Tween
 var bag : Slot

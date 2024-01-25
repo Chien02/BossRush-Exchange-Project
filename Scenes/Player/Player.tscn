@@ -1,12 +1,12 @@
-[gd_scene load_steps=120 format=3 uid="uid://ddkec3ta7hkn"]
+[gd_scene load_steps=119 format=3 uid="uid://ddkec3ta7hkn"]
 
 [ext_resource type="Script" path="res://Scenes/Player/Player.gd" id="1_un0f3"]
 [ext_resource type="Texture2D" uid="uid://dft2my77k4abu" path="res://Sprites/Characters/Player/Character_Down-sheet-sheet.png" id="2_5myg8"]
 [ext_resource type="Texture2D" uid="uid://c8w5c01pmgme6" path="res://Sprites/Characters/Player/Shadow_player.png" id="2_cidgh"]
 [ext_resource type="PackedScene" uid="uid://de2k2witts1wp" path="res://Scenes/StateMachine Manage/state_machine.tscn" id="3_bksxg"]
-[ext_resource type="PackedScene" uid="uid://dsyu5ngxudyy6" path="res://Scenes/Effects/camera_shake.tscn" id="5_xesg2"]
 [ext_resource type="Script" path="res://Scenes/Components/Slot/base_slot.gd" id="7_xr40q"]
-[ext_resource type="Script" path="res://Scenes/Player/Hitbox.gd" id="8_uf707"]
+[ext_resource type="PackedScene" uid="uid://dch8cf4hj10dp" path="res://Scenes/Components/Weapon/weapon_base.tscn" id="8_phc23"]
+[ext_resource type="PackedScene" uid="uid://ba5u0e1se508q" path="res://Scenes/Health/player_health.tscn" id="8_qynjs"]
 [ext_resource type="Script" path="res://Scenes/Player/AnimationControl.gd" id="15_1kay1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pgxju"]
@@ -1119,9 +1119,6 @@ states/Run/position = Vector2(687, 100)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_mufv3"), "Idle", "Attack", SubResource("AnimationNodeStateMachineTransition_n8xfp"), "Attack", "Idle", SubResource("AnimationNodeStateMachineTransition_oo3df"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_jmft0"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_a5ccl"), "Idle", "Dash", SubResource("AnimationNodeStateMachineTransition_ksojw"), "Dash", "Idle", SubResource("AnimationNodeStateMachineTransition_w5fn4"), "Dash", "Run", SubResource("AnimationNodeStateMachineTransition_ymwyf"), "Run", "Dash", SubResource("AnimationNodeStateMachineTransition_p30l4"), "Run", "Attack", SubResource("AnimationNodeStateMachineTransition_0wgui"), "Attack", "Run", SubResource("AnimationNodeStateMachineTransition_kt1q3"), "Dash", "Attack", SubResource("AnimationNodeStateMachineTransition_3o81s"), "Attack", "Dash", SubResource("AnimationNodeStateMachineTransition_20700")]
 graph_offset = Vector2(-58, -19)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5vxmf"]
-size = Vector2(17, 5.9911)
-
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("animation_control") groups=["Player"]]
 z_index = 1
 y_sort_enabled = true
@@ -1131,6 +1128,13 @@ collision_layer = 7
 collision_mask = 7
 script = ExtResource("1_un0f3")
 animation_control = NodePath("Animation/AnimaitonControl")
+
+[node name="Bag" type="Node2D" parent="."]
+script = ExtResource("7_xr40q")
+
+[node name="WeaponBase" parent="Bag" instance=ExtResource("8_phc23")]
+position = Vector2(1, -2)
+scale = Vector2(1, 1.01)
 
 [node name="CollisionShape2d" type="CollisionShape2D" parent="."]
 position = Vector2(1, 5)
@@ -1147,6 +1151,11 @@ animator = NodePath("../Animation/AnimaitonControl")
 character = NodePath("..")
 
 [node name="Animation" type="Node2D" parent="."]
+
+[node name="AnimaitonControl" type="Node2D" parent="Animation" node_paths=PackedStringArray("state_machine", "animation_tree")]
+script = ExtResource("15_1kay1")
+state_machine = NodePath("../../State Machine")
+animation_tree = NodePath("../AnimationTree")
 
 [node name="Shadow" type="Sprite2D" parent="Animation"]
 modulate = Color(1, 1, 1, 0.745098)
@@ -1179,34 +1188,11 @@ parameters/conditions/idle = false
 parameters/conditions/is_attacking = false
 parameters/conditions/is_moving = false
 parameters/Attack/blend_position = Vector2(-0.00168633, 0.424868)
-parameters/Dash/blend_position = Vector2(0, 0)
-parameters/Idle/blend_position = Vector2(0.005059, 0.436508)
+parameters/Dash/blend_position = Vector2(0, 0.925551)
+parameters/Idle/blend_position = Vector2(-0.00177938, 1.06508)
 parameters/Run/blend_position = Vector2(0, 0)
 
-[node name="AnimaitonControl" type="Node2D" parent="Animation" node_paths=PackedStringArray("state_machine", "animation_tree")]
-script = ExtResource("15_1kay1")
-state_machine = NodePath("../../State Machine")
-animation_tree = NodePath("../AnimationTree")
+[node name="Player Health" parent="." node_paths=PackedStringArray("character") instance=ExtResource("8_qynjs")]
+character = NodePath("..")
 
-[node name="CameraShake" parent="." instance=ExtResource("5_xesg2")]
-zoom = Vector2(3, 3)
-
-[node name="TimerShake" type="Timer" parent="CameraShake"]
-one_shot = true
-
-[node name="Bag" type="Node2D" parent="."]
-script = ExtResource("7_xr40q")
-
-[node name="Marker2D" type="Marker2D" parent="."]
-
-[node name="Hitbox" type="Area2D" parent="Marker2D"]
-rotation = 0.214675
-script = ExtResource("8_uf707")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Marker2D/Hitbox"]
-position = Vector2(-3.1631, 11.4679)
-rotation = 0.335371
-shape = SubResource("RectangleShape2D_5vxmf")
-debug_color = Color(0.87451, 0.301961, 0.443137, 0.419608)
-
-[connection signal="timeout" from="CameraShake/TimerShake" to="CameraShake" method="_on_timer_shake_timeout"]
+[connection signal="area_entered" from="Hurtbox" to="Player Health" method="_on_hurtbox_area_entered"]

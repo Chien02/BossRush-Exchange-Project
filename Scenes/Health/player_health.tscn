@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba5u0e1se508q"]
+
+[ext_resource type="PackedScene" uid="uid://cu10b5j6wv23g" path="res://Scenes/Health/health.tscn" id="1_5darj"]
+[ext_resource type="Script" path="res://Scenes/Health/p_health.gd" id="2_nwlu6"]
+
+[node name="Player Health" instance=ExtResource("1_5darj")]
+script = ExtResource("2_nwlu6")

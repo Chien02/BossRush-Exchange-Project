@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://nfg2xjd5721r"]
+
+[ext_resource type="PackedScene" uid="uid://2jlr7s1shdjm" path="res://Scenes/Health/E_HealthBar.tscn" id="1_2snul"]
+[ext_resource type="PackedScene" uid="uid://bsfw8mqi3cwcm" path="res://Scenes/Health/game_over_scene.tscn" id="2_t31g4"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="P_HealthBar" parent="." groups=["Healthbar"] instance=ExtResource("1_2snul")]
+unique_name_in_owner = true
+offset_left = -208.0
+offset_top = -120.0
+offset_right = -81.0
+offset_bottom = -110.0
+value = 100.0
+
+[node name="GameOver" parent="." instance=ExtResource("2_t31g4")]
+visible = false
+layout_mode = 1
