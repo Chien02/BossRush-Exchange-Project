@@ -16,6 +16,7 @@ class_name Player
 func _process(_delta):
 	direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down").normalized()
 	animation_control.update_paramater_animation(direction)
+	print("Direction: ", direction)
 	
 func _physics_process(delta):
 	movement(delta)

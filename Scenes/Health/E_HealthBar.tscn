@@ -36,3 +36,8 @@ theme_override_styles/background = SubResource("StyleBoxFlat_g2xru")
 theme_override_styles/fill = SubResource("StyleBoxFlat_rdp1a")
 value = 100.0
 show_percentage = false
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

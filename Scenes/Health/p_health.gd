@@ -2,7 +2,7 @@ extends HealthSystem
 
 func _ready():
 	init_health()
-	health_bar = get_tree().get_nodes_in_group("Healthbar")[0]
+	#health_bar = get_tree().get_nodes_in_group("Healthbar")[0]
 
 func _on_hurtbox_area_entered(area):
 	hurt(area.get_parent().damage)

@@ -1,3 +1,4 @@
+TextureProgressBar
 CanvasLayer
 Timer
 Camera2D
@@ -11,4 +12,3 @@ MarginContainer
 Label
 TextureRect
 ProgressBar
-TextureProgressBar
