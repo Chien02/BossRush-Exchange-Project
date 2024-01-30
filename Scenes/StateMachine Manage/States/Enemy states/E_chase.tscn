@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://chlp7p1b0wggb"]
 
-[ext_resource type="Script" path="res://Scenes/StateMachine Manage/States/E_chase.gd" id="1_ugipm"]
+[ext_resource type="Script" path="res://Scenes/StateMachine Manage/States/Enemy states/E_chase.gd" id="1_ugipm"]
 
 [node name="EChase" type="Node2D"]
 script = ExtResource("1_ugipm")

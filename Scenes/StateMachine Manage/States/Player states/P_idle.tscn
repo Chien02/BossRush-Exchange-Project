@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://sb710li3ncy1"]
 
 [ext_resource type="PackedScene" uid="uid://hqxikqctx60j" path="res://Scenes/StateMachine Manage/base_state.tscn" id="1_jhtpo"]
-[ext_resource type="Script" path="res://Scenes/StateMachine Manage/States/P_idle.gd" id="2_cr73i"]
+[ext_resource type="Script" path="res://Scenes/StateMachine Manage/States/Player states/P_idle.gd" id="2_cr73i"]
 
 [node name="Idle state" instance=ExtResource("1_jhtpo")]
 script = ExtResource("2_cr73i")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b4h3epwkefxcu"]
 
-[ext_resource type="Script" path="res://Scenes/StateMachine Manage/States/E_Attack.gd" id="1_0xq8i"]
+[ext_resource type="Script" path="res://Scenes/StateMachine Manage/States/Enemy states/E_Attack.gd" id="1_0xq8i"]
 
 [node name="EAttack" type="Node2D"]
 script = ExtResource("1_0xq8i")

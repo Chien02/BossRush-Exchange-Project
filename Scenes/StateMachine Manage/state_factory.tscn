@@ -1,30 +1,31 @@
-[gd_scene load_steps=10 format=3 uid="uid://bgaoofghqts2e"]
+[gd_scene load_steps=9 format=3 uid="uid://bgaoofghqts2e"]
 
 [ext_resource type="Script" path="res://Scenes/StateMachine Manage/State_factory.gd" id="1_5qt6m"]
-[ext_resource type="PackedScene" uid="uid://rvyhcobloaro" path="res://Scenes/StateMachine Manage/States/E_Idle.tscn" id="2_k6n6s"]
-[ext_resource type="PackedScene" uid="uid://sb710li3ncy1" path="res://Scenes/StateMachine Manage/States/P_idle.tscn" id="2_orfao"]
-[ext_resource type="PackedScene" uid="uid://bxtaqi2gxur3w" path="res://Scenes/StateMachine Manage/States/P_run.tscn" id="3_fnxhu"]
-[ext_resource type="PackedScene" uid="uid://chlp7p1b0wggb" path="res://Scenes/StateMachine Manage/States/E_chase.tscn" id="3_frywe"]
-[ext_resource type="PackedScene" uid="uid://b4h3epwkefxcu" path="res://Scenes/StateMachine Manage/States/E_Attack.tscn" id="3_n8e47"]
-[ext_resource type="PackedScene" uid="uid://dioexnoxqdrh" path="res://Scenes/StateMachine Manage/States/P_attack.tscn" id="4_gie0w"]
-[ext_resource type="PackedScene" uid="uid://d1kd8xe8pktd3" path="res://Scenes/StateMachine Manage/States/E_dead.tscn" id="4_llyj5"]
-[ext_resource type="PackedScene" uid="uid://bo6b0pe2c5k5" path="res://Scenes/StateMachine Manage/States/P_dash.tscn" id="5_5p4j4"]
+[ext_resource type="PackedScene" uid="uid://bxtaqi2gxur3w" path="res://Scenes/StateMachine Manage/States/Player states/P_run.tscn" id="2_te28c"]
+[ext_resource type="PackedScene" uid="uid://sb710li3ncy1" path="res://Scenes/StateMachine Manage/States/Player states/P_idle.tscn" id="3_lohdc"]
+[ext_resource type="PackedScene" uid="uid://bo6b0pe2c5k5" path="res://Scenes/StateMachine Manage/States/Player states/P_dash.tscn" id="4_wnylx"]
+[ext_resource type="PackedScene" uid="uid://dioexnoxqdrh" path="res://Scenes/StateMachine Manage/States/Player states/P_attack.tscn" id="5_2kh8m"]
+[ext_resource type="PackedScene" uid="uid://d1kd8xe8pktd3" path="res://Scenes/StateMachine Manage/States/Enemy states/E_dead.tscn" id="6_6gdbd"]
+[ext_resource type="PackedScene" uid="uid://chlp7p1b0wggb" path="res://Scenes/StateMachine Manage/States/Enemy states/E_chase.tscn" id="7_us6js"]
+[ext_resource type="PackedScene" uid="uid://b4h3epwkefxcu" path="res://Scenes/StateMachine Manage/States/Enemy states/E_Attack.tscn" id="8_4tmrc"]
 
 [node name="StateFactory" type="Node2D"]
 script = ExtResource("1_5qt6m")
 
-[node name="E_Idle" parent="." instance=ExtResource("2_k6n6s")]
+[node name="Player state" type="Node2D" parent="."]
 
-[node name="E_attack" parent="." instance=ExtResource("3_n8e47")]
+[node name="Idle state" parent="Player state" instance=ExtResource("3_lohdc")]
 
-[node name="E_chase" parent="." instance=ExtResource("3_frywe")]
+[node name="Run state" parent="Player state" instance=ExtResource("2_te28c")]
 
-[node name="E_dead" parent="." instance=ExtResource("4_llyj5")]
+[node name="Dash state" parent="Player state" instance=ExtResource("4_wnylx")]
 
-[node name="P_idle" parent="." instance=ExtResource("2_orfao")]
+[node name="Attack state" parent="Player state" instance=ExtResource("5_2kh8m")]
 
-[node name="P_run" parent="." instance=ExtResource("3_fnxhu")]
+[node name="Enemy state" type="Node2D" parent="."]
 
-[node name="P_attack" parent="." instance=ExtResource("4_gie0w")]
+[node name="EDead" parent="Enemy state" instance=ExtResource("6_6gdbd")]
 
-[node name="P_dash" parent="." instance=ExtResource("5_5p4j4")]
+[node name="EChase" parent="Enemy state" instance=ExtResource("7_us6js")]
+
+[node name="EAttack" parent="Enemy state" instance=ExtResource("8_4tmrc")]

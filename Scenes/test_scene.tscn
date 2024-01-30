@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3iuotcv3go5b"]
+[gd_scene load_steps=5 format=3 uid="uid://b3iuotcv3go5b"]
 
 [ext_resource type="PackedScene" uid="uid://bwablskr3sujt" path="res://Scenes/Map/map.tscn" id="1_e1dan"]
 [ext_resource type="PackedScene" uid="uid://hbifr4gss77a" path="res://Scenes/enemy_v2/enemy_v2.tscn" id="1_jq5q1"]
 [ext_resource type="PackedScene" uid="uid://ddkec3ta7hkn" path="res://Scenes/Player/Player.tscn" id="2_ce6bf"]
-[ext_resource type="PackedScene" uid="uid://nfg2xjd5721r" path="res://Scenes/GUI/GUI.tscn" id="3_5kolw"]
 [ext_resource type="PackedScene" uid="uid://dsyu5ngxudyy6" path="res://Scenes/Effects/camera_shake.tscn" id="3_sjcgn"]
 
 [node name="Test Scene" type="Node2D"]
@@ -21,8 +20,6 @@ limit_top = 0
 limit_right = 512
 limit_bottom = 320
 position_smoothing_enabled = true
-
-[node name="Control" parent="Player/CameraShake" instance=ExtResource("3_5kolw")]
 
 [node name="Enemy Manager" type="Node2D" parent="."]
 

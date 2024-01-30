@@ -1,11 +1,10 @@
-res://Scenes/Player/Player.tscn
+res://Scenes/StateMachine Manage/States/Player states/P_dash.tscn
 res://addons/shaker/shaker.gd
 res://Scenes/StateMachine Manage/State_machine.gd
+res://Scenes/StateMachine Manage/state_factory.tscn
+res://Scenes/Boss/RabiKing/rabi_king.tscn
+res://Scenes/Player/Player.tscn
 res://Scenes/test_scene.tscn
-res://Scenes/enemy_v2/enemy_v2.tscn
-res://Scenes/GUI/GUI.tscn
-res://Scenes/Effects/camera_shake.tscn
-res://Scenes/Health/E_HealthBar.tscn
-res://Scenes/Health/health.tscn
-res://Scenes/Player/Player.gd
-res://Scenes/Health/p_health.gd
+res://Scenes/Effects/shadow_clone.tscn
+res://Scenes/StateMachine Manage/States/Player states/P_dash.gd
+res://Scenes/Effects/shadow_clone.gd
