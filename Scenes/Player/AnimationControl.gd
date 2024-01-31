@@ -18,12 +18,19 @@ func get_state():
 
 
 func get_direction(direction):
-	if (direction != Vector2.ZERO):
+	if (state_machine.current_state._name == "attack"):
 		animation_tree["parameters/Idle/blend_position"] = direction
-		animation_tree["parameters/Attack/blend_position"] = direction
 		animation_tree["parameters/Dash/blend_position"] = direction
 		animation_tree["parameters/Run/blend_position"] = direction
+	elif (direction != Vector2.ZERO):
+		animation_tree["parameters/Idle/blend_position"] = direction
+		animation_tree["parameters/Dash/blend_position"] = direction
+		animation_tree["parameters/Run/blend_position"] = direction
+		animation_tree["parameters/Attack/blend_position"] = direction
 
+func get_atk_direction(direction):
+	animation_tree["parameters/Attack/blend_position"] = direction
+	
 func set_up_idle(value):
 	animation_tree["parameters/conditions/idle"] = value
 	animation_tree["parameters/conditions/is_moving"] = not value

@@ -1,30 +1,43 @@
 extends Node2D
 
-@export var damage : int = 30
+var target
+@export var player : CharacterBody2D
+@export var damage : int = 50
 @export var speed_attack: int
 @export var mana: int
 @export var skill: Node2D
+@export var can_attack : bool = true
+@onready var hitbox = $Hitbox/CollisionShape2D
 
-@onready var animation_player = $AnimationPlayer
+func _process(_delta):
+	if (player.get_child(3).current_state._name != "attack"):
+		hitbox.disabled = true
+	rotate_to_target(target)
 
-var attacked : bool = false
-
-func hit(direction):
-	if (attacked): return
-	#animator["parameters/Slash/blend_position"] = direction
-	#animator["parameters/conditions/slash"] = true
-	#animator["parameters/conditions/not_slash"] = false
-	if direction.angle() == 0:
-		animation_player.play("slash_right")
-	elif direction.angle() < 0:
-		animation_player.play("slash_up")
-	elif direction.angle() > 1 and direction.angle() < 3:
-		animation_player.play("slash_down")
-	else:
-		animation_player.play("slash_left")
-	attacked = true
+func hit():
+	if (!can_attack): return
+	hitbox.disabled = false
 
 func end_hit():
-	attacked = false
-	#animator["parameters/conditions/not_slash"] = true
-	#animator["parameters/conditions/slash"] = false
+	hitbox.disabled = true
+
+func _on_p_detect_zone_new_target(_target):
+	if (!_target):
+		target = null
+		return
+	target = _target
+
+func rotate_to_target(_target):
+	var delta = 0.75
+	var direction
+	var angle_2
+	var rotation_speed = 5
+	if (!_target): 
+		direction = player.direction
+		angle_2 = $Hitbox.transform.x.angle_to(direction)
+		$Hitbox.rotate(sign(angle_2) * min(delta * rotation_speed, abs(angle_2)))
+		return
+	direction = (_target.global_position - $Hitbox.global_position).normalized()
+	angle_2 = $Hitbox.transform.x.angle_to(direction)
+	$Hitbox.rotate(sign(angle_2) * min(delta * rotation_speed, abs(angle_2)))
+	

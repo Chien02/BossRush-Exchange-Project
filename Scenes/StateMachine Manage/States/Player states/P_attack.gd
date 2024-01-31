@@ -3,6 +3,7 @@ extends BaseState
 @export var speed_default := 100
 @export var speed_when_attack := 50
 var weapon
+var target
 var attacking : bool = false
 var press_dash_while_attack : bool = false
 
@@ -20,7 +21,7 @@ func update():
 
 func check_for_switch():
 	if (!attacking):
-		character.get_child(0).weapon.end_hit()
+		character.bag.weapon.can_attack = false
 		if (press_dash_while_attack):
 			press_dash_while_attack = false # reset
 			switch(state_factory.get_state("p_dash"))
@@ -29,11 +30,16 @@ func check_for_switch():
 
 func handle_attack():
 	character.SPEED = speed_when_attack # Change speed when attack
-	var direction = character.animation_control.animation_tree["parameters/Attack/blend_position"]
 	if (Input.is_action_just_pressed("dash")): # For next action
 		press_dash_while_attack = true
-	if (character.get_child(0)):
-		character.get_child(0).weapon.hit(direction) # use weapon : direction should change to look at target
+	if (character.bag):
+		character.bag.weapon.can_attack = true
+	
+	# check if exsist target
+	if (!character.bag.weapon.target): return
+	var direction = (character.bag.weapon.target.global_position - character.global_position).normalized()
+	character.animation_control.get_atk_direction(direction)
+	
 
 func _on_timer_timeout():
 	attacking = false

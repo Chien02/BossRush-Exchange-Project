@@ -28,3 +28,9 @@ func hurt(value):
 	if (current_health <= 0):
 		current_health = 0
 		dead.emit()
+
+func knockback(opp_velocity):
+	var knock_pwr = 40
+	var knock_direction = (opp_velocity - get_parent().velocity).normalized() * knock_pwr
+	get_parent().velocity = knock_direction
+	get_parent().move_and_slide()

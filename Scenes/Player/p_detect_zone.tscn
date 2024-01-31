@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba4gmrc4qyp7"]
+
+[ext_resource type="Script" path="res://Scenes/Player/p_detect_zone.gd" id="1_yrqgh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7528h"]
+radius = 110.041
+
+[node name="P_detect_zone" type="Area2D"]
+script = ExtResource("1_yrqgh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_7528h")
+debug_color = Color(0.462745, 0.580392, 0.333333, 0.419608)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

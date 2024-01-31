@@ -1,10 +1,7 @@
-res://Scenes/StateMachine Manage/States/Player states/P_dash.tscn
-res://addons/shaker/shaker.gd
-res://Scenes/StateMachine Manage/State_machine.gd
-res://Scenes/StateMachine Manage/state_factory.tscn
-res://Scenes/Boss/RabiKing/rabi_king.tscn
 res://Scenes/Player/Player.tscn
+res://addons/shaker/shaker.gd
 res://Scenes/test_scene.tscn
-res://Scenes/Effects/shadow_clone.tscn
-res://Scenes/StateMachine Manage/States/Player states/P_dash.gd
-res://Scenes/Effects/shadow_clone.gd
+res://Scenes/Components/Weapon/weapon_base.tscn
+res://Scenes/enemy_v2/enemy_v2.tscn
+res://Scenes/enemy_v2/enemy_v2.gd
+res://Scenes/Components/Weapon/weapon_base.gd

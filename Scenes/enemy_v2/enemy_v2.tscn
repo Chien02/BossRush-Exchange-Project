@@ -11,13 +11,13 @@
 size = Vector2(13, 16)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_koub8"]
-radius = 17.0294
+radius = 18.1108
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tm7tt"]
-radius = 12.0416
+radius = 11.0454
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kf8qn"]
-radius = 21.0238
+radius = 12.0
 
 [sub_resource type="Animation" id="Animation_umd68"]
 length = 0.001
@@ -626,7 +626,7 @@ animations = [{
 "speed": 8.0
 }]
 
-[node name="Enemy" type="CharacterBody2D" node_paths=PackedStringArray("animation_control")]
+[node name="Enemy" type="CharacterBody2D" node_paths=PackedStringArray("animation_control") groups=["Enemy"]]
 z_index = 1
 y_sort_enabled = true
 texture_filter = 1
@@ -636,20 +636,22 @@ animation_control = NodePath("Animation/AnimationControl")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_oogo7")
 
-[node name="Detecting Zone" type="Area2D" parent="."]
+[node name="Detecting Zone" type="Area2D" parent="." groups=["Enemy"]]
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detecting Zone"]
 shape = SubResource("CircleShape2D_koub8")
 
-[node name="Hurtbox" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 2
+[node name="Hurtbox" type="Area2D" parent="." groups=["Enemy"]]
+collision_layer = 7
+collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 shape = SubResource("CircleShape2D_tm7tt")
 
-[node name="Hitbox" type="Area2D" parent="."]
+[node name="Hitbox" type="Area2D" parent="." groups=["Enemy"]]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource("CircleShape2D_kf8qn")
@@ -689,10 +691,12 @@ animation_tree = NodePath("../AnimationTree")
 position = Vector2(0, -3)
 sprite_frames = SubResource("SpriteFrames_sfirk")
 animation = &"idle_down"
+frame = 1
 
 [node name="Enemy Health" parent="." node_paths=PackedStringArray("character", "health_bar") instance=ExtResource("5_yt64t")]
 character = NodePath("..")
 health_bar = NodePath("../HealthUI")
+max_health = null
 
 [node name="HealthUI" type="Control" parent="."]
 layout_mode = 3

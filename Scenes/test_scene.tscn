@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://b3iuotcv3go5b"]
 
 [ext_resource type="PackedScene" uid="uid://bwablskr3sujt" path="res://Scenes/Map/map.tscn" id="1_e1dan"]
-[ext_resource type="PackedScene" uid="uid://hbifr4gss77a" path="res://Scenes/enemy_v2/enemy_v2.tscn" id="1_jq5q1"]
 [ext_resource type="PackedScene" uid="uid://ddkec3ta7hkn" path="res://Scenes/Player/Player.tscn" id="2_ce6bf"]
 [ext_resource type="PackedScene" uid="uid://dsyu5ngxudyy6" path="res://Scenes/Effects/camera_shake.tscn" id="3_sjcgn"]
+[ext_resource type="PackedScene" uid="uid://iblipmfewtyk" path="res://Scenes/enemy_v2/spawn_enemy.tscn" id="4_gch2r"]
 
 [node name="Test Scene" type="Node2D"]
 y_sort_enabled = true
@@ -14,14 +14,7 @@ y_sort_enabled = true
 position = Vector2(193, 128)
 
 [node name="CameraShake" parent="Player" instance=ExtResource("3_sjcgn")]
-zoom = Vector2(3, 3)
-limit_left = 0
-limit_top = 0
-limit_right = 512
-limit_bottom = 320
+zoom = Vector2(2.745, 2.745)
 position_smoothing_enabled = true
 
-[node name="Enemy Manager" type="Node2D" parent="."]
-
-[node name="Enemy" parent="Enemy Manager" instance=ExtResource("1_jq5q1")]
-position = Vector2(245, 95)
+[node name="Enemy Manager" parent="." instance=ExtResource("4_gch2r")]

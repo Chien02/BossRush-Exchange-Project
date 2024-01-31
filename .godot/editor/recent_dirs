@@ -1,4 +1,7 @@
+res://Scenes/enemy_v2
+res://VFX
 res://Sprites/Characters/New Character
+res://Scenes/Player
 res://Sprites/Characters/Boss/Rabiking
 res://Scenes/Boss/RabiKing
 res://Scenes/GUI
@@ -12,11 +15,8 @@ res://Sprites/Characters/Player
 res://Scenes/StateMachine Manage/States
 res://Scenes/Components
 res://Scenes
-res://Scenes/Player
 res://Sprites/Characters/Thief Rabbit
-res://Scenes/enemy_v2
 res://Sprites/Components
 res://
 D:/Game Project/Downloaded Assets
 res://Sprites/Icons
-res://Sprites

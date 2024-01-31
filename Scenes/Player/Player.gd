@@ -8,14 +8,14 @@ class_name Player
 @export var SPEED := 100
 @export var ACCELERATION := 300
 @export var FRICTION := 500
-@export var item : String
 
 @export var maxHealth = 100
 @export var currentHealth = maxHealth
 
+@onready var bag = $Bag
+
 func _process(_delta):
 	direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down").normalized()
-	
 	
 func _physics_process(delta):
 	movement(delta)
@@ -28,3 +28,4 @@ func movement(delta):
 	else: 
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta) # Deceleration
 	move_and_slide() # Moving
+
