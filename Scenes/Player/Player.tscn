@@ -1220,7 +1220,9 @@ animations = [{
 }]
 
 [sub_resource type="Animation" id="Animation_vydd3"]
-length = 0.625
+length = 0.5
+loop_mode = 1
+step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1228,7 +1230,7 @@ tracks/0/path = NodePath("Animation/AnimatedSprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5),
+"times": PackedFloat32Array(0, 0.1, 0.25, 0.3, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4]
@@ -1264,7 +1266,9 @@ tracks/2/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_al2gi"]
-length = 0.625
+length = 0.5
+loop_mode = 1
+step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1272,7 +1276,7 @@ tracks/0/path = NodePath("Animation/AnimatedSprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5),
+"times": PackedFloat32Array(0, 0.1, 0.25, 0.3, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4]
@@ -1308,7 +1312,9 @@ tracks/2/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_mbei5"]
-length = 0.625
+length = 0.5
+loop_mode = 1
+step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1316,7 +1322,7 @@ tracks/0/path = NodePath("Animation/AnimatedSprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5),
+"times": PackedFloat32Array(0, 0.1, 0.25, 0.3, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4]
@@ -1352,7 +1358,9 @@ tracks/2/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_2h2wc"]
-length = 0.625
+length = 0.5
+loop_mode = 1
+step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1360,7 +1368,7 @@ tracks/0/path = NodePath("Animation/AnimatedSprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5),
+"times": PackedFloat32Array(0, 0.1, 0.25, 0.3, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4]
@@ -1384,7 +1392,7 @@ tracks/2/path = NodePath("Bag/WeaponBase")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.2, 0.4),
+"times": PackedFloat32Array(0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
@@ -2361,7 +2369,7 @@ texture = ExtResource("2_cidgh")
 position = Vector2(1, -6)
 sprite_frames = SubResource("SpriteFrames_7ejdp")
 animation = &"idle_down"
-frame = 1
+frame = 5
 
 [node name="AnimaitonControl" type="Node2D" parent="Animation" node_paths=PackedStringArray("state_machine", "animation_tree")]
 script = ExtResource("15_1kay1")
@@ -2398,6 +2406,7 @@ parameters/Run/blend_position = Vector2(-0.00177938, 0.00582004)
 character = NodePath("..")
 
 [node name="P_detect_zone" parent="." node_paths=PackedStringArray("player") instance=ExtResource("19_lvbik")]
+visible = false
 collision_layer = 0
 collision_mask = 4
 player = NodePath("..")

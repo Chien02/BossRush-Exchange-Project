@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3iuotcv3go5b"]
+[gd_scene load_steps=6 format=3 uid="uid://b3iuotcv3go5b"]
 
 [ext_resource type="PackedScene" uid="uid://bwablskr3sujt" path="res://Scenes/Map/map.tscn" id="1_e1dan"]
 [ext_resource type="PackedScene" uid="uid://ddkec3ta7hkn" path="res://Scenes/Player/Player.tscn" id="2_ce6bf"]
 [ext_resource type="PackedScene" uid="uid://dsyu5ngxudyy6" path="res://Scenes/Effects/camera_shake.tscn" id="3_sjcgn"]
 [ext_resource type="PackedScene" uid="uid://iblipmfewtyk" path="res://Scenes/enemy_v2/spawn_enemy.tscn" id="4_gch2r"]
+[ext_resource type="PackedScene" uid="uid://dfx3fwmpsvnki" path="res://Scenes/Boss/RabiKing/rabi_king.tscn" id="5_g5wlx"]
 
 [node name="Test Scene" type="Node2D"]
 y_sort_enabled = true
@@ -11,10 +12,14 @@ y_sort_enabled = true
 [node name="Map" parent="." instance=ExtResource("1_e1dan")]
 
 [node name="Player" parent="." instance=ExtResource("2_ce6bf")]
-position = Vector2(193, 128)
+position = Vector2(307, 148)
+scale = Vector2(1, 1)
 
 [node name="CameraShake" parent="Player" instance=ExtResource("3_sjcgn")]
 zoom = Vector2(2.745, 2.745)
 position_smoothing_enabled = true
 
 [node name="Enemy Manager" parent="." instance=ExtResource("4_gch2r")]
+
+[node name="RabiKing" parent="." instance=ExtResource("5_g5wlx")]
+position = Vector2(378, 127)

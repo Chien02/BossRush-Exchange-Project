@@ -1,3 +1,4 @@
+Sprite2D
 CollisionShape2D
 Area2D
 AnimationTree
@@ -11,4 +12,3 @@ Timer
 Camera2D
 Button
 Control
-PanelContainer
