@@ -76,6 +76,13 @@ dash={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="for_detect"
+2d_physics/layer_2="get_hurt"
+2d_physics/layer_3="detect"
+2d_physics/layer_4="get_boss_hit"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

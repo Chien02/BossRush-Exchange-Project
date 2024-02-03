@@ -15,7 +15,7 @@ func get_state():
 	elif (_state_name == "run"): set_up_walk(true)
 	elif (_state_name == "dash"): set_up_dash(true)
 	elif (_state_name == "attack"): set_up_attack(true)
-
+	elif (_state_name == "hurt"): set_up_hurt(true)
 
 func get_direction(direction):
 	if (state_machine.current_state._name == "attack"):
@@ -27,33 +27,44 @@ func get_direction(direction):
 		animation_tree["parameters/Dash/blend_position"] = direction
 		animation_tree["parameters/Run/blend_position"] = direction
 		animation_tree["parameters/Attack/blend_position"] = direction
+		animation_tree["parameters/Hurt/blend_position"] = direction
 
 func get_atk_direction(direction):
 	animation_tree["parameters/Attack/blend_position"] = direction
 	
 func set_up_idle(value):
 	animation_tree["parameters/conditions/idle"] = value
+	animation_tree["parameters/conditions/hurt"] = not value
 	animation_tree["parameters/conditions/is_moving"] = not value
 	animation_tree["parameters/conditions/is_attacking"] = not value
 	animation_tree["parameters/conditions/dash"] = not value
-	
+
+func set_up_hurt(value):
+	animation_tree["parameters/conditions/hurt"] = value
+	animation_tree["parameters/conditions/idle"] = not value
+	animation_tree["parameters/conditions/dash"] = not value
+	animation_tree["parameters/conditions/is_moving"] = not value
+	animation_tree["parameters/conditions/is_attacking"] = not value
 
 func set_up_walk(value):
 	animation_tree["parameters/conditions/is_moving"] = value
 	animation_tree["parameters/conditions/idle"] = not value
 	animation_tree["parameters/conditions/is_attacking"] = not value
 	animation_tree["parameters/conditions/dash"] = not value
+	animation_tree["parameters/conditions/hurt"] = not value
 
 func set_up_dash(value):
 	animation_tree["parameters/conditions/dash"] = value
 	animation_tree["parameters/conditions/is_moving"] = not value
 	animation_tree["parameters/conditions/idle"] = not value
 	animation_tree["parameters/conditions/is_attacking"] = not value
+	animation_tree["parameters/conditions/hurt"] = not value
 
 func set_up_attack(value):
 	animation_tree["parameters/conditions/is_attacking"] = value
 	animation_tree["parameters/conditions/dash"] = not value
 	animation_tree["parameters/conditions/is_moving"] = not value
 	animation_tree["parameters/conditions/idle"] = not value
+	animation_tree["parameters/conditions/hurt"] = not value
 
 

@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://72ugapgdc8t8"]
+
+[ext_resource type="Script" path="res://Scenes/StateMachine Manage/States/Boss states/b_hurt.gd" id="1_gi7jl"]
+
+[node name="B_hurt" type="Node2D"]
+script = ExtResource("1_gi7jl")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.75
+one_shot = true
+
+[node name="FlashTime" type="Timer" parent="."]
+wait_time = 0.2
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="FlashTime" to="." method="_on_flash_time_timeout"]

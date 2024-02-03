@@ -7,7 +7,8 @@ func _ready():
 	init_list(2)
 
 func _process(_delta):
-	check_list()
+	#check_list()
+	pass
 
 func init_list(value: int):
 	for i in range(value):

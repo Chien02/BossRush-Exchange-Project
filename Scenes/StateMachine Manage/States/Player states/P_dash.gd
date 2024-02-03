@@ -8,6 +8,7 @@ var dashing_speed := 500
 var press_attack_while_dash : bool = false
 
 func enter():
+	_name = "dash"
 	dashing = true
 	$Timer.start()
 	$Timer2SpawnShadow.start()

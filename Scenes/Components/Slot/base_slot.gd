@@ -31,5 +31,5 @@ func get_weapon():
 	if (get_child_count() < 1): return
 	var stuffs = get_children()
 	for object in stuffs:
-		if object.is_in_group("Weapon") and !weapon:
+		if object.is_in_group("Player") and !weapon:
 			weapon = object

@@ -9,6 +9,7 @@ var press_dash_while_attack : bool = false
 var press_attack_while_attacck : bool = false
 
 func enter():
+	_name = "attack"
 	attacking = true
 	$Timer.start()
 	
@@ -21,6 +22,8 @@ func update():
 	check_for_switch()
 
 func check_for_switch():
+	if (character.get_child(5).is_hurting):
+		switch(state_factory.get_state("p_hurt"))
 	if (!attacking):
 		character.bag.weapon.can_attack = false
 		if (press_dash_while_attack):
@@ -39,10 +42,11 @@ func handle_attack():
 	if (Input.is_action_just_pressed("attack")):
 		press_attack_while_attacck = true
 	if (character.bag):
-		character.bag.weapon.can_attack = true
+		character.bag.weapon.can_attack = true # To turn on-off hitbox
 	
 	# check if exsist target
 	if (!character.bag.weapon.target): return
+	# get direction to auto aim
 	var direction = Vector2.ZERO
 	direction = (character.bag.weapon.target.global_position - character.global_position).normalized()
 	character.animation_control.get_atk_direction(direction)

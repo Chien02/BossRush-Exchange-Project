@@ -4,8 +4,9 @@ class_name HealthSystem
 @export var character : CharacterBody2D
 @export var health_bar : Control
 @export var max_health := 100
-var current_health
 
+var current_health
+var is_hurting : bool = false
 signal dead
 
 func _ready():
@@ -24,13 +25,13 @@ func heal(value):
 		current_health = max_health
 
 func hurt(value):
+	is_hurting = true
 	current_health -= value
 	if (current_health <= 0):
 		current_health = 0
 		dead.emit()
 
-func knockback(opp_velocity):
-	var knock_pwr = 40
-	var knock_direction = (opp_velocity - get_parent().velocity).normalized() * knock_pwr
+func knockback(opp_velocity, _knock_pwr):
+	var knock_direction = (opp_velocity).normalized() * pow(_knock_pwr, 2)
 	get_parent().velocity = knock_direction
 	get_parent().move_and_slide()

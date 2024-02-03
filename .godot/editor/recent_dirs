@@ -1,13 +1,16 @@
+res://Scenes/Player
+res://Scenes/StateMachine Manage/States/Boss states
+res://Sprites/Characters/New Character
+res://Scenes/StateMachine Manage/States/Player states
 res://Sprites/Characters/Boss/Rabiking
+res://Scenes/Boss/RabiKing
+res://Scenes/StateMachine Manage
+res://VFX/Smoke
 res://Scenes/enemy_v2
 res://VFX
-res://Sprites/Characters/New Character
-res://Scenes/Player
-res://Scenes/Boss/RabiKing
 res://Scenes/GUI
 res://Scenes/Health
 res://Sprites/Weapons
-res://Scenes/StateMachine Manage
 res://Sprites/Characters/Enemy
 res://Scenes/Components/Global variables
 res://Scenes/Effects
@@ -17,6 +20,4 @@ res://Scenes/Components
 res://Scenes
 res://Sprites/Characters/Thief Rabbit
 res://Sprites/Components
-res://
 D:/Game Project/Downloaded Assets
-res://Sprites/Icons

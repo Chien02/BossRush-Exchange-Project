@@ -2,7 +2,7 @@ extends BaseState
 # run_state.id
 
 func enter():
-	pass
+	_name = "run"
 	
 func exit():
 	pass
@@ -14,6 +14,9 @@ func update():
 
 func check_for_switch():
 	# dash
+	if (character.get_child(5).is_hurting):
+		switch(state_factory.get_state("p_hurt"))
+	
 	if (Input.is_action_just_pressed("ui_accept")):
 		switch(state_factory.get_state("p_dash"))
 	# attack

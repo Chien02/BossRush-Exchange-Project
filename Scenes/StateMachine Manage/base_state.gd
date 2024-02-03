@@ -21,6 +21,9 @@ func exit():
 func update():
 	pass
 
+func physics_update():
+	pass
+
 func check_for_switch():
 	pass
 
