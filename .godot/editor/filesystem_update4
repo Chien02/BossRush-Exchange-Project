@@ -1,10 +1,19 @@
-res://Scenes/test_scene.tscn
+res://Scenes/ui.tscn
 res://addons/shaker/shaker.gd
+res://Scenes/StateMachine Manage/State_machine.gd
 res://Scenes/Player/P_hurt.gdshader
+res://Scenes/test_scene.tscn
 res://Scenes/Boss/RabiKing/rabi_king.tscn
-res://Scenes/StateMachine Manage/States/Boss states/b_hurt.tscn
 res://Scenes/Player/Player.tscn
-res://Scenes/Health/player_health.tscn
-res://Scenes/Health/health.tscn
 res://Scenes/Components/Weapon/weapon_base.tscn
-res://Scenes/StateMachine Manage/States/Player states/P_attack.tscn
+res://Scenes/Components/Global variables/Global.gd
+res://Scenes/Health/p_health.gd
+res://Scenes/Boss/RabiKing/b_health.gd
+res://Scenes/GUI/ui.tscn
+res://Scenes/Health/HealthSystem.gd
+res://Scenes/GUI/P_Healthbar.gd
+res://Scenes/GUI/B_Healthbar.gd
+res://Scenes/GUI/game_over.tscn
+res://Scenes/GUI/game_over.gd
+res://Scenes/GUI/ui_control.gd
+res://Scenes/Boss/RabiKing/Boss.gd

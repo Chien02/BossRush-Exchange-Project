@@ -29,5 +29,5 @@ func check_list():
 	return true
 
 func _on_area_entered(area):
-	if (area.is_in_group("Enemy")):
+	if (area.is_in_group("Boss")):
 		list.append(area.owner)

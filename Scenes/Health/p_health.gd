@@ -2,14 +2,14 @@ extends HealthSystem
 
 func _ready():
 	init_health()
-	#health_bar = get_tree().get_nodes_in_group("Healthbar")[0]
+	Global.p_health = self
 
 func _on_hurtbox_area_entered(area):
+	Global.frame_freeze(0.1, 0.1)
 	if (area.is_in_group("Boss") and area.name == "Hurtbox"):
 		hurt(area.get_parent().damage)
-		knockback(-character.velocity, 12)
+		knockback(area.owner.last_velocity, 12)
 		
-	if (area.is_in_group("Boss") and area.name == "Hitbox"):
-		print(area.name)
+	elif (area.is_in_group("Boss") and area.name == "Hitbox"):
 		hurt(area.owner.damage)
 		knockback(area.get_parent().last_velocity, 20)

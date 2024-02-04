@@ -3,12 +3,13 @@ class_name Boss
 
 @export var animation_control : Node2D
 @export var distance : float
+@export var damage : int = 30
 
 const SPEED = 45.0
 var player : CharacterBody2D
 var last_velocity = Vector2.ZERO
 var direction := Vector2.ZERO
-var damage : int = 30
+
 var attack : bool = false
 var sweep : bool = false
 

@@ -1,6 +1,8 @@
+res://Scenes/GUI
+res://Scenes
+res://Sprites/Characters/New Character
 res://Scenes/Player
 res://Scenes/StateMachine Manage/States/Boss states
-res://Sprites/Characters/New Character
 res://Scenes/StateMachine Manage/States/Player states
 res://Sprites/Characters/Boss/Rabiking
 res://Scenes/Boss/RabiKing
@@ -8,7 +10,6 @@ res://Scenes/StateMachine Manage
 res://VFX/Smoke
 res://Scenes/enemy_v2
 res://VFX
-res://Scenes/GUI
 res://Scenes/Health
 res://Sprites/Weapons
 res://Sprites/Characters/Enemy
@@ -17,7 +18,6 @@ res://Scenes/Effects
 res://Sprites/Characters/Player
 res://Scenes/StateMachine Manage/States
 res://Scenes/Components
-res://Scenes
 res://Sprites/Characters/Thief Rabbit
 res://Sprites/Components
 D:/Game Project/Downloaded Assets

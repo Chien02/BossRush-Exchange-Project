@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cb0ynjfk82gbq"]
+
+[ext_resource type="Texture2D" uid="uid://ctttnc1u1mqcp" path="res://Sprites/Characters/New Character/assist_aim.png" id="1_10qhc"]
+
+[node name="Assist aim" type="Sprite2D"]
+position = Vector2(1.6, 5.6)
+rotation = -1.5708
+scale = Vector2(0.64501, 1.42643)
+texture = ExtResource("1_10qhc")

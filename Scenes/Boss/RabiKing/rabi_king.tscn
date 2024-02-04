@@ -755,18 +755,20 @@ states/sweep/position = Vector2(535, 182)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_opmsk"), "idle", "chase", SubResource("AnimationNodeStateMachineTransition_5a7l1"), "chase", "idle", SubResource("AnimationNodeStateMachineTransition_mr58p"), "idle", "sweep", SubResource("AnimationNodeStateMachineTransition_owcwe"), "sweep", "idle", SubResource("AnimationNodeStateMachineTransition_ti0t4"), "sweep", "chase", SubResource("AnimationNodeStateMachineTransition_p56tg"), "chase", "sweep", SubResource("AnimationNodeStateMachineTransition_t2o8d")]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rj8ks"]
-radius = 23.5
-height = 71.0
+radius = 21.0
+height = 44.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7uf3w"]
-radius = 24.9932
-height = 65.0
+radius = 19.0
+height = 58.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_j8wie"]
-radius = 51.0392
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0tcp0"]
+radius = 24.0
+height = 70.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1e3j"]
-size = Vector2(35.5357, 16.342)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kqpas"]
+radius = 9.90742
+height = 41.7808
 
 [node name="RabiKing" type="CharacterBody2D" node_paths=PackedStringArray("animation_control") groups=["Boss"]]
 z_index = 1
@@ -775,6 +777,7 @@ texture_filter = 1
 script = ExtResource("1_5xg0j")
 animation_control = NodePath("Animation/AnimationControl")
 distance = 40.0
+damage = 35
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -792,7 +795,7 @@ animation_tree = NodePath("../AnimationTree")
 material = SubResource("ShaderMaterial_3gfx5")
 sprite_frames = SubResource("SpriteFrames_xaatk")
 animation = &"idle"
-frame = 4
+frame = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Animation"]
 root_node = NodePath("../../CollisionShape2D")
@@ -819,12 +822,14 @@ collision_layer = 13
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
-position = Vector2(0, 1)
+visible = false
+position = Vector2(2, 12)
 shape = SubResource("CapsuleShape2D_rj8ks")
 debug_color = Color(0, 0.6, 0.701961, 0.239216)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hurtbox"]
-position = Vector2(0, 2)
+visible = false
+position = Vector2(1, 4)
 rotation = -1.5708
 shape = SubResource("CapsuleShape2D_7uf3w")
 
@@ -833,8 +838,10 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detect Player Zone"]
-position = Vector2(2, -3)
-shape = SubResource("CircleShape2D_j8wie")
+position = Vector2(1, 26)
+rotation = 1.5708
+scale = Vector2(1.24, 1.64)
+shape = SubResource("CapsuleShape2D_0tcp0")
 debug_color = Color(0.705882, 0.486275, 0.0980392, 0.0901961)
 
 [node name="B_state_machine" parent="." node_paths=PackedStringArray("animator", "character") instance=ExtResource("6_6sfgv")]
@@ -846,16 +853,17 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
-position = Vector2(5.96046e-08, 28)
+position = Vector2(1, 26)
+rotation = 1.5708
 scale = Vector2(2.92, 2.92)
-shape = SubResource("RectangleShape2D_e1e3j")
+shape = SubResource("CapsuleShape2D_kqpas")
 disabled = true
 debug_color = Color(0.803922, 0.384314, 0.439216, 0.419608)
 
 [node name="Boss_health" type="Node2D" parent="." node_paths=PackedStringArray("character")]
 script = ExtResource("9_0c13l")
 character = NodePath("..")
-max_health = 200
+max_health = 700
 
 [connection signal="area_entered" from="Hurtbox" to="Boss_health" method="_on_hurtbox_area_entered"]
 [connection signal="area_entered" from="Detect Player Zone" to="." method="_on_detect_player_zone_area_entered"]
