@@ -10,9 +10,11 @@ class_name Player
 @export var FRICTION := 500
 
 @export var maxHealth = 100
-@export var currentHealth = maxHealth
 
-@onready var bag = $Bag
+@export var bag : Node2D
+
+func _ready():
+	pass
 
 func _process(_delta):
 	direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down").normalized()
@@ -26,6 +28,5 @@ func movement(delta):
 	if direction != Vector2.ZERO:
 		velocity = velocity.move_toward(direction * SPEED, ACCELERATION * delta)# Acceleration
 	else: 
-		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta) # Deceleration
-	move_and_slide() # Moving
-
+		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta) # Deceleration	move_and_slide() # Moving
+	move_and_slide()

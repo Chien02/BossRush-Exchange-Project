@@ -15,7 +15,7 @@ class_name StateFactory
 	"boss_idle": $"Boss state/BIdle",
 	"boss_chase": $"Boss state/BChase",
 	"boss_sweep" : $"Boss state/BSweep",
-	"boss_attack": "null",
+	"boss_attack": $"Boss state/BAttack",
 	"boss_hurt": $"Boss state/BHurt",
 	"boss_dead": "null"
 }

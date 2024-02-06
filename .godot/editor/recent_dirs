@@ -1,23 +1,23 @@
+res://VFX
+res://VFX/Impact
+res://VFX/Smoke
+res://Scenes/Player
+res://Scenes/Health
+res://Sprites/Characters/Boss/Rabiking
+res://Scenes/Components/Slot
+res://Sprites/Characters/New Character
+res://Sprites/Weapons
+res://Scenes/Effects
+res://Sprites/Icons
+res://Scenes/menu
+res://Scenes/Components/Weapon
+res://Scenes/StateMachine Manage/States/Boss states
+res://Scenes/enemy_v2
+res://Sprites/Characters/Enemy
 res://Scenes/GUI
 res://Scenes
-res://Sprites/Characters/New Character
-res://Scenes/Player
-res://Scenes/StateMachine Manage/States/Boss states
 res://Scenes/StateMachine Manage/States/Player states
-res://Sprites/Characters/Boss/Rabiking
 res://Scenes/Boss/RabiKing
 res://Scenes/StateMachine Manage
-res://VFX/Smoke
-res://Scenes/enemy_v2
-res://VFX
-res://Scenes/Health
-res://Sprites/Weapons
-res://Sprites/Characters/Enemy
 res://Scenes/Components/Global variables
-res://Scenes/Effects
-res://Sprites/Characters/Player
-res://Scenes/StateMachine Manage/States
-res://Scenes/Components
-res://Sprites/Characters/Thief Rabbit
-res://Sprites/Components
 D:/Game Project/Downloaded Assets

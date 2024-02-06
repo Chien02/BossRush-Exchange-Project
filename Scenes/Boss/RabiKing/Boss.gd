@@ -4,6 +4,7 @@ class_name Boss
 @export var animation_control : Node2D
 @export var distance : float
 @export var damage : int = 30
+@export var bag : Node2D
 
 const SPEED = 45.0
 var player : CharacterBody2D
@@ -12,6 +13,8 @@ var direction := Vector2.ZERO
 
 var attack : bool = false
 var sweep : bool = false
+
+
 
 func _ready():
 	player = get_tree().get_first_node_in_group("Player")
@@ -24,11 +27,15 @@ func handle_velocity():
 	if velocity != Vector2.ZERO:
 		last_velocity = velocity
 
-func _on_detect_player_zone_area_entered(area):
+func _on_hammer_zone_area_entered(area):
+	if (area.owner.is_in_group("Player")):
+		attack = true
+
+func _on_sweep_zone_area_entered(area):
 	if (area.owner.is_in_group("Player")):
 		sweep = true
 		velocity = Vector2.ZERO
 
-func _on_detect_player_zone_area_exited(area):
+func _on_sweep_zone_area_exited(area):
 	if (area.owner.is_in_group("Player")):
 		sweep= false

@@ -24,7 +24,7 @@ func update():
 func check_for_switch():
 	if !hurting:
 		$Flash_time.stop()
-		character.get_child(5).is_hurting = false
+		character.get_node("Player Health").is_hurting = false
 		var layer2 = 0b001
 		var layer4 = 0b011
 		character.get_node("Hurtbox").collision_mask = layer2 | layer4
@@ -36,7 +36,7 @@ func check_for_switch():
 			switch(state_factory.get_state("p_idle"))
 
 func handle_hurt():
-	character.get_child(5).is_hurting = true
+	character.get_node("Player Health").is_hurting = true
 	character.get_node("Hurtbox").collision_mask = 0
 	character.get_node("Animation").get_node("AnimatedSprite2D").material["shader_parameter/flash"] = flash
 	if (!can_move):

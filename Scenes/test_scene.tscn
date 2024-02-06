@@ -12,7 +12,7 @@ y_sort_enabled = true
 [node name="Map" parent="." instance=ExtResource("1_e1dan")]
 
 [node name="Player" parent="." instance=ExtResource("2_ce6bf")]
-position = Vector2(307, 148)
+position = Vector2(91, 142)
 scale = Vector2(1, 1)
 
 [node name="CameraShake" parent="Player" instance=ExtResource("3_sjcgn")]
@@ -23,3 +23,14 @@ position_smoothing_enabled = true
 position = Vector2(378, 127)
 
 [node name="UI" parent="RabiKing" instance=ExtResource("5_uptpn")]
+
+[node name="Quit" type="Button" parent="RabiKing/UI"]
+process_mode = 3
+offset_left = 1542.0
+offset_top = 61.0
+offset_right = 1584.0
+offset_bottom = 92.0
+scale = Vector2(2.80814, 2.40051)
+text = "Quit"
+
+[connection signal="button_down" from="RabiKing/UI/Quit" to="RabiKing/UI" method="_on_quit_button_down"]

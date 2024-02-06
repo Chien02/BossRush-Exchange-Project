@@ -12,12 +12,17 @@ signal dead
 func _ready():
 	init_health()
 
-func _process(delta):
+func _process(_delta):
 	if current_health == 0:
 		death = true
+	if (is_hurting):
+		character.get_node("Hurtbox").get_node("CollisionShape2D").disabled = true
+	else:
+		character.get_node("Hurtbox").get_node("CollisionShape2D").disabled = false
 
 func init_health():
 	current_health = max_health
+	death = false
 
 func heal(value):
 	current_health += value
@@ -34,6 +39,7 @@ func hurt(value):
 		death = true
 
 func knockback(opp_velocity, _knock_pwr):
+	if (!is_hurting): return
 	var knock_direction = (opp_velocity).normalized() * pow(_knock_pwr, 2)
 	get_parent().velocity = knock_direction
 	get_parent().move_and_slide()

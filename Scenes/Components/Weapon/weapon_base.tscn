@@ -1,28 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dch8cf4hj10dp"]
+[gd_scene load_steps=2 format=3 uid="uid://be5dvshvq4rod"]
 
 [ext_resource type="Script" path="res://Scenes/Components/Weapon/weapon_base.gd" id="1_rn3gn"]
-[ext_resource type="PackedScene" uid="uid://cb0ynjfk82gbq" path="res://Scenes/Player/assist_aim.tscn" id="2_qkae6"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kygcm"]
-size = Vector2(29, 24.5)
-
-[node name="WeaponBase" type="Node2D" groups=["Player"]]
-texture_filter = 1
+[node name="WeaponBase" type="Node2D"]
 script = ExtResource("1_rn3gn")
-
-[node name="Hitbox" type="Area2D" parent="." groups=["Weapon"]]
-collision_layer = 2
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
-position = Vector2(21.75, -2.49999)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_kygcm")
-disabled = true
-debug_color = Color(0.980392, 0.101961, 0.227451, 0.419608)
-
-[node name="Assist aim" parent="Hitbox" instance=ExtResource("2_qkae6")]
-modulate = Color(1, 1, 1, 0.831373)
-y_sort_enabled = true
-position = Vector2(2.72848e-12, 4.76837e-07)
-scale = Vector2(1.05031, 1.73344)

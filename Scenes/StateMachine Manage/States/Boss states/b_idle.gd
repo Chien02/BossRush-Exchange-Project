@@ -16,11 +16,11 @@ func update():
 	check_for_switch()
 
 func check_for_switch():
-	if (character.get_node("Boss_health").is_hurting):
-		switch(state_factory.get_state("boss_hurt"))
 	if (!idling):
 		if (character.sweep):
 			switch(state_factory.get_state("boss_sweep"))
+		elif (character.attack):
+			switch(state_factory.get_state("boss_attack"))
 		else:
 			switch(state_factory.get_state("boss_chase"))
 

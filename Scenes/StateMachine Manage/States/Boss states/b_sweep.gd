@@ -16,9 +16,6 @@ func update():
 	check_for_switch()
 
 func check_for_switch():
-	if (character.get_node("Boss_health").is_hurting):
-		sweeping = false
-		switch(state_factory.get_state("boss_hurt"))
 	if (!sweeping):
 		switch(state_factory.get_state("boss_idle"))
 

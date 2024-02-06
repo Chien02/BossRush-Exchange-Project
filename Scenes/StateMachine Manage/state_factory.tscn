@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bgaoofghqts2e"]
+[gd_scene load_steps=15 format=3 uid="uid://bgaoofghqts2e"]
 
 [ext_resource type="Script" path="res://Scenes/StateMachine Manage/State_factory.gd" id="1_5qt6m"]
 [ext_resource type="PackedScene" uid="uid://bxtaqi2gxur3w" path="res://Scenes/StateMachine Manage/States/Player states/P_run.tscn" id="2_te28c"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://l1sjisaiaxmi" path="res://Scenes/StateMachine Manage/States/Boss states/b_idle.tscn" id="10_0f65r"]
 [ext_resource type="PackedScene" uid="uid://bf7fex0gpyoyn" path="res://Scenes/StateMachine Manage/States/Boss states/b_sweep.tscn" id="11_84f5c"]
 [ext_resource type="PackedScene" uid="uid://72ugapgdc8t8" path="res://Scenes/StateMachine Manage/States/Boss states/b_hurt.tscn" id="13_0xae7"]
+[ext_resource type="PackedScene" uid="uid://bii87hhh2y7xn" path="res://Scenes/StateMachine Manage/States/Boss states/b_attack.tscn" id="14_tbpsy"]
 
 [node name="StateFactory" type="Node2D"]
 script = ExtResource("1_5qt6m")
@@ -46,3 +47,5 @@ script = ExtResource("1_5qt6m")
 [node name="BSweep" parent="Boss state" instance=ExtResource("11_84f5c")]
 
 [node name="BHurt" parent="Boss state" instance=ExtResource("13_0xae7")]
+
+[node name="BAttack" parent="Boss state" instance=ExtResource("14_tbpsy")]
