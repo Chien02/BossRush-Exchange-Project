@@ -11,7 +11,7 @@ wait_time = 0.75
 one_shot = true
 
 [node name="FlashyTime" type="Timer" parent="."]
-wait_time = 0.25
+wait_time = 0.15
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="FlashyTime" to="." method="_on_flashy_time_timeout"]

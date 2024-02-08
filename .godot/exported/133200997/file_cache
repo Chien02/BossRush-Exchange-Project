@@ -1,0 +1,55 @@
+res://Scenes/Boss/RabiKing/rabi_king.tscn::68701586c44e6e901efe6a7860a5cdbe::1707294757::res://.godot/exported/133200997/export-37e299f2b2f677f97f3af9cf4f418259-rabi_king.scn
+res://Scenes/Components/Item/base_item.tscn::8a0aba09f5f4007502cdbcf25637ac64::1707159156::res://.godot/exported/133200997/export-59c1bf25e92663c22d29b7a6ce9a85fe-base_item.scn
+res://Scenes/Components/Slot/base_slot.tscn::86942bc8ad3387634e34421da09b6088::1707173966::res://.godot/exported/133200997/export-fa5d22e6b2bbc01c663fb89765ba5083-base_slot.scn
+res://Scenes/Components/Slot/b_slot.tscn::bbc14461b23714edcf815dac190d70be::1707183824::res://.godot/exported/133200997/export-2f042d81eb8d48d248a6ce7d8bccc1d6-b_slot.scn
+res://Scenes/Components/Slot/p_slot.tscn::ef27ea7f0c51db08dc3466d321975883::1707161586::res://.godot/exported/133200997/export-136273c840402c900b06aa50ca4e3875-p_slot.scn
+res://Scenes/Components/Weapon/lighting_sword.tscn::908164728e743612b7e009cec3a99e81::1707294757::res://.godot/exported/133200997/export-9bc45a4fe7307a3feeef933c7223793f-lighting_sword.scn
+res://Scenes/Components/Weapon/tree_hammer.tscn::a08c4befc9dc9869983eccf5b26cfa27::1707294757::res://.godot/exported/133200997/export-97c48c6022ec63e5b1917375fcd4543e-tree_hammer.scn
+res://Scenes/Components/Weapon/weapon_base.tscn::0b8a16c300e3fa7e569f6b423829e9ed::1707168548::res://.godot/exported/133200997/export-610ec173e171801291e62b3b6d9770fa-weapon_base.scn
+res://Scenes/Components/Weapon/weapon_factory.tscn::3d1e9897d35d89c2eab49ac380cb8333::1707080481::res://.godot/exported/133200997/export-52e7ddfd121316ca3f1ecc9f61816bc0-weapon_factory.scn
+res://Scenes/Effects/camera_shake.tscn::c3fc98a30fadc8877f1660009d82bb02::1707290886::res://.godot/exported/133200997/export-7bfa374b0c162c12373e75bbfb1c6a01-camera_shake.scn
+res://Scenes/Effects/scene_transition.tscn::382bcfb0e576dc72f1f734aad3494160::1707294757::res://.godot/exported/133200997/export-687696db263538d7a123030059a27484-scene_transition.scn
+res://Scenes/Effects/shadow_clone.tscn::f2eed47c95ae308f4814ecd462e5a5ca::1706656488::res://.godot/exported/133200997/export-fe23c837841b3e6065f2f7d1775bacfd-shadow_clone.scn
+res://Scenes/enemy_v2/enemy_v2.tscn::37f47c08e47698abee8f58fd5a79a958::1706903018::res://.godot/exported/133200997/export-77e9ff0d579f762c498f394593d1b8e1-enemy_v2.scn
+res://Scenes/enemy_v2/gatekeeper.tscn::1aed23ad1e1a2b8f80725affd09b604b::1707159156::res://.godot/exported/133200997/export-24cf9eaa4c75851cceafc83befc71a20-gatekeeper.scn
+res://Scenes/enemy_v2/spawn_enemy.tscn::82393974a48cc10919d9aea3ae08d365::1706903018::res://.godot/exported/133200997/export-310cd4600f87002bf92b5182bbd425a0-spawn_enemy.scn
+res://Scenes/GUI/game_over.tscn::6ebeb7bdee3bb8ec386c05f4a3b43ddd::1707185344::res://.godot/exported/133200997/export-14054397f8749b2339ec73de0ccb475f-game_over.scn
+res://Scenes/GUI/GUI.tscn::186f44c7e9b185128374c353eccb993a::1707217578::res://.godot/exported/133200997/export-26b02796f195625597e8c854e243542f-GUI.scn
+res://Scenes/GUI/ui.tscn::bbc1a774ecd3b4b9dd434d4eb30253fb::1707290886::res://.godot/exported/133200997/export-5aa035c84abb0ec039460bd8e8cbcaba-ui.scn
+res://Scenes/Health/boss_health.tscn::401041edefe08285be1197865461d3f4::1707290886::res://.godot/exported/133200997/export-20092e32d37a201d38afd924c8291d51-boss_health.scn
+res://Scenes/Health/enemy_health.tscn::1a29996c79f0389bc00d077703931701::1706132844::res://.godot/exported/133200997/export-ba04508befb89f9577167363554ead6d-enemy_health.scn
+res://Scenes/Health/E_HealthBar.tscn::15d0fe19022593d7f01aea1652444e75::1706279060::res://.godot/exported/133200997/export-89f52c2162d4c54a980d13058cc9a81c-E_HealthBar.scn
+res://Scenes/Health/game_over_scene.tscn::5d257caf337ae2123753218534e8a8ce::1707185344::res://.godot/exported/133200997/export-679f6819773db46f218b4aa717abf491-game_over_scene.scn
+res://Scenes/Health/health.tscn::1a6710619a1be86af36105d8b1bea9db::1707290886::res://.godot/exported/133200997/export-ff753f9d28719be2eb5ef57cfb6ff5ad-health.scn
+res://Scenes/Health/player_health.tscn::0a5c09e441df7919f4d3a5b77c454dab::1707290886::res://.godot/exported/133200997/export-4a0891d711b42e7e57b803065ed5eb60-player_health.scn
+res://Scenes/Health/player_healthbar.tscn::29ef3368b9dc9be256e2b9c416936ec2::1707217578::res://.godot/exported/133200997/export-d3c5993a29b2e76d9b5a3e5ef50d02b0-player_healthbar.scn
+res://Scenes/Map/map.tscn::c75108166efd531cd40c1c25c01bd4c8::1706903018::res://.godot/exported/133200997/export-5d37ab08ddbaabc3ab2265ac0f33251a-map.scn
+res://Scenes/menu/main_menu.tscn::87d6a1bd25b3c17df27fa17a5452b07a::1707294757::res://.godot/exported/133200997/export-f1ef8c0bb25278be4ced2a19c6b5afd7-main_menu.scn
+res://Scenes/Player/assist_aim.tscn::694af0326624c32580c58dd62f5c50c7::1707027407::res://.godot/exported/133200997/export-da5ed2a1d357fbd29034d3a9102a487a-assist_aim.scn
+res://Scenes/Player/Player.tscn::6ecdeb3a218c8611c634e3529d5ef35f::1707294757::res://.godot/exported/133200997/export-81ac81193aa819dc19769e88ef012874-Player.scn
+res://Scenes/Player/p_detect_zone.tscn::d425f295e6bdabbfa09bf5837010bff7::1706656408::res://.godot/exported/133200997/export-18dbcf120b07cd55771da3c1e4384c36-p_detect_zone.scn
+res://Scenes/StateMachine Manage/States/Boss states/b_attack.tscn::fdd7d45e0138c6219bd610ff5edf3fd7::1707183824::res://.godot/exported/133200997/export-2b930ad46c56e73855e06b1aaa232eec-b_attack.scn
+res://Scenes/StateMachine Manage/States/Boss states/b_chase.tscn::633ef0136b87ce5e7c070aff97b4b96a::1706903017::res://.godot/exported/133200997/export-864195cbdf6f8984f080aee7a13a4c62-b_chase.scn
+res://Scenes/StateMachine Manage/States/Boss states/b_hurt.tscn::1f0c00081be2b6f572a7af5bbd9783ff::1707173966::res://.godot/exported/133200997/export-d1616fc25ed1a3eeb880e9f08d9e4a37-b_hurt.scn
+res://Scenes/StateMachine Manage/States/Boss states/b_idle.tscn::9bb0c2fd2cb7fc9405f9dc5793278026::1707183824::res://.godot/exported/133200997/export-847c6de305958bc328a63c05353b2a28-b_idle.scn
+res://Scenes/StateMachine Manage/States/Boss states/b_sweep.tscn::c24c1e4ed9d696a02e6821eb02e36016::1706901192::res://.godot/exported/133200997/export-300fabe4a1bdda0eaf60f99490fea729-b_sweep.scn
+res://Scenes/StateMachine Manage/States/Enemy states/E_Attack.tscn::71529aa888e8ea004fc6713c2ff19f6a::1706350524::res://.godot/exported/133200997/export-1f9d705222be215e8b47ac448cae087c-E_Attack.scn
+res://Scenes/StateMachine Manage/States/Enemy states/E_chase.tscn::1f920ba0062c18916a9067b80bf0448b::1706350524::res://.godot/exported/133200997/export-a1e103b547733d72bb893394e68fab2c-E_chase.scn
+res://Scenes/StateMachine Manage/States/Enemy states/E_dead.tscn::0174329cb5479992adfd5cf513df2f8e::1706350524::res://.godot/exported/133200997/export-f0ed6f13f19212e92751c59edd914a91-E_dead.scn
+res://Scenes/StateMachine Manage/States/Enemy states/E_Idle.tscn::4915e0ab7b11024688e699f8f72f6bb9::1706350524::res://.godot/exported/133200997/export-7b4b7e73e6579d03e1aa7042797ba12d-E_Idle.scn
+res://Scenes/StateMachine Manage/States/Player states/P_attack.tscn::fda56430b87362cf39f188d6e742e067::1707290886::res://.godot/exported/133200997/export-274038513aa1f9ad63038acc26475687-P_attack.scn
+res://Scenes/StateMachine Manage/States/Player states/P_dash.tscn::bb9cfd4cbb7bb645ca5102f9b1af394f::1707183824::res://.godot/exported/133200997/export-999dd136f8dc84f1db182ffa6ee652eb-P_dash.scn
+res://Scenes/StateMachine Manage/States/Player states/p_hurt.tscn::99c441361f2a9b511b1ab1f251a15159::1707294757::res://.godot/exported/133200997/export-a0a0d9e288f71c5314e79b252c309033-p_hurt.scn
+res://Scenes/StateMachine Manage/States/Player states/P_idle.tscn::0bf3a80b06dfb3a550024921ef0eb76d::1707168548::res://.godot/exported/133200997/export-165d6faff52c5d347c0a8c4e71da6576-P_idle.scn
+res://Scenes/StateMachine Manage/States/Player states/P_run.tscn::44df69c1852b7f64963df856d2559aef::1707155553::res://.godot/exported/133200997/export-998a52987cf574aca9757a4fa3760495-P_run.scn
+res://Scenes/StateMachine Manage/base_state.tscn::a81d0be17b4614b2ff9d5f02acc8dd66::1706876758::res://.godot/exported/133200997/export-3ae8528a1e561f4e0a2830b5fcefd120-base_state.scn
+res://Scenes/StateMachine Manage/b_state_machine.tscn::fb01db34c9e03699d93ea38959032315::1707155642::res://.godot/exported/133200997/export-868d7f7278c494613bab90143b59e810-b_state_machine.scn
+res://Scenes/StateMachine Manage/e_state_machine.tscn::a7890bcde900bf742924a2e0d2df3334::1706099420::res://.godot/exported/133200997/export-3c194cdc607889c1f4d17f342cec227e-e_state_machine.scn
+res://Scenes/StateMachine Manage/state_factory.tscn::9016ae45d784296f1884f098eaf3900a::1707173966::res://.godot/exported/133200997/export-2a9962f678b04955fa7a29fc9a1ba1d4-state_factory.scn
+res://Scenes/StateMachine Manage/state_machine.tscn::59389f112f5f76647d16589cfb4f5a77::1706648673::res://.godot/exported/133200997/export-57cd638757610637310f4ae0b77fd2de-state_machine.scn
+res://Scenes/Temp.tscn::9a9ce72bbb96b157f8fbe3d108da3f8d::1706099420::res://.godot/exported/133200997/export-aea3d36f5e50fc14ac94390e529b1ce1-Temp.scn
+res://Scenes/test_scene.tscn::65bd4316dbc852adcfd11abce4be7290::1707294756::res://.godot/exported/133200997/export-f355e2b0241559ee806d6869746e0f8a-test_scene.scn
+res://joystick/virtual_joystick.tscn::071a11f1996cf975b0d18e53adc37558::1707214972::res://.godot/exported/133200997/export-7c8949f8c4aebccbc8952e89cc58d938-virtual_joystick.scn
+res://test/test.tscn::3572bc0a6e7e2ce1c54516240eeead6e::1707291327::res://.godot/exported/133200997/export-1955aacdc9602f33d69f33f7e8b9a131-test.scn
+res://default_env.tres::756de160834ef7cc033c2a79cd80f338::1707214971::res://.godot/exported/133200997/export-7cf3fd67ad9f55210191d77b582b8209-default_env.res
+res://Scenes/loading_scene.tscn::780280b19d58a8a6a8b9ff0eb0550607::1707294757::res://.godot/exported/133200997/export-06e6220bc9d2fbdb5faeee17e4c215cc-loading_scene.scn

@@ -1,5 +1,7 @@
 extends Weapon_base
 
+var using_time : float = 0.5
+
 func _ready():
 	# character -> state machine
 	animation_tree = get_node("AnimationTree")
@@ -25,9 +27,9 @@ func play_animation():
 	animation_tree["parameters/player/blend_position"] = rotate_to_target(target)
 	#animation_tree["parameters/boss/blend_position"] = direction
 
-func set_attack(value):
-	animation_tree["parameters/conditions/can_attack"] = value
-	animation_tree["parameters/conditions/cannot_attack"] = !value
+func set_attack(_value):
+	animation_tree["parameters/conditions/can_attack"] = _value
+	animation_tree["parameters/conditions/cannot_attack"] = !_value
 	
 func rotate_to_target(_target):
 	var delta = 0.75
@@ -35,11 +37,12 @@ func rotate_to_target(_target):
 	var rotation_speed = 5
 	if (is_player == false):
 		direction = character.direction
-		angle_2 = $Hitbox.transform.x.angle_to(direction)
-		$Hitbox.rotate(sign(angle_2) * min(delta * rotation_speed, abs(angle_2)))
+		angle_2 = hitbox.get_parent().transform.x.angle_to(direction)
+		hitbox.get_parent().rotate(sign(angle_2) * min(delta * rotation_speed, abs(angle_2)))
 		return direction
 	
-	direction = (_target.global_position - $Hitbox.global_position).normalized()
-	angle_2 = $Hitbox.transform.x.angle_to(direction)
-	$Hitbox.rotate(sign(angle_2) * min(delta * rotation_speed, abs(angle_2)))
-	return direction
+	if (_target):
+		direction = (_target.global_position - hitbox.get_parent().global_position).normalized()
+		angle_2 = hitbox.get_parent().transform.x.angle_to(direction)
+		hitbox.get_parent().rotate(sign(angle_2) * min(delta * rotation_speed, abs(angle_2)))
+		return direction

@@ -8,6 +8,7 @@
 
 [node name="Test Scene" type="Node2D"]
 y_sort_enabled = true
+texture_filter = 1
 
 [node name="Map" parent="." instance=ExtResource("1_e1dan")]
 
@@ -16,21 +17,26 @@ position = Vector2(91, 142)
 scale = Vector2(1, 1)
 
 [node name="CameraShake" parent="Player" instance=ExtResource("3_sjcgn")]
-zoom = Vector2(2.745, 2.745)
+position = Vector2(2, 0)
+zoom = Vector2(2.5, 2.5)
 position_smoothing_enabled = true
+
+[node name="UI" parent="." instance=ExtResource("5_uptpn")]
+
+[node name="Main menu" type="Button" parent="UI"]
+process_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -104.0
+offset_top = 20.0
+offset_right = -61.9999
+offset_bottom = 51.0
+grow_horizontal = 0
+scale = Vector2(1.88111, 1.30158)
+text = "Menu"
 
 [node name="RabiKing" parent="." instance=ExtResource("5_g5wlx")]
 position = Vector2(378, 127)
 
-[node name="UI" parent="RabiKing" instance=ExtResource("5_uptpn")]
-
-[node name="Quit" type="Button" parent="RabiKing/UI"]
-process_mode = 3
-offset_left = 1542.0
-offset_top = 61.0
-offset_right = 1584.0
-offset_bottom = 92.0
-scale = Vector2(2.80814, 2.40051)
-text = "Quit"
-
-[connection signal="button_down" from="RabiKing/UI/Quit" to="RabiKing/UI" method="_on_quit_button_down"]
+[connection signal="button_down" from="UI/Main menu" to="UI" method="_on_quit_button_down"]

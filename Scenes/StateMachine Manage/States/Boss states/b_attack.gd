@@ -37,11 +37,12 @@ func handle_atk():
 	character.get_node("Hammer Zone/Hammer").disabled = attacking
 
 func reset_atk_animation():
-	if (character.bag): 
+	if (character.bag.weapon): 
 		character.bag.weapon.set_attack(false)
 
 func _on_timer_timeout():
 	attacking = false
 
 func _on_ready_2_atk_timeout():
-	character.bag.weapon.rotate_to_target(character.bag.weapon.target)
+	if (character.bag.weapon):
+		character.bag.weapon.rotate_to_target(character.bag.weapon.target)

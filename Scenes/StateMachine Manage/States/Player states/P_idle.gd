@@ -18,7 +18,7 @@ func check_for_switch():
 	if (character.get_node("Player Health").is_hurting):
 		switch(state_factory.get_state("p_hurt"))
 	# dash
-	if (Input.is_action_just_pressed("ui_accept")):
+	if (Input.is_action_just_pressed("dash")):
 		switch(state_factory.get_state("p_dash"))
 	# attack
 	if (Input.is_action_just_pressed("attack")):

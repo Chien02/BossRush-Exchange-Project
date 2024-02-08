@@ -1,30 +1,32 @@
 extends HealthSystem
 
-var flash : bool = false
+var flash : bool = true
 
 func _ready():
-	init_health()
 	Global.b_health = self
+	init_health()
 	character.get_node("Animation/AnimatedSprite2D").material["shader_parameter/flash"] = false
 
 func _process(_delta):
 	if current_health == 0:
 		death = true
 	if (is_hurting):
-		character.get_node("Hurtbox/CollisionShape2D").disabled = true
-		character.get_node("Hurtbox/CollisionShape2D2").disabled = true
+		character.get_node("Hurtbox/Lower").disabled = true
+		character.get_node("Hurtbox/Upper").disabled = true
 		handle_hurt()
 	else:
-		character.get_node("Hurtbox/CollisionShape2D").disabled = false
-		character.get_node("Hurtbox/CollisionShape2D2").disabled = false
+		character.get_node("Hurtbox/Lower").disabled = false
+		character.get_node("Hurtbox/Upper").disabled = false
 
 func _on_hurtbox_area_entered(area):
-	if (area.owner.is_in_group("Weapon") and area.owner.name == "Lighting Sword"):
+	if (area.is_in_group("Weapon") and area.is_in_group("Player")):
 		$Timer.start()
 		$FlashyTime.start()
-		Global.camera.shake(0.07, 2)
+		flash = true
+		Global.camera.shake(0.05, 1)
 		Global.frame_freeze(0.1, 0.2)
-		var weapon = area.owner
+		Global.zoom(0.2)
+		var weapon = get_tree().get_first_node_in_group("Player").bag.weapon
 		hurt(weapon.damage)
 		knockback(weapon.get_parent().get_parent().velocity, 10)
 
@@ -32,14 +34,20 @@ func handle_hurt():
 	var delta : float = 0.75
 	character.velocity = lerp(character.velocity, Vector2.ZERO, delta)
 	var _material = character.get_node("Animation/AnimatedSprite2D").material
-	character.get_node("b_slot/TreeHammer/AnimatedSprite2D").material = _material
-	character.get_node("b_slot/TreeHammer/AnimatedSprite2D").material["shader_parameter/flash"] = flash
+	if (character.bag.weapon):
+		if (character.bag.weapon.name == "TreeHammer"):
+			character.get_node("b_slot/TreeHammer/Boss/BossAnimated").material = _material
+			character.get_node("b_slot/TreeHammer/Boss/BossAnimated").material["shader_parameter/flash"] = flash
+	character.get_node("Animation/AnimatedSprite2D").material["shader_parameter/flash"] = flash
 
 func _on_timer_timeout():
 	is_hurting = false
 	$FlashyTime.stop()
 	flash = false
-	character.get_node("b_slot/TreeHammer/AnimatedSprite2D").material["shader_parameter/flash"] = flash
+	if (character.bag.weapon):
+		if (character.bag.weapon.name == "TreeHammer"):
+			character.get_node("b_slot/TreeHammer/Boss/BossAnimated").material["shader_parameter/flash"] = flash
+	character.get_node("Animation/AnimatedSprite2D").material["shader_parameter/flash"] = false
 	
 func _on_flashy_time_timeout():
 	flash = !flash

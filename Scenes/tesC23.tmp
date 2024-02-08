@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://b3iuotcv3go5b"]
+
+[ext_resource type="PackedScene" uid="uid://bwablskr3sujt" path="res://Scenes/Map/map.tscn" id="1_e1dan"]
+[ext_resource type="PackedScene" uid="uid://ddkec3ta7hkn" path="res://Scenes/Player/Player.tscn" id="2_ce6bf"]
+[ext_resource type="PackedScene" uid="uid://dsyu5ngxudyy6" path="res://Scenes/Effects/camera_shake.tscn" id="3_sjcgn"]
+[ext_resource type="PackedScene" uid="uid://dfx3fwmpsvnki" path="res://Scenes/Boss/RabiKing/rabi_king.tscn" id="5_g5wlx"]
+[ext_resource type="PackedScene" uid="uid://dr7elyw5hqa1s" path="res://Scenes/GUI/ui.tscn" id="5_uptpn"]
+
+[node name="Test Scene" type="Node2D"]
+y_sort_enabled = true
+texture_filter = 1
+
+[node name="Map" parent="." instance=ExtResource("1_e1dan")]
+
+[node name="Player" parent="." instance=ExtResource("2_ce6bf")]
+position = Vector2(91, 142)
+scale = Vector2(1, 1)
+
+[node name="CameraShake" parent="Player" instance=ExtResource("3_sjcgn")]
+zoom = Vector2(3.5, 3.5)
+position_smoothing_enabled = true
+
+[node name="RabiKing" parent="." instance=ExtResource("5_g5wlx")]
+position = Vector2(378, 127)
+
+[node name="UI" parent="RabiKing" instance=ExtResource("5_uptpn")]
+
+[node name="Quit" type="Button" parent="RabiKing/UI"]
+process_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -163.0
+offset_top = 19.0
+offset_right = -121.0
+offset_bottom = 50.0
+grow_horizontal = 0
+scale = Vector2(2.80814, 2.40051)
+text = "Quit"
+
+[connection signal="button_down" from="RabiKing/UI/Quit" to="RabiKing/UI" method="_on_quit_button_down"]

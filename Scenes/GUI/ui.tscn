@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dr7elyw5hqa1s"]
+[gd_scene load_steps=16 format=3 uid="uid://dr7elyw5hqa1s"]
 
 [ext_resource type="Texture2D" uid="uid://dck8pju3wy0qo" path="res://Sprites/Characters/New Character/new character healthbar_under.png" id="1_bf061"]
 [ext_resource type="Script" path="res://Scenes/GUI/ui_control.gd" id="1_wjpqn"]
@@ -10,6 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://1ruc8q7qqqhh" path="res://Sprites/Characters/Boss/Rabiking/Boss healthbar_fill.png" id="6_was4w"]
 [ext_resource type="Script" path="res://Scenes/GUI/B_Healthbar.gd" id="7_mda1n"]
 [ext_resource type="PackedScene" uid="uid://b0x34cj8gbmey" path="res://Scenes/GUI/game_over.tscn" id="10_d442r"]
+[ext_resource type="Texture2D" uid="uid://davyeuw4w2s71" path="res://Sprites/GUI/Button/panel-border-010.png" id="11_mdmbo"]
+[ext_resource type="Texture2D" uid="uid://do5fyogt4wywd" path="res://Sprites/GUI/Button/panel-border-016.png" id="12_ohqvf"]
+[ext_resource type="Texture2D" uid="uid://bwrx8lmdcaw3l" path="res://Sprites/GUI/Button/dash icon.png" id="13_6iiaq"]
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://joystick/virtual_joystick.tscn" id="13_lc1yg"]
+[ext_resource type="Texture2D" uid="uid://dbp84dl0i7wk5" path="res://Sprites/GUI/Button/attack icon.png" id="14_xx1ht"]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_wjpqn")
@@ -17,14 +22,15 @@ script = ExtResource("1_wjpqn")
 [node name="PlayerHealthbar" type="TextureProgressBar" parent="."]
 z_index = 1
 texture_filter = 1
-offset_left = 84.0
-offset_top = 22.0
-offset_right = 180.0
-offset_bottom = 62.0
-scale = Vector2(3, 3)
+offset_left = 58.0
+offset_top = 23.0
+offset_right = 154.0
+offset_bottom = 63.0
+scale = Vector2(2.85175, 2.81814)
 value = 100.0
 texture_under = ExtResource("1_bf061")
 texture_progress = ExtResource("2_sm0t0")
+texture_progress_offset = Vector2(0.285, 0)
 script = ExtResource("3_dvscv")
 
 [node name="TextureRect" type="TextureRect" parent="PlayerHealthbar"]
@@ -33,7 +39,7 @@ layout_mode = 0
 offset_left = -1.0
 offset_top = 6.0
 offset_right = 95.0
-offset_bottom = 46.0
+offset_bottom = 50.0
 scale = Vector2(1.03786, 0.490364)
 texture = ExtResource("3_cea0p")
 
@@ -45,13 +51,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -242.0
-offset_top = -85.0
-offset_right = -18.0
-offset_bottom = -45.0
+offset_left = -332.0
+offset_top = -96.0
+offset_right = -108.0
+offset_bottom = -56.0
 grow_horizontal = 2
 grow_vertical = 0
-scale = Vector2(2.5, 2.5)
+scale = Vector2(2.77926, 2.48371)
 value = 100.0
 texture_under = ExtResource("4_l3b8p")
 texture_progress = ExtResource("6_was4w")
@@ -70,3 +76,76 @@ texture = ExtResource("3_vh4rw")
 [node name="Game Over" parent="." instance=ExtResource("10_d442r")]
 process_mode = 2
 visible = false
+
+[node name="Virtual Joystick" parent="." instance=ExtResource("13_lc1yg")]
+visible = false
+modulate = Color(1, 1, 1, 0.313726)
+offset_left = 3.0
+offset_top = -303.0
+offset_right = 303.0
+offset_bottom = -3.0
+visibility_mode = 1
+
+[node name="Touch manage" type="Control" parent="."]
+visible = false
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Dash" type="TouchScreenButton" parent="Touch manage"]
+position = Vector2(-183, -325)
+scale = Vector2(2.38451, 2.35251)
+texture_normal = ExtResource("11_mdmbo")
+texture_pressed = ExtResource("12_ohqvf")
+action = "dash"
+visibility_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="Touch manage/Dash"]
+texture_filter = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = -48.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("13_6iiaq")
+expand_mode = 1
+
+[node name="Attack" type="TouchScreenButton" parent="Touch manage"]
+position = Vector2(-327, -233)
+scale = Vector2(2.22732, 2.2411)
+texture_normal = ExtResource("11_mdmbo")
+texture_pressed = ExtResource("12_ohqvf")
+action = "attack"
+visibility_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="Touch manage/Attack"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = -48.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("14_xx1ht")
+expand_mode = 1
+
+[node name="Bag button" type="TouchScreenButton" parent="Touch manage"]
+position = Vector2(-188, -166)
+scale = Vector2(2.84036, 2.47239)
+texture_normal = ExtResource("11_mdmbo")
+texture_pressed = ExtResource("12_ohqvf")
+visibility_mode = 1

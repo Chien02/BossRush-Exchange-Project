@@ -3,13 +3,13 @@
 [ext_resource type="Script" path="res://Scenes/Player/Player.gd" id="1_un0f3"]
 [ext_resource type="Texture2D" uid="uid://c8w5c01pmgme6" path="res://Sprites/Characters/Player/Shadow_player.png" id="2_cidgh"]
 [ext_resource type="PackedScene" uid="uid://cyov8qq87sp5t" path="res://Scenes/Components/Slot/p_slot.tscn" id="2_vpxaf"]
+[ext_resource type="PackedScene" uid="uid://bc1vn7efaxtow" path="res://Scenes/Components/Weapon/tree_hammer.tscn" id="3_8r6sk"]
 [ext_resource type="PackedScene" uid="uid://de2k2witts1wp" path="res://Scenes/StateMachine Manage/state_machine.tscn" id="3_bksxg"]
 [ext_resource type="Shader" path="res://Scenes/Player/P_hurt.gdshader" id="6_2u2vv"]
 [ext_resource type="Texture2D" uid="uid://6icvun5ewdlo" path="res://Sprites/Characters/New Character/new character attack.png" id="6_opd8b"]
 [ext_resource type="Texture2D" uid="uid://cka8u5p0674wt" path="res://Sprites/Characters/New Character/new character dash.png" id="8_6hrcv"]
 [ext_resource type="Texture2D" uid="uid://dcx18ckrc61xk" path="res://Sprites/Characters/New Character/hurt_down.png" id="8_8r1v5"]
 [ext_resource type="Texture2D" uid="uid://d1qsw5xvrr4fr" path="res://Sprites/Characters/New Character/idle_down.png" id="8_an77w"]
-[ext_resource type="PackedScene" uid="uid://dch8cf4hj10dp" path="res://Scenes/Components/Weapon/lighting_sword.tscn" id="8_phc23"]
 [ext_resource type="PackedScene" uid="uid://ba5u0e1se508q" path="res://Scenes/Health/player_health.tscn" id="8_qynjs"]
 [ext_resource type="Texture2D" uid="uid://cwllq8sc1rq8n" path="res://Sprites/Characters/New Character/idle_left.png" id="9_yw2se"]
 [ext_resource type="Texture2D" uid="uid://ddu3haod2pvrj" path="res://Sprites/Characters/New Character/idle_left_down.png" id="10_kn8aw"]
@@ -25,8 +25,8 @@
 size = Vector2(10, 10)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p07ru"]
-radius = 5.6
-height = 15.2381
+radius = 4.8
+height = 13.3334
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r7vog"]
 shader = ExtResource("6_2u2vv")
@@ -2307,7 +2307,7 @@ bag = NodePath("P_slot")
 
 [node name="P_slot" parent="." instance=ExtResource("2_vpxaf")]
 
-[node name="Lighting Sword" parent="P_slot" instance=ExtResource("8_phc23")]
+[node name="TreeHammer" parent="P_slot" instance=ExtResource("3_8r6sk")]
 
 [node name="CollisionShape2d" type="CollisionShape2D" parent="."]
 position = Vector2(1, 5)
@@ -2321,7 +2321,7 @@ collision_layer = 5
 collision_mask = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
-position = Vector2(18.4, 1.90476)
+position = Vector2(18.4, 3.80953)
 shape = SubResource("CapsuleShape2D_p07ru")
 
 [node name="State Machine" parent="." node_paths=PackedStringArray("animator", "character") instance=ExtResource("3_bksxg")]
@@ -2341,7 +2341,7 @@ material = SubResource("ShaderMaterial_r7vog")
 position = Vector2(1, -6)
 sprite_frames = SubResource("SpriteFrames_7ejdp")
 animation = &"idle_down"
-frame = 3
+frame = 7
 
 [node name="AnimaitonControl" type="Node2D" parent="Animation" node_paths=PackedStringArray("state_machine", "animation_tree")]
 script = ExtResource("15_1kay1")
@@ -2377,5 +2377,6 @@ parameters/Run/blend_position = Vector2(-0.00177938, 0.00582004)
 
 [node name="Player Health" parent="." node_paths=PackedStringArray("character") instance=ExtResource("8_qynjs")]
 character = NodePath("..")
+max_health = 120
 
 [connection signal="area_entered" from="Hurtbox" to="Player Health" method="_on_hurtbox_area_entered"]

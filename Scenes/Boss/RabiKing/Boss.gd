@@ -28,7 +28,7 @@ func handle_velocity():
 		last_velocity = velocity
 
 func _on_hammer_zone_area_entered(area):
-	if (area.owner.is_in_group("Player")):
+	if (area.owner.is_in_group("Player") and bag.weapon):
 		attack = true
 
 func _on_sweep_zone_area_entered(area):

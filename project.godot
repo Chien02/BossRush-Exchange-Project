@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Exchange BossRush"
-run/main_scene="res://Scenes/menu/main_menu.tscn"
+run/main_scene="res://Scenes/test_scene.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 boot_splash/image="res://Sprites/Icons/Exchange Blush.png"
 boot_splash/use_filter=false
@@ -25,9 +25,8 @@ SceneTransition="*res://Scenes/Effects/scene_transition.tscn"
 
 [display]
 
-window/size/viewport_width=1760
-window/size/viewport_height=990
-window/size/mode=3
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
@@ -80,6 +79,10 @@ dash={
 ]
 }
 
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
 [layer_names]
 
 2d_physics/layer_1="for_detect"
@@ -91,3 +94,4 @@ dash={
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true

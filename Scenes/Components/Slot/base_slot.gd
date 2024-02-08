@@ -5,10 +5,10 @@ class_name Slot
 @export var weapon : Node2D
 
 func _ready():
-	get_weapon()
+	pass
 
 func _process(_delta):
-	get_weapon()
+	pass
 
 # Function that receive other item and switch it to current item
 # There are two cases: when character are not have any weapon yet
@@ -26,10 +26,16 @@ func display():
 	if (item): print("Item: " + item)
 	else: print("There don't have any item.")
 
-func get_weapon():
+func get_weapon(name_group : String):
 	if (weapon): return
 	if (get_child_count() < 1): return
 	var stuffs = get_children()
 	for object in stuffs:
 		if !weapon:
 			weapon = object
+	
+	# Add weapon to group
+	if (weapon.check_user()):
+		weapon.get_node(name_group).get_node("Hitbox").add_to_group(name_group)
+	else:
+		weapon.get_node(name_group).get_node("Hitbox").add_to_group(name_group)

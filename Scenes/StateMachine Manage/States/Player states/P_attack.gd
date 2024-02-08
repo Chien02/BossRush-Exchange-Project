@@ -3,6 +3,7 @@ extends BaseState
 @export var speed_default := 100
 @export var speed_when_attack := 50
 
+var flag : bool = false # use for play animation just 1 time
 var weapon : Weapon_base
 var attacking : bool = false
 var press_dash_while_attack : bool = false
@@ -15,6 +16,7 @@ func enter():
 	
 func exit():
 	character.SPEED = speed_default
+	flag = false
 
 func update():
 	if (!character): return
@@ -40,6 +42,7 @@ func check_for_switch():
 			switch(state_factory.get_state("p_idle"))
 
 func handle_attack():
+	$Timer.wait_time = character.bag.weapon.using_time # Time for using weapon
 	character.SPEED = speed_when_attack # Change speed when attack
 	if (Input.is_action_just_pressed("dash")): # For next action
 		press_dash_while_attack = true
@@ -49,12 +52,10 @@ func handle_attack():
 	# check if exsist target
 	if (!character.bag): return
 	if (!character.bag.weapon): return
-	character.bag.weapon.set_attack(true)
-	character.bag.weapon.play_animation()
-	# get direction to auto aim
-	#var _direction = Vector2.ZERO
-	#_direction = (character.bag.weapon.target.global_position - character.global_position).normalized()
-	#character.animation_control.get_atk_direction(_direction)
+	if (!flag):
+		flag = true
+		character.bag.weapon.set_attack(true)
+		character.bag.weapon.play_animation()
 
 func reset_atk_animation():
 	if (character.bag): 

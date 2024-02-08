@@ -38,8 +38,9 @@ func hurt(value):
 		dead.emit()
 		death = true
 
+
 func knockback(opp_velocity, _knock_pwr):
 	if (!is_hurting): return
-	var knock_direction = (opp_velocity).normalized() * pow(_knock_pwr, 2)
+	var knock_direction = (opp_velocity - character.velocity).normalized() * pow(_knock_pwr, 2)
 	get_parent().velocity = knock_direction
 	get_parent().move_and_slide()

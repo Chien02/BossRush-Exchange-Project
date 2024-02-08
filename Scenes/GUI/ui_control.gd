@@ -18,4 +18,5 @@ func _process(_delta):
 
 
 func _on_quit_button_down():
-	get_tree().quit()
+	var next_scene = "res://Scenes/menu/main_menu.tscn"
+	SceneTransition.fade_out(next_scene)

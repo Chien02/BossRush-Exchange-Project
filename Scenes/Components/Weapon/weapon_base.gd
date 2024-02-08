@@ -2,17 +2,16 @@ extends Node2D
 
 class_name Weapon_base
 
-@export var state_machine : Node2D
 @export var damage : int
 @export var mana: int
 @export var can_attack : bool = false
 @export var hitbox : CollisionShape2D
 
+var state_machine
 var is_player : bool = false
 var character
 var target
-var direction
-
+var direction : Vector2
 var animation_tree : AnimationTree
 
 func _ready():
@@ -50,3 +49,6 @@ func skill():
 
 func rotate_to_target(_target):
 	pass
+
+func is_not_use():
+	return character==null # if not use then it can be collect if it were apeared on scenes

@@ -1,4 +1,4 @@
-[gd_scene load_steps=124 format=3 uid="uid://dfx3fwmpsvnki"]
+[gd_scene load_steps=123 format=3 uid="uid://dfx3fwmpsvnki"]
 
 [ext_resource type="Script" path="res://Scenes/Boss/RabiKing/Boss.gd" id="1_5xg0j"]
 [ext_resource type="Texture2D" uid="uid://8w72pljrqcwq" path="res://Sprites/Characters/Boss/Rabiking/Character_sheet.png" id="1_bm7rk"]
@@ -7,7 +7,6 @@
 [ext_resource type="Script" path="res://Scenes/Boss/RabiKing/B_AnimationControl.gd" id="2_lqiu2"]
 [ext_resource type="PackedScene" uid="uid://cp1dwigd47p84" path="res://Scenes/Components/Slot/b_slot.tscn" id="2_wtpm4"]
 [ext_resource type="Shader" path="res://Scenes/Player/P_hurt.gdshader" id="3_7ldtb"]
-[ext_resource type="PackedScene" uid="uid://bc1vn7efaxtow" path="res://Scenes/Components/Weapon/tree_hammer.tscn" id="3_34bwq"]
 [ext_resource type="Texture2D" uid="uid://dwwv7cmiifgis" path="res://Sprites/Characters/Boss/Rabiking/boss_sweep_down.png" id="6_2o8mt"]
 [ext_resource type="PackedScene" uid="uid://bbp2nxw630xj5" path="res://Scenes/StateMachine Manage/b_state_machine.tscn" id="6_6sfgv"]
 [ext_resource type="Texture2D" uid="uid://c4iqv2sorkvle" path="res://Sprites/Characters/Boss/Rabiking/boss_with_weapon_down.png" id="8_lm35k"]
@@ -893,7 +892,7 @@ height = 44.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7uf3w"]
 radius = 21.0
-height = 64.0
+height = 68.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u6wjq"]
 radius = 116.108
@@ -918,9 +917,6 @@ bag = NodePath("b_slot")
 
 [node name="b_slot" parent="." instance=ExtResource("2_wtpm4")]
 
-[node name="TreeHammer" parent="b_slot" instance=ExtResource("3_34bwq")]
-damage = 35
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource("RectangleShape2D_gxcl5")
@@ -938,7 +934,7 @@ material = SubResource("ShaderMaterial_3gfx5")
 position = Vector2(1, 0)
 sprite_frames = SubResource("SpriteFrames_xaatk")
 animation = &"idle"
-frame = 5
+frame = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Animation"]
 root_node = NodePath("../../CollisionShape2D")
@@ -965,13 +961,13 @@ parameters/sweep/blend_position = Vector2(0, 0)
 collision_layer = 13
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
-position = Vector2(2, 12)
+[node name="Lower" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(3, 11)
 shape = SubResource("CapsuleShape2D_rj8ks")
 debug_color = Color(0, 0.6, 0.701961, 0.239216)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Hurtbox"]
-position = Vector2(1, 7)
+[node name="Upper" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(2, 8)
 rotation = -1.5708
 shape = SubResource("CapsuleShape2D_7uf3w")
 
@@ -988,7 +984,7 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="Sweep" type="CollisionShape2D" parent="Sweep Zone"]
-position = Vector2(1, 26)
+position = Vector2(5.96046e-08, 29)
 rotation = 1.5708
 scale = Vector2(1.24, 1.64)
 shape = SubResource("CapsuleShape2D_0tcp0")
@@ -1003,7 +999,7 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
-position = Vector2(1, 26)
+position = Vector2(1, 30)
 rotation = 1.5708
 scale = Vector2(2.92, 2.92)
 shape = SubResource("CapsuleShape2D_kqpas")

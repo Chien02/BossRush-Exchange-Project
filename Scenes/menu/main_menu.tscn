@@ -172,6 +172,7 @@ _data = {
 }
 
 [node name="Main menu" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_nqtnp")
 
 [node name="Control2" type="Control" parent="."]
@@ -190,13 +191,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -875.0
-offset_top = -493.0
-offset_right = 1044.0
-offset_bottom = 582.0
+offset_left = -664.0
+offset_top = -359.0
+offset_right = 1336.0
+offset_bottom = 716.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.914664, 0.916292)
+scale = Vector2(0.65363, 0.667133)
 texture = ExtResource("2_q4g5g")
 
 [node name="icon" type="TextureRect" parent="Control2"]
@@ -207,13 +208,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -874.0
-offset_top = -486.0
-offset_right = 565.0
-offset_bottom = 323.0
+offset_left = -563.0
+offset_top = -356.0
+offset_right = 876.0
+offset_bottom = 453.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.22785, 1.21575)
+scale = Vector2(0.794518, 0.856633)
 texture = ExtResource("3_6pbrg")
 
 [node name="Control" type="Control" parent="Control2"]
@@ -230,14 +231,13 @@ offset_right = 29.0
 offset_bottom = 14.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.67584, 2.18444)
+scale = Vector2(1.39995, 1.89851)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control2/Control"]
 visible = false
-position = Vector2(3.58028, 16.4802)
-scale = Vector2(3.29266, 2.5289)
+position = Vector2(10.0004, 12.6415)
+scale = Vector2(2.97657, 2.19642)
 sprite_frames = SubResource("SpriteFrames_fh45t")
-frame = 15
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Control2/Control"]
 libraries = {
@@ -251,12 +251,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -125.0
-offset_top = 200.0
-offset_right = 147.0
-offset_bottom = 289.0
+offset_left = -100.0
+offset_top = 147.0
+offset_right = 172.0
+offset_bottom = 236.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.694298, 0.750612)
 theme_override_font_sizes/font_size = 36
 text = "Start"
 
@@ -267,12 +268,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -126.0
-offset_top = 326.0
-offset_right = 146.0
-offset_bottom = 415.0
+offset_left = -93.0
+offset_top = 229.0
+offset_right = 179.0
+offset_bottom = 318.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.67191, 0.652073)
 theme_override_font_sizes/font_size = 36
 text = "Quit"
 

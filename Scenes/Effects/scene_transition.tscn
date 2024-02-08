@@ -198,6 +198,7 @@ _data = {
 }
 
 [node name="Scene_transition" type="CanvasLayer" node_paths=PackedStringArray("animator")]
+layer = 2
 script = ExtResource("1_lvbu2")
 animator = NodePath("Control/AnimationPlayer")
 

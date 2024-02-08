@@ -12,6 +12,14 @@ func get_tween():
 	tween = get_tree().create_tween()
 	return tween
 
+func zoom(duration):
+	var last_zoom = Vector2.ZERO
+	if (last_zoom == Vector2.ZERO):
+		last_zoom = camera.zoom # get the last zoom, then use it when 
+	camera.zoom += Vector2(0.05, 0.05)
+	await get_tree().create_timer(duration, true, false, true).timeout
+	camera.zoom = last_zoom
+
 func frame_freeze(_time_scale, duration):
 	Engine.time_scale = _time_scale
 	await get_tree().create_timer(duration, true, false, true).timeout

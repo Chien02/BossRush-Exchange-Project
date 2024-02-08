@@ -6,14 +6,15 @@
 script = ExtResource("1_yww2q")
 
 [node name="Timer" type="Timer" parent="."]
-one_shot = true
-
-[node name="Flinch_time" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
 
+[node name="Flinch_time" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
 [node name="Flash_time" type="Timer" parent="."]
-wait_time = 0.25
+wait_time = 0.15
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Flinch_time" to="." method="_on_flinch_time_timeout"]
