@@ -1,16 +1,10 @@
-res://Scenes/test_scene.tscn
 res://addons/shaker/shaker.gd
 res://Scenes/Components/Weapon/lighting_sword.gd
 res://Scenes/StateMachine Manage/State_machine.gd
 res://Scenes/Player/P_hurt.gdshader
-res://Scenes/Health/player_health.tscn
-res://Scenes/Health/p_health.gd
-res://Scenes/Boss/RabiKing/rabi_king.tscn
-res://Scenes/Health/player_healthbar.tscn
-res://Scenes/Components/Weapon/tree_hammer.tscn
-res://Scenes/loading_scene.tscn
-res://Scenes/menu/main_menu.gd
-res://Scenes/Player/Player.tscn
-res://Scenes/Components/Weapon/tree_hammer.gd
-res://Scenes/Health/boss_health.tscn
-res://Scenes/Components/Weapon/weapon_base.gd
+res://Scenes/platform.tscn
+res://Scenes/Components/Global variables/Global.gd
+res://Scenes/platform.gd
+res://Scenes/GUI/ui.tscn
+res://Scenes/GUI/ui_control.gd
+res://Scenes/test_scene.tscn

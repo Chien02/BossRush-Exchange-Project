@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=3 uid="uid://bajiwilf01hpc"]
+
+[ext_resource type="Script" path="res://Scenes/platform.gd" id="1_w23y7"]
+
+[node name="Platform" type="CanvasLayer"]
+script = ExtResource("1_w23y7")
+
+[node name="Control" type="Control" parent="."]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 2.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -197.0
+offset_top = -35.0
+offset_right = -9.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.1828, 3.3733)
+text = "Tell me you'r using a ... ?"
+horizontal_alignment = 1
+
+[node name="Mobile" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 297.0
+offset_top = 426.0
+offset_right = 358.0
+offset_bottom = 457.0
+scale = Vector2(3, 3.399)
+text = "Mobile"
+
+[node name="PC" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 767.0
+offset_top = 420.0
+offset_right = 795.0
+offset_bottom = 451.0
+scale = Vector2(7, 3.549)
+text = "PC"
+
+[connection signal="button_down" from="Control/Mobile" to="." method="_on_mobile_button_down"]
+[connection signal="button_down" from="Control/PC" to="." method="_on_pc_button_down"]

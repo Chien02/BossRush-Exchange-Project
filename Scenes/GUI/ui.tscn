@@ -77,30 +77,38 @@ texture = ExtResource("3_vh4rw")
 process_mode = 2
 visible = false
 
-[node name="Virtual Joystick" parent="." instance=ExtResource("13_lc1yg")]
-visible = false
-modulate = Color(1, 1, 1, 0.313726)
-offset_left = 3.0
-offset_top = -303.0
-offset_right = 303.0
-offset_bottom = -3.0
-visibility_mode = 1
-
-[node name="Touch manage" type="Control" parent="."]
-visible = false
-texture_filter = 1
+[node name="ForMobile" type="Control" parent="."]
 layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Touch manage" type="Control" parent="ForMobile"]
+texture_filter = 1
+layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 636.0
+offset_top = 344.0
+offset_right = 636.0
+offset_bottom = 344.0
 grow_horizontal = 0
 grow_vertical = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Dash" type="TouchScreenButton" parent="Touch manage"]
+[node name="Dash" type="TouchScreenButton" parent="ForMobile/Touch manage"]
 position = Vector2(-183, -325)
 scale = Vector2(2.38451, 2.35251)
 texture_normal = ExtResource("11_mdmbo")
@@ -108,7 +116,7 @@ texture_pressed = ExtResource("12_ohqvf")
 action = "dash"
 visibility_mode = 1
 
-[node name="TextureRect" type="TextureRect" parent="Touch manage/Dash"]
+[node name="TextureRect" type="TextureRect" parent="ForMobile/Touch manage/Dash"]
 texture_filter = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -122,7 +130,7 @@ grow_vertical = 0
 texture = ExtResource("13_6iiaq")
 expand_mode = 1
 
-[node name="Attack" type="TouchScreenButton" parent="Touch manage"]
+[node name="Attack" type="TouchScreenButton" parent="ForMobile/Touch manage"]
 position = Vector2(-327, -233)
 scale = Vector2(2.22732, 2.2411)
 texture_normal = ExtResource("11_mdmbo")
@@ -130,7 +138,7 @@ texture_pressed = ExtResource("12_ohqvf")
 action = "attack"
 visibility_mode = 1
 
-[node name="TextureRect" type="TextureRect" parent="Touch manage/Attack"]
+[node name="TextureRect" type="TextureRect" parent="ForMobile/Touch manage/Attack"]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -143,9 +151,18 @@ grow_vertical = 0
 texture = ExtResource("14_xx1ht")
 expand_mode = 1
 
-[node name="Bag button" type="TouchScreenButton" parent="Touch manage"]
+[node name="Bag button" type="TouchScreenButton" parent="ForMobile/Touch manage"]
 position = Vector2(-188, -166)
 scale = Vector2(2.84036, 2.47239)
 texture_normal = ExtResource("11_mdmbo")
 texture_pressed = ExtResource("12_ohqvf")
+visibility_mode = 1
+
+[node name="Virtual Joystick" parent="ForMobile" instance=ExtResource("13_lc1yg")]
+modulate = Color(1, 1, 1, 0.313726)
+layout_mode = 1
+offset_left = -601.0
+offset_top = 41.0
+offset_right = -301.0
+offset_bottom = 341.0
 visibility_mode = 1

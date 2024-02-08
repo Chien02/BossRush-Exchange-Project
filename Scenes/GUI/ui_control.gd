@@ -3,11 +3,12 @@ extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	manage_mobile()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
+	manage_mobile()
 	if (Global.p_health.death == true):
 		$"Game Over".visible = true
 		get_tree().paused = true
@@ -16,6 +17,9 @@ func _process(_delta):
 		$"Game Over".visible = true
 		get_tree().paused = true
 
+
+func manage_mobile():
+	$ForMobile.visible = true if Global.platform == true else false
 
 func _on_quit_button_down():
 	var next_scene = "res://Scenes/menu/main_menu.tscn"

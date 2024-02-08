@@ -4,6 +4,7 @@ var p_health : HealthSystem
 var b_health : HealthSystem
 var player : CharacterBody2D
 var player_dead : bool = false
+var platform : bool = false # false = PC, true = mobile
 var camera : Camera2D
 var tween : Tween
 var bag : Slot

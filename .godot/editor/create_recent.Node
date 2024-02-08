@@ -1,7 +1,9 @@
-Sprite2D
-Label
 Control
+Button
+Label
+VisibleOnScreenEnabler2D
 CanvasLayer
+Sprite2D
 Node2D
 CollisionShape2D
 Area2D
@@ -10,5 +12,3 @@ AnimatedSprite2D
 AnimatableBody2D
 Camera2D
 TextureRect
-TouchScreenButton
-Button

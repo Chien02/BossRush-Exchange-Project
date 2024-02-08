@@ -1,5 +1,5 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1707309415
+::res://::1707387276
 default_env.tres::Environment::-1::1707214971::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1707220548::0::1::::<><>::
 icon.png::CompressedTexture2D::1635457999319410032::1707214971::1707214972::1::::<><>::
@@ -118,7 +118,7 @@ map.tscn::PackedScene::3930656566134431109::1706903018::0::1::::<><>::uid://ceys
 ::res://Scenes/menu/::1707311527
 main_menu.gd::GDScript::-1::1707311527::0::1::::<>CanvasLayer<>::
 main_menu.tscn::PackedScene::7933902634968629899::1707296221::0::1::::<><>::res://Scenes/menu/main_menu.gd<>uid://dea25ieec60gf::::res://Sprites/Icons/Ekchan background.png<>uid://cqldpscmokii8::::res://Sprites/Icons/Ekchan icon.png<>uid://cnvk4bj6t3xci::::res://Sprites/Icons/Ekchan slide.png
-::res://Scenes/Player/::1707312742
+::res://Scenes/Player/::1707329324
 AnimationControl.gd::GDScript::-1::1707163693::0::1::::Animation_Control<>Node2D<>::
 assist_aim.tscn::PackedScene::4896120558956582578::1707027407::0::1::::<><>::uid://ctttnc1u1mqcp::::res://Sprites/Characters/New Character/assist_aim.png
 Hitbox.gd::GDScript::-1::1706099420::0::1::::<>Area2D<>::
@@ -126,7 +126,7 @@ Player.gd::GDScript::-1::1707178180::0::1::::Player<>CharacterBody2D<>::
 Player.tscn::PackedScene::217374126445323869::1707312742::0::1::::<><>::res://Scenes/Player/Player.gd<>uid://c8w5c01pmgme6::::res://Sprites/Characters/Player/Shadow_player.png<>uid://cyov8qq87sp5t::::res://Scenes/Components/Slot/p_slot.tscn<>uid://bc1vn7efaxtow::::res://Scenes/Components/Weapon/tree_hammer.tscn<>uid://de2k2witts1wp::::res://Scenes/StateMachine Manage/state_machine.tscn<>res://Scenes/Player/P_hurt.gdshader<>uid://6icvun5ewdlo::::res://Sprites/Characters/New Character/new character attack.png<>uid://cka8u5p0674wt::::res://Sprites/Characters/New Character/new character dash.png<>uid://dcx18ckrc61xk::::res://Sprites/Characters/New Character/hurt_down.png<>uid://d1qsw5xvrr4fr::::res://Sprites/Characters/New Character/idle_down.png<>uid://ba5u0e1se508q::::res://Scenes/Health/player_health.tscn<>uid://cwllq8sc1rq8n::::res://Sprites/Characters/New Character/idle_left.png<>uid://ddu3haod2pvrj::::res://Sprites/Characters/New Character/idle_left_down.png<>uid://dtscjsn8ys726::::res://Sprites/Characters/New Character/idle_left_up.png<>uid://b1ypvfdy7gjjf::::res://Sprites/Characters/New Character/idle_right.png<>uid://ck0vc678j486h::::res://Sprites/Characters/New Character/idle_right_down.png<>uid://cc6lrsqvxtyuf::::res://Sprites/Characters/New Character/idle_right_up.png<>res://Scenes/Player/AnimationControl.gd<>uid://dyiophimr0p2x::::res://Sprites/Characters/New Character/idle_up.png<>uid://bbgnu1jjlgest::::res://Sprites/Characters/New Character/new character run.png
 p_detect_zone.gd::GDScript::-1::1707021741::0::1::::<>Area2D<>::
 p_detect_zone.tscn::PackedScene::71961007863847758::1706656408::0::1::::<><>::res://Scenes/Player/p_detect_zone.gd
-P_hurt.gdshader::Shader::-1::1707312742::0::1::::<><>::
+P_hurt.gdshader::Shader::-1::1707329324::0::1::::<><>::
 ::res://Scenes/StateMachine Manage/::1707308802
 base_state.gd::GDScript::-1::1706876715::0::1::::BaseState<>Node2D<>::
 base_state.tscn::PackedScene::525763276783624959::1706876758::0::1::::<><>::res://Scenes/StateMachine Manage/base_state.gd
@@ -194,7 +194,7 @@ spr_goblin_hurt.png::CompressedTexture2D::5389038916794322545::1693935435::17070
 spr_goblin_hurt_withoutfilter.png::CompressedTexture2D::7560714768833387798::1693935626::1707061705::1::::<><>::
 spr_goblin_idle.png::CompressedTexture2D::3254158463100532842::1693935420::1707061705::1::::<><>::
 spr_goblin_walk.png::CompressedTexture2D::2289714053094556211::1693935427::1707061705::1::::<><>::
-::res://Sprites/Characters/New Character/::1707329295
+::res://Sprites/Characters/New Character/::1707329321
 assist_aim.png::CompressedTexture2D::6146829558174838163::1707055158::1707055161::1::::<><>::
 hurt_down.png::CompressedTexture2D::7348758120980601016::1706974093::1706974097::1::::<><>::
 hurt_up.png::CompressedTexture2D::2951803134545942931::1706976904::1706977255::1::::<><>::
