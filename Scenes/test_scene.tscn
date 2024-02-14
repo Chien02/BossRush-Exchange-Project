@@ -1,16 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://b3iuotcv3go5b"]
+[gd_scene load_steps=7 format=3 uid="uid://b3iuotcv3go5b"]
 
 [ext_resource type="PackedScene" uid="uid://bwablskr3sujt" path="res://Scenes/Map/map.tscn" id="1_e1dan"]
 [ext_resource type="PackedScene" uid="uid://ddkec3ta7hkn" path="res://Scenes/Player/Player.tscn" id="2_ce6bf"]
 [ext_resource type="PackedScene" uid="uid://dsyu5ngxudyy6" path="res://Scenes/Effects/camera_shake.tscn" id="3_sjcgn"]
 [ext_resource type="PackedScene" uid="uid://dfx3fwmpsvnki" path="res://Scenes/Boss/RabiKing/rabi_king.tscn" id="5_g5wlx"]
 [ext_resource type="PackedScene" uid="uid://dr7elyw5hqa1s" path="res://Scenes/GUI/ui.tscn" id="5_uptpn"]
+[ext_resource type="Script" path="res://Scenes/Effects/CameraController.gd" id="6_kn12f"]
 
 [node name="Test Scene" type="Node2D"]
 y_sort_enabled = true
 texture_filter = 1
 
 [node name="Map" parent="." instance=ExtResource("1_e1dan")]
+
+[node name="RabiKing" parent="." instance=ExtResource("5_g5wlx")]
+position = Vector2(378, 127)
 
 [node name="Player" parent="." instance=ExtResource("2_ce6bf")]
 position = Vector2(91, 142)
@@ -36,7 +40,9 @@ grow_horizontal = 0
 scale = Vector2(1.88111, 1.30158)
 text = "Menu"
 
-[node name="RabiKing" parent="." instance=ExtResource("5_g5wlx")]
-position = Vector2(378, 127)
+[node name="CameraController" type="Node2D" parent="." node_paths=PackedStringArray("main_camera", "player")]
+script = ExtResource("6_kn12f")
+main_camera = NodePath("../Player/CameraShake")
+player = NodePath("../Player")
 
 [connection signal="button_down" from="UI/Main menu" to="UI" method="_on_quit_button_down"]

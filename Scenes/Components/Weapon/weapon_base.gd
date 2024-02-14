@@ -2,6 +2,8 @@ extends Node2D
 
 class_name Weapon_base
 
+# weapon properties
+@export var icon : Sprite2D
 @export var damage : int
 @export var mana: int
 @export var can_attack : bool = false

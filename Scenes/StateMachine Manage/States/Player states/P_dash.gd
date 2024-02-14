@@ -53,7 +53,9 @@ func _on_timer_2_spawn_shadow_timeout():
 	shadow_clone = preload("res://Scenes/Effects/shadow_clone.tscn").instantiate()
 	if (!get_tree().current_scene): return
 	get_tree().current_scene.add_child(shadow_clone)
-	var animated = character.get_node("Animation/AnimatedSprite2D")
-	var current_frame = animated.frame
-	shadow_clone.texture = animated.get_sprite_frames().get_frame_texture(animated.animation, current_frame) # first child is Animation node, second child: Animated Sprite
-	shadow_clone.position = character.position # Set the position of the shadow is behind player
+	var animated = character.get_node("Animation/Normal Mode") if (!character.is_ek_change) else character.get_node("Animation/Ek Mode")
+	var frame = animated.sprite_frames.get_frame_texture(animated.animation, animated.frame)
+	
+	#if (Engine.is_editor_hint()):
+	shadow_clone.texture = frame
+	shadow_clone.position = character.position + Vector2(0, -6)# Set the position of the shadow is behind player

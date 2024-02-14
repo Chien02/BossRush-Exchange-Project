@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cp0jghekdwfo3"]
+
+[ext_resource type="PackedScene" uid="uid://hbifr4gss77a" path="res://Scenes/enemy_v2/enemy_v2.tscn" id="2_gqrng"]
+[ext_resource type="PackedScene" uid="uid://dsyu5ngxudyy6" path="res://Scenes/Effects/camera_shake.tscn" id="3_l63pw"]
+[ext_resource type="PackedScene" uid="uid://h76osfy61jqb" path="res://Scenes/Components/Weapon/aim_system.tscn" id="3_vvu3a"]
+
+[node name="Test core mechanic" type="Node2D"]
+
+[node name="Enemy" parent="." instance=ExtResource("2_gqrng")]
+position = Vector2(88, 67)
+
+[node name="Enemy2" parent="." instance=ExtResource("2_gqrng")]
+position = Vector2(131, -22)
+
+[node name="CameraShake" parent="." instance=ExtResource("3_l63pw")]
+
+[node name="Aim system" parent="." node_paths=PackedStringArray("root_node") instance=ExtResource("3_vvu3a")]
+root_node = NodePath("..")

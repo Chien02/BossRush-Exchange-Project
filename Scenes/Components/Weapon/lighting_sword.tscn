@@ -478,13 +478,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kygcm"]
-size = Vector2(29, 24.5)
+size = Vector2(29, 23.5)
 
 [node name="Lighting Sword" type="Node2D" node_paths=PackedStringArray("hitbox") groups=["Weapon"]]
-z_index = 1
+y_sort_enabled = true
 texture_filter = 1
 script = ExtResource("1_dlruu")
-damage = 50
+damage = 35
 hitbox = NodePath("Player/Hitbox/CollisionShape2D")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -516,13 +516,14 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Hitbox"]
-position = Vector2(21.75, -2.49999)
+position = Vector2(21.25, -2.5)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_kygcm")
 disabled = true
 debug_color = Color(0.980392, 0.101961, 0.227451, 0.419608)
 
 [node name="Assist aim" parent="Player/Hitbox" instance=ExtResource("2_qkae6")]
+visible = false
 modulate = Color(1, 1, 1, 0.831373)
 y_sort_enabled = true
 position = Vector2(2.72848e-12, 4.76837e-07)

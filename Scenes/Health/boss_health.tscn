@@ -7,7 +7,7 @@ script = ExtResource("1_li20w")
 max_health = 700
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.75
+wait_time = 0.5
 one_shot = true
 
 [node name="FlashyTime" type="Timer" parent="."]

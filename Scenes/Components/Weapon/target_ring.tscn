@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxdlptsk0bpml"]
+
+[ext_resource type="Texture2D" uid="uid://ctv6ndj6s5lju" path="res://Sprites/Characters/New Character/target_ring.png" id="1_idvt3"]
+
+[node name="Target_ring" type="Sprite2D"]
+texture_filter = 1
+texture = ExtResource("1_idvt3")

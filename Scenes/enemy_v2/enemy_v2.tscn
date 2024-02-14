@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://hbifr4gss77a"]
+[gd_scene load_steps=69 format=3 uid="uid://hbifr4gss77a"]
 
 [ext_resource type="Script" path="res://Scenes/enemy_v2/enemy_v2.gd" id="1_c6xud"]
 [ext_resource type="PackedScene" uid="uid://cco83gospa7dd" path="res://Scenes/StateMachine Manage/e_state_machine.tscn" id="2_itkql"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b3yj8isspfda" path="res://Sprites/Characters/Enemy/momo_idle_shadow-sheet.png" id="3_r5kw7"]
 [ext_resource type="PackedScene" uid="uid://2jlr7s1shdjm" path="res://Scenes/Health/E_HealthBar.tscn" id="5_y6wsu"]
 [ext_resource type="PackedScene" uid="uid://bgu07dj03vkbw" path="res://Scenes/Health/enemy_health.tscn" id="5_yt64t"]
+[ext_resource type="PackedScene" uid="uid://bxdlptsk0bpml" path="res://Scenes/Components/Weapon/target_ring.tscn" id="7_ext5g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oogo7"]
 size = Vector2(13, 16)
@@ -692,11 +693,10 @@ animation_tree = NodePath("../AnimationTree")
 position = Vector2(0, -3)
 sprite_frames = SubResource("SpriteFrames_sfirk")
 animation = &"idle_down"
-frame = 3
+frame = 2
 
-[node name="Enemy Health" parent="." node_paths=PackedStringArray("character", "health_bar") instance=ExtResource("5_yt64t")]
+[node name="Enemy Health" parent="." node_paths=PackedStringArray("character") instance=ExtResource("5_yt64t")]
 character = NodePath("..")
-health_bar = NodePath("../HealthUI")
 max_health = null
 
 [node name="HealthUI" type="Control" parent="."]
@@ -712,6 +712,13 @@ offset_top = -21.0
 offset_right = 17.0
 offset_bottom = -19.0
 value = 100.0
+
+[node name="Target_ring" parent="." instance=ExtResource("7_ext5g")]
+visible = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+enabled = false
+zoom = Vector2(2, 2)
 
 [connection signal="body_entered" from="Detecting Zone" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Detecting Zone" to="." method="_on_area_2d_body_exited"]

@@ -3,6 +3,8 @@ extends Node
 var p_health : HealthSystem
 var b_health : HealthSystem
 var player : CharacterBody2D
+var player_energy : Energy
+var player_ek_mode : Ek
 var player_dead : bool = false
 var platform : bool = false # false = PC, true = mobile
 var camera : Camera2D

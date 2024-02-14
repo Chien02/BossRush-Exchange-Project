@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dr7elyw5hqa1s"]
+[gd_scene load_steps=17 format=3 uid="uid://dr7elyw5hqa1s"]
 
 [ext_resource type="Texture2D" uid="uid://dck8pju3wy0qo" path="res://Sprites/Characters/New Character/new character healthbar_under.png" id="1_bf061"]
 [ext_resource type="Script" path="res://Scenes/GUI/ui_control.gd" id="1_wjpqn"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://bwrx8lmdcaw3l" path="res://Sprites/GUI/Button/dash icon.png" id="13_6iiaq"]
 [ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://joystick/virtual_joystick.tscn" id="13_lc1yg"]
 [ext_resource type="Texture2D" uid="uid://dbp84dl0i7wk5" path="res://Sprites/GUI/Button/attack icon.png" id="14_xx1ht"]
+[ext_resource type="PackedScene" uid="uid://c446g0jwosvei" path="res://Scenes/Components/Global variables/energy_bar.tscn" id="16_ea8t4"]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_wjpqn")
@@ -36,12 +37,19 @@ script = ExtResource("3_dvscv")
 [node name="TextureRect" type="TextureRect" parent="PlayerHealthbar"]
 z_as_relative = false
 layout_mode = 0
-offset_left = -1.0
-offset_top = 6.0
-offset_right = 95.0
-offset_bottom = 50.0
-scale = Vector2(1.03786, 0.490364)
+offset_left = -1.75331
+offset_top = -0.354844
+offset_right = 94.2467
+offset_bottom = 43.6452
+scale = Vector2(1.05577, 0.875665)
 texture = ExtResource("3_cea0p")
+
+[node name="PlayerEnergyBar" parent="." instance=ExtResource("16_ea8t4")]
+offset_left = 65.0
+offset_top = 72.0
+offset_right = 65.0
+offset_bottom = 72.0
+scale = Vector2(2.35841, 2.04541)
 
 [node name="BossHealthbar" type="TextureProgressBar" parent="."]
 z_index = 1

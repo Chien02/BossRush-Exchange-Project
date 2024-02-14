@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://c446g0jwosvei"]
+
+[ext_resource type="Script" path="res://Scenes/Components/Global variables/energy_bar.gd" id="1_pumfi"]
+[ext_resource type="Texture2D" uid="uid://6rvkp8a67mow" path="res://Sprites/Characters/New Character/Energy bar-under.png" id="1_rksut"]
+[ext_resource type="Texture2D" uid="uid://b7vj365a66sag" path="res://Sprites/Characters/New Character/Energy bar-overl.png" id="2_cs3s6"]
+[ext_resource type="Texture2D" uid="uid://0fy0y2hrrq3u" path="res://Sprites/Characters/New Character/Energy bar-fill.png" id="3_2d7h4"]
+
+[node name="EnergyBar" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_pumfi")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 7.0
+offset_right = 93.0
+offset_bottom = 18.0
+value = 100.0
+texture_under = ExtResource("1_rksut")
+texture_over = ExtResource("2_cs3s6")
+texture_progress = ExtResource("3_2d7h4")

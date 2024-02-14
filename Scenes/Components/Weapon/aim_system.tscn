@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://h76osfy61jqb"]
+
+[ext_resource type="Script" path="res://Scenes/Components/Weapon/aim_system.gd" id="1_typon"]
+[ext_resource type="PackedScene" uid="uid://cb0ynjfk82gbq" path="res://Scenes/Player/assist_aim.tscn" id="2_gkotu"]
+
+[node name="Aim system" type="Node2D"]
+script = ExtResource("1_typon")
+
+[node name="Assist aim" parent="." instance=ExtResource("2_gkotu")]
+position = Vector2(3, -4.54747e-13)
+scale = Vector2(1, 2.211)

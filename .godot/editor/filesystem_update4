@@ -1,10 +1,18 @@
+res://Scenes/Boss/RabiKing/rabi_king.tscn
 res://addons/shaker/shaker.gd
 res://Scenes/Components/Weapon/lighting_sword.gd
-res://Scenes/StateMachine Manage/State_machine.gd
 res://Scenes/Player/P_hurt.gdshader
-res://Scenes/platform.tscn
-res://Scenes/Components/Global variables/Global.gd
-res://Scenes/platform.gd
-res://Scenes/GUI/ui.tscn
-res://Scenes/GUI/ui_control.gd
+res://Scenes/Effects/CameraController.gd
+res://Scenes/Player/Player.tscn
+res://Scenes/enemy_v2/enemy_v2.tscn
 res://Scenes/test_scene.tscn
+res://Scenes/StateMachine Manage/States/Boss states/b_attack.tscn
+res://Scenes/Components/Weapon/tree_hammer.tscn
+res://Scenes/Health/boss_health.tscn
+res://Scenes/Components/Weapon/lighting_sword.tscn
+res://Scenes/StateMachine Manage/States/Player states/P_dash.tscn
+res://Scenes/StateMachine Manage/States/Player states/P_dash.gd
+res://Scenes/Player/assist_aim.tscn
+res://Scenes/Components/Weapon/aim_system.tscn
+res://Scenes/Components/Weapon/aim_system.gd
+res://Scenes/Health/player_health.tscn

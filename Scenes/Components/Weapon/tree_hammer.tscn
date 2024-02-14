@@ -92,7 +92,7 @@ tracks/4/path = NodePath("Boss/Effect/ShadowHint:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0.4, 1),
+"times": PackedFloat32Array(0.55, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -1359,7 +1359,7 @@ visible = false
 [node name="BossAnimated" type="AnimatedSprite2D" parent="Boss"]
 material = SubResource("ShaderMaterial_dbhtk")
 sprite_frames = SubResource("SpriteFrames_irmey")
-animation = &"transition"
+animation = &"b_down"
 
 [node name="Hitbox" type="Area2D" parent="Boss" groups=["Weapon"]]
 collision_layer = 2
@@ -1439,5 +1439,6 @@ libraries = {
 }
 
 [node name="Icon" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(-7, -8)
 texture = ExtResource("8_yps5b")

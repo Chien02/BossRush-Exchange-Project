@@ -28,8 +28,7 @@ func check_for_switch():
 		var layer2 = 0b001
 		var layer4 = 0b011
 		character.get_node("Hurtbox").collision_mask = layer2 | layer4
-		
-		character.get_node("Animation").get_node("AnimatedSprite2D").material["shader_parameter/flash"] = false
+		character.get_node("Animation/Normal Mode").material["shader_parameter/flash"] = false
 		if (character.direction != Vector2.ZERO):
 			switch(state_factory.get_state("p_run"))
 		else:
@@ -38,7 +37,7 @@ func check_for_switch():
 func handle_hurt():
 	character.get_node("Player Health").is_hurting = true
 	character.get_node("Hurtbox").collision_mask = 0
-	character.get_node("Animation").get_node("AnimatedSprite2D").material["shader_parameter/flash"] = flash
+	character.get_node("Animation/Normal Mode").material["shader_parameter/flash"] = flash
 	if (!can_move):
 		character.direction = Vector2.ZERO
 

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://7r1yo3gw8r0v"]
+
+[ext_resource type="Script" path="res://Scenes/Components/Global variables/ek_mode.gd" id="1_bxjnr"]
+
+[node name="Ek_mode" type="Node2D"]
+script = ExtResource("1_bxjnr")

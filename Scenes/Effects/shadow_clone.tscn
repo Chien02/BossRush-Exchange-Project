@@ -1,10 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://ce8sc7lkiwjed"]
 
-[ext_resource type="Texture2D" uid="uid://cka8u5p0674wt" path="res://Sprites/Characters/New Character/new character dash.png" id="1_ijynb"]
+[ext_resource type="Texture2D" uid="uid://cbr80kx3iamof" path="res://Sprites/Characters/New Character/dash_up.png" id="1_68a7g"]
 [ext_resource type="Script" path="res://Scenes/Effects/shadow_clone.gd" id="1_nqwqc"]
 
 [node name="Shadow_clone" type="Sprite2D"]
 self_modulate = Color(0.12549, 0.0823529, 0.858824, 1)
-texture = ExtResource("1_ijynb")
-hframes = 8
+texture_filter = 1
+position = Vector2(1, -6)
+texture = ExtResource("1_68a7g")
 script = ExtResource("1_nqwqc")

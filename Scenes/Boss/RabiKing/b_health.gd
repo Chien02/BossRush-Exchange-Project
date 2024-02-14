@@ -24,11 +24,15 @@ func _on_hurtbox_area_entered(area):
 		$FlashyTime.start()
 		flash = true
 		Global.camera.shake(0.05, 1)
+		# For energy bar
+		if (Global.player_energy.energy < Global.player_energy.max_energy):
+			Global.player_energy.add_energy(1)
 		Global.frame_freeze(0.1, 0.2)
 		Global.zoom(0.2)
 		var weapon = get_tree().get_first_node_in_group("Player").bag.weapon
 		hurt(weapon.damage)
 		knockback(weapon.get_parent().get_parent().velocity, 10)
+		
 
 func handle_hurt():
 	var delta : float = 0.75

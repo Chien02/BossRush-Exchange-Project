@@ -15,7 +15,6 @@ var attack : bool = false
 var sweep : bool = false
 
 
-
 func _ready():
 	player = get_tree().get_first_node_in_group("Player")
 
