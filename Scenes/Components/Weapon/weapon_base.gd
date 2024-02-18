@@ -3,7 +3,6 @@ extends Node2D
 class_name Weapon_base
 
 # weapon properties
-@export var icon : Sprite2D
 @export var damage : int
 @export var mana: int
 @export var can_attack : bool = false
@@ -15,6 +14,7 @@ var character
 var target
 var direction : Vector2
 var animation_tree : AnimationTree
+var icon
 
 func _ready():
 	hitbox.disabled = true
@@ -30,12 +30,16 @@ func end_hit():
 	hitbox.disabled = true
 
 func get_character():
-	character = get_parent().get_parent()
+	var user = get_parent().get_parent()
+	if user is CharacterBody2D:
+		character = user
+	else:
+		character = null
 	is_player = true if (character.is_in_group("Player")) else false
 	if (is_player == false):
 		target = get_tree().get_first_node_in_group("Player")
 	else:
-		target = get_tree().get_first_node_in_group("Boss")
+		target = character.get_node("Aim system").target
 
 func set_attack(_value):
 	pass

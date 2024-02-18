@@ -2,6 +2,7 @@ extends BaseState
 
 var attacking : bool = false
 var play_animation : bool = false
+var cancel : bool = false
 
 func enter():
 	_name = "boss_attack"
@@ -11,7 +12,8 @@ func enter():
 	$Ready2atk.start()
 
 func exit():
-	character.attack = false
+	if (character):
+		character.attack = false
 
 func update():
 	handle_atk()

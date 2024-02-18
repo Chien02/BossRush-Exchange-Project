@@ -1,9 +1,10 @@
-res://Scenes/Effects
+D:/Game Project/BossRush Exchange Project/Export/Ekchane_DemoCombat
 res://Scenes/Components/Weapon
 res://Scenes
+res://Scenes/StateMachine Manage/States/Player states
+res://Scenes/Effects
 res://Sprites/Characters/New Character
 res://Scenes/Components/Global variables
-D:/Game Project/BossRush Exchange Project/Export/Ekchane_DemoCombat
 res://VFX/Impact
 res://VFX
 res://Sprites/GUI/Button
@@ -19,4 +20,3 @@ res://Scenes/menu
 res://Scenes/StateMachine Manage/States/Boss states
 res://Scenes/enemy_v2
 res://Sprites/Characters/Enemy
-res://Scenes/GUI

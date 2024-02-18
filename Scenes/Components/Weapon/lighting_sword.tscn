@@ -1,7 +1,6 @@
-[gd_scene load_steps=51 format=3 uid="uid://dch8cf4hj10dp"]
+[gd_scene load_steps=50 format=3 uid="uid://dch8cf4hj10dp"]
 
 [ext_resource type="Script" path="res://Scenes/Components/Weapon/lighting_sword.gd" id="1_dlruu"]
-[ext_resource type="PackedScene" uid="uid://cb0ynjfk82gbq" path="res://Scenes/Player/assist_aim.tscn" id="2_qkae6"]
 [ext_resource type="Texture2D" uid="uid://6icvun5ewdlo" path="res://Sprites/Characters/New Character/new character attack.png" id="3_6vvgj"]
 
 [sub_resource type="Animation" id="Animation_h7ogm"]
@@ -480,7 +479,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kygcm"]
 size = Vector2(29, 23.5)
 
-[node name="Lighting Sword" type="Node2D" node_paths=PackedStringArray("hitbox") groups=["Weapon"]]
+[node name="LightingSword" type="Node2D" node_paths=PackedStringArray("hitbox") groups=["Weapon"]]
 y_sort_enabled = true
 texture_filter = 1
 script = ExtResource("1_dlruu")
@@ -522,9 +521,5 @@ shape = SubResource("RectangleShape2D_kygcm")
 disabled = true
 debug_color = Color(0.980392, 0.101961, 0.227451, 0.419608)
 
-[node name="Assist aim" parent="Player/Hitbox" instance=ExtResource("2_qkae6")]
+[node name="Icon" type="Sprite2D" parent="."]
 visible = false
-modulate = Color(1, 1, 1, 0.831373)
-y_sort_enabled = true
-position = Vector2(2.72848e-12, 4.76837e-07)
-scale = Vector2(1.05031, 1.73344)

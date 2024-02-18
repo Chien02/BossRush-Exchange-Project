@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://css658qy86c3t"]
+
+[ext_resource type="PackedScene" uid="uid://c1mfqny2dfurv" path="res://Scenes/Components/Slot/base_slot.tscn" id="1_sax0e"]
+[ext_resource type="PackedScene" uid="uid://dch8cf4hj10dp" path="res://Scenes/Components/Weapon/lighting_sword.tscn" id="2_7cwmi"]
+
+[node name="Test Ekchane" type="Node2D"]
+
+[node name="p1" type="Node2D" parent="."]
+
+[node name="BaseSlot" parent="p1" instance=ExtResource("1_sax0e")]
+
+[node name="Lighting Sword" parent="p1/BaseSlot" instance=ExtResource("2_7cwmi")]
+
+[node name="p2" type="Node2D" parent="."]
+
+[node name="BaseSlot2" parent="p2" instance=ExtResource("1_sax0e")]
+unique_name_in_owner = true
+
+[node name="Lighting Sword" parent="p2/BaseSlot2" node_paths=PackedStringArray("hitbox") instance=ExtResource("2_7cwmi")]
+hitbox = NodePath("../../../p1/BaseSlot/Lighting Sword/Player/Hitbox/CollisionShape2D")

@@ -3,6 +3,12 @@
 [ext_resource type="Script" path="res://Scenes/Effects/CameraShake.gd" id="1_x5vgy"]
 
 [node name="CameraShake" type="Camera2D"]
+position_smoothing_speed = 1.0
+rotation_smoothing_speed = 1.0
+drag_left_margin = 0.1
+drag_top_margin = 0.1
+drag_right_margin = 0.1
+drag_bottom_margin = 0.1
 script = ExtResource("1_x5vgy")
 
 [node name="Timer" type="Timer" parent="."]

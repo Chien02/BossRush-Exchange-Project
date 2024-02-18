@@ -19,4 +19,3 @@ func _on_start_button_down():
 	$Control2/Control/AnimatedSprite2D.visible = true
 	animator.play("default")
 	$Control2/Start.visible = false
-	$Control2/Quit.visible = false

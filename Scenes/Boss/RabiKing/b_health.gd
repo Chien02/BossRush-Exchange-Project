@@ -23,7 +23,7 @@ func _on_hurtbox_area_entered(area):
 		$Timer.start()
 		$FlashyTime.start()
 		flash = true
-		Global.camera.shake(0.05, 1)
+		Global.camera.shake(0.2, 2.5)
 		# For energy bar
 		if (Global.player_energy.energy < Global.player_energy.max_energy):
 			Global.player_energy.add_energy(1)

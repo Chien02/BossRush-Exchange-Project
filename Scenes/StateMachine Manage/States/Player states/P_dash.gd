@@ -40,8 +40,8 @@ func handle_dash():
 	
 	get_tree().create_tween().tween_property(character, # For the real dash, do animation
 		"position",
-		character.position + character.animation_control.animation_tree["parameters/Dash/blend_position"].normalized() * 25,
-		$Timer.wait_time).set_ease(Tween.EASE_IN)
+		character.position + character.animation_control.animation_tree["parameters/Dash/blend_position"].normalized() * 18,
+		$Timer.wait_time).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 	
 
 func _on_timer_timeout():
@@ -49,13 +49,14 @@ func _on_timer_timeout():
 
 # For the effects
 func _on_timer_2_spawn_shadow_timeout():
-	# Use Ghosting technic, spawn the shadow to the screen
-	shadow_clone = preload("res://Scenes/Effects/shadow_clone.tscn").instantiate()
-	if (!get_tree().current_scene): return
-	get_tree().current_scene.add_child(shadow_clone)
-	var animated = character.get_node("Animation/Normal Mode") if (!character.is_ek_change) else character.get_node("Animation/Ek Mode")
-	var frame = animated.sprite_frames.get_frame_texture(animated.animation, animated.frame)
-	
-	#if (Engine.is_editor_hint()):
-	shadow_clone.texture = frame
-	shadow_clone.position = character.position + Vector2(0, -6)# Set the position of the shadow is behind player
+	if (dashing):
+		# Use Ghosting technic, spawn the shadow to the screen
+		shadow_clone = preload("res://Scenes/Effects/shadow_clone.tscn").instantiate()
+		if (!get_tree().current_scene): return
+		get_tree().current_scene.add_child(shadow_clone)
+		var animated = character.get_node("Animation/Normal Mode") if (!character.is_ek_change) else character.get_node("Animation/Ek Mode")
+		var frame = animated.sprite_frames.get_frame_texture(animated.animation, animated.frame)
+		
+		#if (Engine.is_editor_hint()):
+		shadow_clone.texture = frame
+		shadow_clone.position = character.position + Vector2(0, -6)# Set the position of the shadow is behind player

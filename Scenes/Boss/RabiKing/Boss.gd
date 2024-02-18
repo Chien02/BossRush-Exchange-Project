@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name Boss
 
+@export var state_machine : Node2D
 @export var animation_control : Node2D
 @export var distance : float
 @export var damage : int = 30
@@ -20,6 +21,7 @@ func _ready():
 
 func _process(_delta):
 	handle_velocity()
+	print("Boss's weapon: ", bag.weapon.name)
 	animation_control.update_paramater_animation(direction)
 
 func handle_velocity():
@@ -27,7 +29,7 @@ func handle_velocity():
 		last_velocity = velocity
 
 func _on_hammer_zone_area_entered(area):
-	if (area.owner.is_in_group("Player") and bag.weapon):
+	if (area.owner.is_in_group("Player") and bag.weapon.name == "TreeHammer"):
 		attack = true
 
 func _on_sweep_zone_area_entered(area):

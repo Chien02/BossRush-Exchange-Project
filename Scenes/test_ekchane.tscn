@@ -1,0 +1,58 @@
+[gd_scene load_steps=11 format=3 uid="uid://bgbu4o4waxpcr"]
+
+[ext_resource type="Script" path="res://Scenes/p1.gd" id="1_fh0j8"]
+[ext_resource type="PackedScene" uid="uid://cyov8qq87sp5t" path="res://Scenes/Components/Slot/p_slot.tscn" id="2_gxhek"]
+[ext_resource type="PackedScene" uid="uid://dch8cf4hj10dp" path="res://Scenes/Components/Weapon/lighting_sword.tscn" id="2_vbslo"]
+[ext_resource type="Texture2D" uid="uid://xkh0v8hpcifg" path="res://icon.png" id="3_jlpxm"]
+[ext_resource type="Texture2D" uid="uid://ctu7og6ik5jk1" path="res://icon.svg" id="4_mpv3u"]
+[ext_resource type="PackedScene" uid="uid://cp1dwigd47p84" path="res://Scenes/Components/Slot/b_slot.tscn" id="5_a0mjv"]
+[ext_resource type="PackedScene" uid="uid://bc1vn7efaxtow" path="res://Scenes/Components/Weapon/tree_hammer.tscn" id="6_iqy03"]
+[ext_resource type="Script" path="res://Scenes/p2.gd" id="6_tx7dd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqjhp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_85wvc"]
+
+[node name="Test Ekchane" type="Node2D"]
+texture_filter = 1
+
+[node name="p1" type="CharacterBody2D" parent="."]
+position = Vector2(-153, 3)
+script = ExtResource("1_fh0j8")
+
+[node name="avatar" type="Sprite2D" parent="p1"]
+texture = ExtResource("3_jlpxm")
+
+[node name="slot" type="Sprite2D" parent="p1"]
+modulate = Color(0, 0, 0, 0.372549)
+position = Vector2(-36, -39)
+scale = Vector2(0.218097, 0.225555)
+texture = ExtResource("4_mpv3u")
+
+[node name="P_slot" parent="p1" instance=ExtResource("2_gxhek")]
+position = Vector2(0, 1)
+
+[node name="Lighting Sword" parent="p1/P_slot" instance=ExtResource("2_vbslo")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="p1"]
+shape = SubResource("RectangleShape2D_hqjhp")
+
+[node name="p2" type="CharacterBody2D" parent="."]
+position = Vector2(136, -3)
+script = ExtResource("6_tx7dd")
+
+[node name="avatar" type="Sprite2D" parent="p2"]
+texture = ExtResource("3_jlpxm")
+
+[node name="slot" type="Sprite2D" parent="p2"]
+modulate = Color(0, 0, 0, 0.372549)
+position = Vector2(-35, -40)
+scale = Vector2(0.243775, 0.235758)
+texture = ExtResource("4_mpv3u")
+
+[node name="b_slot" parent="p2" instance=ExtResource("5_a0mjv")]
+
+[node name="TreeHammer" parent="p2/b_slot" instance=ExtResource("6_iqy03")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="p2"]
+shape = SubResource("RectangleShape2D_85wvc")

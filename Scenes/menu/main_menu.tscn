@@ -191,10 +191,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -664.0
-offset_top = -359.0
-offset_right = 1336.0
-offset_bottom = 716.0
+offset_left = -800.0
+offset_top = -448.0
+offset_right = 1645.0
+offset_bottom = 891.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.65363, 0.667133)
@@ -208,10 +208,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -563.0
-offset_top = -356.0
-offset_right = 876.0
-offset_bottom = 453.0
+offset_left = -614.0
+offset_top = -382.0
+offset_right = 950.0
+offset_bottom = 519.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.794518, 0.856633)
@@ -235,8 +235,8 @@ scale = Vector2(1.39995, 1.89851)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control2/Control"]
 visible = false
-position = Vector2(10.0004, 12.6415)
-scale = Vector2(2.97657, 2.19642)
+position = Vector2(7.85737, 14.2217)
+scale = Vector2(3.57156, 2.62194)
 sprite_frames = SubResource("SpriteFrames_fh45t")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Control2/Control"]
@@ -252,31 +252,13 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -100.0
-offset_top = 147.0
+offset_top = 187.0
 offset_right = 172.0
-offset_bottom = 236.0
+offset_bottom = 276.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.694298, 0.750612)
 theme_override_font_sizes/font_size = 36
 text = "Start"
 
-[node name="Quit" type="Button" parent="Control2"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -93.0
-offset_top = 229.0
-offset_right = 179.0
-offset_bottom = 318.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.67191, 0.652073)
-theme_override_font_sizes/font_size = 36
-text = "Quit"
-
 [connection signal="button_down" from="Control2/Start" to="." method="_on_start_button_down"]
-[connection signal="button_down" from="Control2/Quit" to="." method="_on_quit_button_down"]

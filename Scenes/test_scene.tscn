@@ -23,7 +23,12 @@ scale = Vector2(1, 1)
 [node name="CameraShake" parent="Player" instance=ExtResource("3_sjcgn")]
 position = Vector2(2, 0)
 zoom = Vector2(2.5, 2.5)
+limit_smoothed = true
 position_smoothing_enabled = true
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+enabled = false
+zoom = Vector2(2, 2)
 
 [node name="UI" parent="." instance=ExtResource("5_uptpn")]
 

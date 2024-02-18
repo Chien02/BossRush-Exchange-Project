@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 class_name Player
 
+@export var state_machine : Node2D
 @export var animation_control : Node2D
 @export var direction : Vector2 = Vector2.ZERO
 @export var block_direction : bool = false # khi dash hoặc attack thì ko được chuyển hướng
@@ -20,6 +21,7 @@ func _ready():
 
 func _process(_delta):
 	direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down").normalized()
+	print("Player's weapon: ", bag.weapon.name)
 	check_ek_change()
 	
 func _physics_process(delta):

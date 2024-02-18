@@ -34,7 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://h76osfy61jqb" path="res://Scenes/Components/Weapon/aim_system.tscn" id="32_qnpps"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pgxju"]
-size = Vector2(10, 10)
+size = Vector2(10, 9.8)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p07ru"]
 radius = 4.8
@@ -3520,7 +3520,7 @@ states/transition/position = Vector2(543, 6)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_mufv3"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_jmft0"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_a5ccl"), "Idle", "Dash", SubResource("AnimationNodeStateMachineTransition_ksojw"), "Dash", "Idle", SubResource("AnimationNodeStateMachineTransition_w5fn4"), "Dash", "Run", SubResource("AnimationNodeStateMachineTransition_ymwyf"), "Run", "Dash", SubResource("AnimationNodeStateMachineTransition_p30l4"), "Idle", "Hurt", SubResource("AnimationNodeStateMachineTransition_3osjq"), "Hurt", "Idle", SubResource("AnimationNodeStateMachineTransition_807c0"), "Hurt", "Run", SubResource("AnimationNodeStateMachineTransition_atapu"), "Run", "Hurt", SubResource("AnimationNodeStateMachineTransition_p4xhl"), "Idle", "transition", SubResource("AnimationNodeStateMachineTransition_e66xq"), "transition", "Idle", SubResource("AnimationNodeStateMachineTransition_7arrq"), "Dash", "transition", SubResource("AnimationNodeStateMachineTransition_ajk7h"), "Run", "transition", SubResource("AnimationNodeStateMachineTransition_3uxqj"), "transition", "Run", SubResource("AnimationNodeStateMachineTransition_6arnf"), "transition", "Dash", SubResource("AnimationNodeStateMachineTransition_i7ssa"), "transition", "Hurt", SubResource("AnimationNodeStateMachineTransition_b3of4"), "Idle", "change", SubResource("AnimationNodeStateMachineTransition_f8v36"), "Run", "change", SubResource("AnimationNodeStateMachineTransition_tykmf"), "change", "ek_idle", SubResource("AnimationNodeStateMachineTransition_ssagw"), "ek_idle", "ek_attack", SubResource("AnimationNodeStateMachineTransition_is30a"), "ek_idle", "ek_run", SubResource("AnimationNodeStateMachineTransition_wfcu8"), "ek_run", "ek_idle", SubResource("AnimationNodeStateMachineTransition_ec2xc"), "ek_attack", "ek_idle", SubResource("AnimationNodeStateMachineTransition_vsid6"), "ek_run", "ek_attack", SubResource("AnimationNodeStateMachineTransition_1fpkt"), "ek_attack", "ek_run", SubResource("AnimationNodeStateMachineTransition_tyhvb")]
 graph_offset = Vector2(83, 318)
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("animation_control", "bag") groups=["Player"]]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("state_machine", "animation_control", "bag") groups=["Player"]]
 z_index = 1
 y_sort_enabled = true
 texture_filter = 1
@@ -3529,6 +3529,7 @@ disable_mode = 2
 collision_layer = 7
 collision_mask = 7
 script = ExtResource("1_un0f3")
+state_machine = NodePath("State Machine")
 animation_control = NodePath("Animation/AnimaitonControl")
 ACCELERATION = 600
 FRICTION = 700
@@ -3536,12 +3537,12 @@ bag = NodePath("P_slot")
 
 [node name="P_slot" parent="." instance=ExtResource("2_vpxaf")]
 
-[node name="Lighting Sword" parent="P_slot" instance=ExtResource("3_fuvhg")]
+[node name="LightingSword" parent="P_slot" instance=ExtResource("3_fuvhg")]
 
 [node name="CollisionShape2d" type="CollisionShape2D" parent="."]
-position = Vector2(1, 5)
+position = Vector2(0.8, 3.3)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_pgxju")
-disabled = true
 
 [node name="Hurtbox" type="Area2D" parent="."]
 position = Vector2(-16.8, -0.8)
@@ -3571,7 +3572,7 @@ material = SubResource("ShaderMaterial_r7vog")
 position = Vector2(1, -6)
 sprite_frames = SubResource("SpriteFrames_7ejdp")
 animation = &"idle_down"
-frame = 5
+frame = 6
 
 [node name="Ek Mode" type="AnimatedSprite2D" parent="Animation"]
 position = Vector2(0.8, -6.4)

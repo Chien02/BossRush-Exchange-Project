@@ -4,12 +4,15 @@ var using_time : float = 0.5
 
 func _ready():
 	# character -> state machine
+	icon = preload("res://Sprites/GUI/Button/attack icon.png")
 	animation_tree = get_node("AnimationTree")
 	get_character()
+	if (!character): return
 	rotate_to_target(target)
 	state_machine = character.get_node("State Machine") 
 
 func _process(_delta):
+	if (!character): return
 	get_character()
 	if (state_machine.current_state._name != "attack"): # if player
 		hitbox.disabled = true
@@ -32,10 +35,12 @@ func set_attack(_value):
 	animation_tree["parameters/conditions/cannot_attack"] = !_value
 	
 func rotate_to_target(_target):
+	if (!character): return
 	var delta = 0.75
 	var angle_2
 	var rotation_speed = 5
 	if (is_player == false):
+		if !character.direction: return Vector2.ZERO
 		direction = character.direction
 		angle_2 = hitbox.get_parent().transform.x.angle_to(direction)
 		hitbox.get_parent().rotate(sign(angle_2) * min(delta * rotation_speed, abs(angle_2)))
@@ -43,6 +48,11 @@ func rotate_to_target(_target):
 	
 	if (_target):
 		direction = (_target.global_position - hitbox.get_parent().global_position).normalized()
+		angle_2 = hitbox.get_parent().transform.x.angle_to(direction)
+		hitbox.get_parent().rotate(sign(angle_2) * min(delta * rotation_speed, abs(angle_2)))
+		return direction
+	else:
+		direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 		angle_2 = hitbox.get_parent().transform.x.angle_to(direction)
 		hitbox.get_parent().rotate(sign(angle_2) * min(delta * rotation_speed, abs(angle_2)))
 		return direction

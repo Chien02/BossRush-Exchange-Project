@@ -4,4 +4,13 @@
 [ext_resource type="Script" path="res://Scenes/Components/Slot/b_slot.gd" id="2_r0ran"]
 
 [node name="b_slot" instance=ExtResource("1_t554d")]
+texture_filter = 1
 script = ExtResource("2_r0ran")
+
+[node name="Slot" parent="." index="0"]
+position = Vector2(-33, -36)
+scale = Vector2(0.144225, 0.146318)
+
+[node name="Icon" parent="." index="1"]
+position = Vector2(-33, -36)
+scale = Vector2(0.500547, 0.501126)

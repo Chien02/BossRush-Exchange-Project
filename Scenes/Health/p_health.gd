@@ -7,8 +7,8 @@ func _ready():
 
 func _on_hurtbox_area_entered(area):
 	if (area.is_in_group("Boss") and area.name == "Hurtbox"):
-		hurt(area.get_parent().damage)
-		knockback(area.owner.last_velocity, 12)
+		#hurt(area.get_parent().damage)
+		knockback(area.owner.last_velocity, 5)
 		invisible()
 	
 	elif (area.is_in_group("Weapon") and area.is_in_group("Boss")):
@@ -19,7 +19,6 @@ func _on_hurtbox_area_entered(area):
 	
 	elif (area.is_in_group("Boss")):
 		var boss = get_tree().get_first_node_in_group("Boss")
-		print("boss.damage: ", boss.damage)
 		hurt(boss.damage)
 		knockback(boss.last_velocity, 20)
 		invisible()

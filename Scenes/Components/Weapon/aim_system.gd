@@ -22,6 +22,7 @@ func _ready():
 	user = get_parent()
 	active = false
 	target = null
+	visible = false
 
 func _process(_delta):
 	# test
@@ -32,6 +33,7 @@ func _process(_delta):
 	if (!root_node):
 		root_node = get_parent().world
 	control_aim()
+	visible = active
 	if (active == false):
 		return
 	check_amount()
@@ -41,7 +43,6 @@ func _process(_delta):
 	set_target()
 	check_to_change()
 	rotate_to_target()
-
 
 func check_amount():
 	if (root_node.get_child_count() > last_child_count):
@@ -57,9 +58,9 @@ func control_aim():
 	if (Input.is_action_just_pressed("aim")):
 		if (!active):
 			active = true
-	
+
+
 	if (Input.is_action_just_pressed("exit_aim")):
-		print("Exit aim")
 		active = exit_aim()
 
 func sort_list():
@@ -125,7 +126,6 @@ func exit_aim():
 	if (active == true):
 		if (target):
 			target.get_node("Target_ring").visible = false
-			target.get_node("Camera2D").enabled = false
 			target = null
 			user.target = null
 	return false

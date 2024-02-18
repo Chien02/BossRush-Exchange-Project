@@ -21,16 +21,20 @@ var user : String # To define who is using this
 var is_playing : bool = false
 
 func _ready():
+	icon = preload("res://Sprites/Weapons/Tree_hammer_icon.png")
 	get_character() # check for who is using this weapon
 	set_character() # set for the first time appear in tree
+	if (!character): return
 	set_using_time()
 	state_machine = character.get_node("State Machine")
 	animation_tree = $AnimationTree
 
 func _process(_delta):
+	if (!character): return
 	if (is_user_changed()): # Update information if user changed
 		get_character()
 		set_character()
+		if (!character): return
 		set_using_time()
 	set_hitbox() # This user for disable hitbox when not in attack state
 	#rotate_to_target(target)
@@ -121,7 +125,7 @@ func play_animation():
 	if (character.direction != Vector2.ZERO):
 		animation_tree["parameters/player/blend_position"] = character.direction
 		animation_tree["parameters/boss/blend_position"] = rotate_to_target(target)
-	
+
 
 func set_attack(_value):
 	if (animation_tree):

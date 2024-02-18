@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://co8yqe4jnv1j1" path="res://Sprites/Characters/New Character/new character healthbar_back.png" id="3_cea0p"]
 [ext_resource type="Script" path="res://Scenes/GUI/P_Healthbar.gd" id="3_dvscv"]
 [ext_resource type="Texture2D" uid="uid://bwof5nvmgs6js" path="res://Sprites/Characters/Boss/Rabiking/Boss healthbar_under.png" id="3_vh4rw"]
-[ext_resource type="Texture2D" uid="uid://dlyvljek2g4ey" path="res://Sprites/Characters/Boss/Rabiking/Boss healthbar_background.png" id="4_l3b8p"]
 [ext_resource type="Texture2D" uid="uid://1ruc8q7qqqhh" path="res://Sprites/Characters/Boss/Rabiking/Boss healthbar_fill.png" id="6_was4w"]
 [ext_resource type="Script" path="res://Scenes/GUI/B_Healthbar.gd" id="7_mda1n"]
+[ext_resource type="Texture2D" uid="uid://bnscf7qmv1pbi" path="res://Sprites/Characters/Boss/Rabiking/Boss healthbar_underl.png" id="10_4yclu"]
 [ext_resource type="PackedScene" uid="uid://b0x34cj8gbmey" path="res://Scenes/GUI/game_over.tscn" id="10_d442r"]
 [ext_resource type="Texture2D" uid="uid://davyeuw4w2s71" path="res://Sprites/GUI/Button/panel-border-010.png" id="11_mdmbo"]
 [ext_resource type="Texture2D" uid="uid://do5fyogt4wywd" path="res://Sprites/GUI/Button/panel-border-016.png" id="12_ohqvf"]
@@ -67,7 +67,7 @@ grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(2.77926, 2.48371)
 value = 100.0
-texture_under = ExtResource("4_l3b8p")
+texture_under = ExtResource("3_vh4rw")
 texture_progress = ExtResource("6_was4w")
 script = ExtResource("7_mda1n")
 
@@ -79,7 +79,7 @@ offset_top = -3.0
 offset_right = 222.0
 offset_bottom = 66.0
 scale = Vector2(1.02118, 0.556849)
-texture = ExtResource("3_vh4rw")
+texture = ExtResource("10_4yclu")
 
 [node name="Game Over" parent="." instance=ExtResource("10_d442r")]
 process_mode = 2

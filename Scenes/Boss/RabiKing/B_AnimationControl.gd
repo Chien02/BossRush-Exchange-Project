@@ -28,21 +28,25 @@ func set_up_atk(_value):
 	animation_tree["parameters/conditions/sweep"] = not _value
 	animation_tree["parameters/conditions/idle"] = not _value
 	animation_tree["parameters/conditions/chase"] = not _value
+	animation_tree["parameters/conditions/cancel"] = not _value
 
 func set_up_sweep(_value):
 	animation_tree["parameters/conditions/sweep"] = _value
 	animation_tree["parameters/conditions/idle"] = not _value
 	animation_tree["parameters/conditions/chase"] = not _value
 	animation_tree["parameters/conditions/attack"] = not _value
+	animation_tree["parameters/conditions/cancel"] = not _value
 
 func set_up_chase(_value):
 	animation_tree["parameters/conditions/chase"] = _value
+	animation_tree["parameters/conditions/cancel"] = not _value
 	animation_tree["parameters/conditions/idle"] = not _value
 	animation_tree["parameters/conditions/sweep"] = not _value
 	animation_tree["parameters/conditions/attack"] = not _value
 
 func set_up_idle(_value):
 	animation_tree["parameters/conditions/idle"] = _value
+	animation_tree["parameters/conditions/cancel"] = _value
 	animation_tree["parameters/conditions/chase"] = not _value
 	animation_tree["parameters/conditions/sweep"] = not _value
 	animation_tree["parameters/conditions/attack"] = not _value

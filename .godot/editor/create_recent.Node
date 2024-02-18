@@ -1,6 +1,10 @@
+CollisionShape2D
+Area2D
+Sprite2D
+Shaker
+CharacterBody2D
 Node2D
 Camera2D
-Sprite2D
 AnimatedSprite2D
 TextureProgressBar
 Control
@@ -8,7 +12,3 @@ Button
 Label
 VisibleOnScreenEnabler2D
 CanvasLayer
-CollisionShape2D
-Area2D
-AnimationPlayer
-AnimatableBody2D

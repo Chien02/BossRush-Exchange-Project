@@ -4,6 +4,9 @@ class_name Slot
 @export var item : String
 @export var weapon : Node2D
 
+var slot_sprite : Sprite2D
+var icon_sprite : Sprite2D
+
 func _ready():
 	pass
 
@@ -15,13 +18,6 @@ func _process(_delta):
 # and they have already.
 # After switch, this function have to return the item its hold before switch
 
-func switch(new_item: String):
-	# In case that item is the same, do not do anything
-	if (item == new_item): return
-	if (item):  emit_signal("current_item", item)
-	else:  print("Got item: " + new_item)
-	item = new_item
-
 func display():
 	if (item): print("Item: " + item)
 	else: print("There don't have any item.")
@@ -31,11 +27,25 @@ func get_weapon(name_group : String):
 	if (get_child_count() < 1): return
 	var stuffs = get_children()
 	for object in stuffs:
-		if !weapon:
+		if object.is_in_group("Weapon") and !weapon:
 			weapon = object
 	
 	# Add weapon to group
+	if (weapon == null): return
 	if (weapon.check_user()):
 		weapon.get_node(name_group).get_node("Hitbox").add_to_group(name_group)
 	else:
 		weapon.get_node(name_group).get_node("Hitbox").add_to_group(name_group)
+
+func set_icon():
+	pass
+
+func active_icon(value: bool):
+	slot_sprite.visible = value
+	icon_sprite.visible = value
+
+func discard(_old):
+	pass
+
+func add(_new):
+	pass
