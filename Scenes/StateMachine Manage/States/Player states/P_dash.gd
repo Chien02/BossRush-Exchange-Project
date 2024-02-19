@@ -54,7 +54,7 @@ func _on_timer_2_spawn_shadow_timeout():
 		shadow_clone = preload("res://Scenes/Effects/shadow_clone.tscn").instantiate()
 		if (!get_tree().current_scene): return
 		get_tree().current_scene.add_child(shadow_clone)
-		var animated = character.get_node("Animation/Normal Mode") if (!character.is_ek_change) else character.get_node("Animation/Ek Mode")
+		var animated = character.get_node("Animation/Normal Mode") if (!character.ek.ek_mode) else character.get_node("Animation/Ek Mode")
 		var frame = animated.sprite_frames.get_frame_texture(animated.animation, animated.frame)
 		
 		#if (Engine.is_editor_hint()):

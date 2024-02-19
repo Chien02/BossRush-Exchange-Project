@@ -34,7 +34,7 @@ func add(new):
 		weapon = new_weapon
 	cb.call_deferred()
 
-func get_weapon(name_group : String):
+func get_weapon(_name_group : String):
 	if (weapon): return
 	if (get_child_count() <= 0): return
 	var stuffs = get_children()
@@ -45,6 +45,10 @@ func get_weapon(name_group : String):
 	# Add weapon to group
 	if (weapon == null): return
 	if (weapon.is_player):
-		weapon.get_node(name_group).get_node("Hitbox").add_to_group(name_group)
+		weapon.hitbox.add_to_group(name_group)
+		if (weapon.hitbox.is_in_group("Boss")):
+			weapon.hitbox.remove_from_group("Boss")
 	else:
-		weapon.get_node(name_group).get_node("Hitbox").add_to_group(name_group)
+		weapon.hitbox.add_to_group(name_group)
+		if (weapon.hitbox.is_in_group("Player")):
+			weapon.hitbox.remove_from_group("PLayer")

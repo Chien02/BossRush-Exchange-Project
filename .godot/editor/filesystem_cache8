@@ -1,5 +1,5 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1708354462
+::res://::1708384687
 default_env.tres::Environment::-1::1707214971::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1708260454::0::1::::<><>::
 icon.png::CompressedTexture2D::1635457999319410032::1707214971::1707214972::1::::<><>::
@@ -12,10 +12,10 @@ InspectorConvertor.gd::GDScript::-1::1706099420::0::1::::<>EditorInspectorPlugin
 NodeSelectorProperty.gd::GDScript::-1::1706099420::0::1::::<>EditorProperty<>::
 plugin.cfg::TextFile::-1::1706099420::0::1::::<><>::
 plugin.gd::GDScript::-1::1706099420::0::1::::<>EditorPlugin<>::
-::res://addons/shaker/::1708352173
+::res://addons/shaker/::1708382852
 plugin.cfg::TextFile::-1::1706099420::0::1::::<><>::
 plugin.gd::GDScript::-1::1706099420::0::1::::<>EditorPlugin<>::
-shaker.gd::GDScript::-1::1708352173::0::1::::Shaker<>Node<>res://addons/shaker/shaker.svg::
+shaker.gd::GDScript::-1::1708382852::0::1::::Shaker<>Node<>res://addons/shaker/shaker.svg::
 shaker.svg::CompressedTexture2D::4284292724571158551::1706099420::1706099420::1::::<><>::
 ::res://addons/tw/::1706099420
 icon.png::CompressedTexture2D::401056332513307300::1706099420::1706099420::1::::<><>::
@@ -44,7 +44,7 @@ icon.png::CompressedTexture2D::3517523119449250610::1707214972::1707214972::1:::
 preview1.png::CompressedTexture2D::8694945781546797102::1707214972::1707214972::1::::<><>::
 preview2.png::CompressedTexture2D::2499373190917467691::1707214972::1707214972::1::::<><>::
 preview3.png::CompressedTexture2D::5569587280631529046::1707214972::1707214972::1::::<><>::
-::res://Scenes/::1708353806
+::res://Scenes/::1708359282
 loading_scene.gd::GDScript::-1::1707294579::0::1::::<>CanvasLayer<>::
 loading_scene.tscn::PackedScene::2741020441217449019::1707312569::0::1::::<><>::res://Scenes/loading_scene.gd
 p1.gd::GDScript::-1::1708312248::0::1::::<>CharacterBody2D<>::
@@ -55,44 +55,44 @@ Temp.gd::GDScript::-1::1706099420::0::1::::<>Node2D<>::
 Temp.tscn::PackedScene::8380060991620820788::1706099420::0::1::::<><>::res://Scenes/Temp.gd
 test_core_mechanic.tscn::PackedScene::5877841007808412716::1707990652::0::1::::<><>::uid://hbifr4gss77a::::res://Scenes/enemy_v2/enemy_v2.tscn<>uid://dsyu5ngxudyy6::::res://Scenes/Effects/camera_shake.tscn<>uid://h76osfy61jqb::::res://Scenes/Components/Weapon/aim_system.tscn
 test_ekchane.gd::GDScript::-1::1708313784::0::1::::<>Node2D<>::
-test_ekchane.tscn::PackedScene::2810885032280657225::1708353806::0::1::::<><>::res://Scenes/p1.gd<>res://Scenes/test_ekchane.gd<>uid://xkh0v8hpcifg::::res://icon.png<>res://Scenes/p2.gd
+test_ekchane.tscn::PackedScene::2810885032280657225::1708359282::0::1::::<><>::res://Scenes/p1.gd<>res://Scenes/test_ekchane.gd<>uid://xkh0v8hpcifg::::res://icon.png<>res://Scenes/p2.gd
 test_scene.tscn::PackedScene::4369463670585559749::1708108829::0::1::::<><>::uid://bwablskr3sujt::::res://Scenes/Map/map.tscn<>uid://ddkec3ta7hkn::::res://Scenes/Player/Player.tscn<>uid://dsyu5ngxudyy6::::res://Scenes/Effects/camera_shake.tscn<>uid://dfx3fwmpsvnki::::res://Scenes/Boss/RabiKing/rabi_king.tscn<>uid://dr7elyw5hqa1s::::res://Scenes/GUI/ui.tscn<>res://Scenes/Effects/CameraController.gd
 ::res://Scenes/Boss/::1706350372
-::res://Scenes/Boss/RabiKing/::1708353806
-Boss.gd::GDScript::-1::1708345626::0::1::::Boss<>CharacterBody2D<>::
+::res://Scenes/Boss/RabiKing/::1708384610
+Boss.gd::GDScript::-1::1708355864::0::1::::Boss<>CharacterBody2D<>::
 B_AnimationControl.gd::GDScript::-1::1708164065::0::1::::<>Node2D<>::
 B_bag.gd::GDScript::-1::1707078779::0::1::::<>Slot<>::
-b_health.gd::GDScript::-1::1708353804::0::1::::<>HealthSystem<>::
-rabi_king.tscn::PackedScene::7559397137137607736::1708353806::0::1::::<><>::res://Scenes/Boss/RabiKing/Boss.gd<>uid://8w72pljrqcwq::::res://Sprites/Characters/Boss/Rabiking/Character_sheet.png<>uid://sa3w7jwhnu6n::::res://Sprites/Characters/Boss/Rabiking/boss_walk_down.png<>uid://cukqf4mm7tv7m::::res://Sprites/Characters/Boss/Rabiking/boss.png<>res://Scenes/Boss/RabiKing/B_AnimationControl.gd<>uid://cp1dwigd47p84::::res://Scenes/Components/Slot/b_slot.tscn<>res://Scenes/Player/P_hurt.gdshader<>uid://bc1vn7efaxtow::::res://Scenes/Components/Weapon/tree_hammer.tscn<>uid://dwwv7cmiifgis::::res://Sprites/Characters/Boss/Rabiking/boss_sweep_down.png<>uid://bbp2nxw630xj5::::res://Scenes/StateMachine Manage/b_state_machine.tscn<>uid://c4iqv2sorkvle::::res://Sprites/Characters/Boss/Rabiking/boss_with_weapon_down.png<>uid://cnd5nqtty8hk3::::res://Scenes/Health/boss_health.tscn<>uid://bxdlptsk0bpml::::res://Scenes/Components/Weapon/target_ring.tscn
+b_health.gd::GDScript::-1::1708384610::0::1::::<>HealthSystem<>::
+rabi_king.tscn::PackedScene::7559397137137607736::1708359283::0::1::::<><>::res://Scenes/Boss/RabiKing/Boss.gd<>uid://8w72pljrqcwq::::res://Sprites/Characters/Boss/Rabiking/Character_sheet.png<>uid://sa3w7jwhnu6n::::res://Sprites/Characters/Boss/Rabiking/boss_walk_down.png<>uid://cukqf4mm7tv7m::::res://Sprites/Characters/Boss/Rabiking/boss.png<>res://Scenes/Boss/RabiKing/B_AnimationControl.gd<>uid://cp1dwigd47p84::::res://Scenes/Components/Slot/b_slot.tscn<>res://Scenes/Player/P_hurt.gdshader<>uid://bc1vn7efaxtow::::res://Scenes/Components/Weapon/tree_hammer.tscn<>uid://dwwv7cmiifgis::::res://Sprites/Characters/Boss/Rabiking/boss_sweep_down.png<>uid://bbp2nxw630xj5::::res://Scenes/StateMachine Manage/b_state_machine.tscn<>uid://c4iqv2sorkvle::::res://Sprites/Characters/Boss/Rabiking/boss_with_weapon_down.png<>uid://cnd5nqtty8hk3::::res://Scenes/Health/boss_health.tscn<>uid://bxdlptsk0bpml::::res://Scenes/Components/Weapon/target_ring.tscn
 ::res://Scenes/Components/::1706099420
-::res://Scenes/Components/Global variables/::1708353806
-ek_mode.gd::GDScript::-1::1708311655::0::1::::Ek<>Node2D<>::
-ek_mode.tscn::PackedScene::2282759697986453203::1708353806::0::1::::<><>::res://Scenes/Components/Global variables/ek_mode.gd
-energy_bar.gd::GDScript::-1::1707577222::0::1::::Energy<>Control<>::
-energy_bar.tscn::PackedScene::6870079057302077780::1707803892::0::1::::<><>::res://Scenes/Components/Global variables/energy_bar.gd<>uid://6rvkp8a67mow::::res://Sprites/Characters/New Character/Energy bar-under.png<>uid://b7vj365a66sag::::res://Sprites/Characters/New Character/Energy bar-overl.png<>uid://0fy0y2hrrq3u::::res://Sprites/Characters/New Character/Energy bar-fill.png
+::res://Scenes/Components/Global variables/::1708384622
+ek_mode.gd::GDScript::-1::1708384388::0::1::::Ek<>Node2D<>::
+ek_mode.tscn::PackedScene::2282759697986453203::1708384622::0::1::::<><>::res://Scenes/Components/Global variables/ek_mode.gd
+energy_bar.gd::GDScript::-1::1708383434::0::1::::Energy<>Control<>::
+energy_bar.tscn::PackedScene::6870079057302077780::1708384391::0::1::::<><>::res://Scenes/Components/Global variables/energy_bar.gd<>uid://6rvkp8a67mow::::res://Sprites/Characters/New Character/Energy bar-under.png<>uid://b7vj365a66sag::::res://Sprites/Characters/New Character/Energy bar-overl.png<>uid://0fy0y2hrrq3u::::res://Sprites/Characters/New Character/Energy bar-fill.png
 Global.gd::GDScript::-1::1707462579::0::1::::<>Node<>::
 ::res://Scenes/Components/Item/::1707159156
 base_item.gd::GDScript::-1::1706099420::0::1::::Item<>Area2D<>::
 base_item.tscn::PackedScene::7438615742306104775::1707159156::0::1::::<><>::res://Scenes/Components/Item/base_item.gd<>uid://b4v3ojgs7iad::::res://Sprites/Components/Test Card.png
 Item.gd::GDScript::-1::1706099420::0::1::::<>RefCounted<>::
-::res://Scenes/Components/Slot/::1708353806
-base_slot.gd::GDScript::-1::1708343037::0::1::::Slot<>Node2D<>::
-base_slot.tscn::PackedScene::6622856713799915615::1708353806::0::1::::<><>::res://Scenes/Components/Slot/base_slot.gd<>uid://ctu7og6ik5jk1::::res://icon.svg<>uid://6nwbhw6d47tu::::res://Sprites/Weapons/32 Free Weapon Icons/Icons/Iicon_32_26.png
-b_slot.gd::GDScript::-1::1708315074::0::1::::<>Slot<>::
+::res://Scenes/Components/Slot/::1708384567
+base_slot.gd::GDScript::-1::1708356197::0::1::::Slot<>Node2D<>::
+base_slot.tscn::PackedScene::6622856713799915615::1708359282::0::1::::<><>::res://Scenes/Components/Slot/base_slot.gd<>uid://ctu7og6ik5jk1::::res://icon.svg<>uid://6nwbhw6d47tu::::res://Sprites/Weapons/32 Free Weapon Icons/Icons/Iicon_32_26.png
+b_slot.gd::GDScript::-1::1708358792::0::1::::<>Slot<>::
 b_slot.tscn::PackedScene::5879569711638413035::1708261178::0::1::::<><>::uid://c1mfqny2dfurv::::res://Scenes/Components/Slot/base_slot.tscn<>res://Scenes/Components/Slot/b_slot.gd
-P_slot.gd::GDScript::-1::1708344992::0::1::::<>Slot<>::
-p_slot.tscn::PackedScene::6487609757936104059::1708353806::0::1::::<><>::uid://c1mfqny2dfurv::::res://Scenes/Components/Slot/base_slot.tscn<>res://Scenes/Components/Slot/P_slot.gd
-::res://Scenes/Components/Weapon/::1708353806
+P_slot.gd::GDScript::-1::1708384567::0::1::::<>Slot<>::
+p_slot.tscn::PackedScene::6487609757936104059::1708359282::0::1::::<><>::uid://c1mfqny2dfurv::::res://Scenes/Components/Slot/base_slot.tscn<>res://Scenes/Components/Slot/P_slot.gd
+::res://Scenes/Components/Weapon/::1708359282
 aim_system.gd::GDScript::-1::1708164529::0::1::::AimSystem<>Node2D<>::
 aim_system.tscn::PackedScene::559290175763802565::1708109947::0::1::::<><>::res://Scenes/Components/Weapon/aim_system.gd<>uid://cb0ynjfk82gbq::::res://Scenes/Player/assist_aim.tscn
-lighting_sword.gd::GDScript::-1::1708351820::0::1::::<>Weapon_base<>::
-lighting_sword.tscn::PackedScene::7316097922730094169::1708353806::0::1::::<><>::res://Scenes/Components/Weapon/lighting_sword.gd<>uid://6icvun5ewdlo::::res://Sprites/Characters/New Character/new character attack.png
+lighting_sword.gd::GDScript::-1::1708358695::0::1::::<>Weapon_base<>::
+lighting_sword.tscn::PackedScene::7316097922730094169::1708359282::0::1::::<><>::res://Scenes/Components/Weapon/lighting_sword.gd<>uid://6icvun5ewdlo::::res://Sprites/Characters/New Character/new character attack.png
 target_ring.tscn::PackedScene::4007652920696981687::1707818229::0::1::::<><>::uid://ctv6ndj6s5lju::::res://Sprites/Characters/New Character/target_ring.png
 tree_hammer.gd::GDScript::-1::1708350382::0::1::::<>Weapon_base<>::
-tree_hammer.tscn::PackedScene::2581772151898105238::1708353806::0::1::::<><>::res://Scenes/Components/Weapon/tree_hammer.gd<>res://Scenes/Player/P_hurt.gdshader<>uid://c4iqv2sorkvle::::res://Sprites/Characters/Boss/Rabiking/boss_with_weapon_down.png<>uid://cgayamluyib6k::::res://Sprites/Weapons/Sword_DownLeft.png<>uid://6icvun5ewdlo::::res://Sprites/Characters/New Character/new character attack.png<>uid://tm2bg38gna73::::res://VFX/Impact_Shine_V2_spritesheet.png<>uid://wy2uoh03j1mp::::res://VFX/Impact/Impact_Shockwave v2_spritesheet.png
+tree_hammer.tscn::PackedScene::2581772151898105238::1708359282::0::1::::<><>::res://Scenes/Components/Weapon/tree_hammer.gd<>res://Scenes/Player/P_hurt.gdshader<>uid://c4iqv2sorkvle::::res://Sprites/Characters/Boss/Rabiking/boss_with_weapon_down.png<>uid://cgayamluyib6k::::res://Sprites/Weapons/Sword_DownLeft.png<>uid://6icvun5ewdlo::::res://Sprites/Characters/New Character/new character attack.png<>uid://tm2bg38gna73::::res://VFX/Impact_Shine_V2_spritesheet.png<>uid://wy2uoh03j1mp::::res://VFX/Impact/Impact_Shockwave v2_spritesheet.png
 WeaponFactory.gd::GDScript::-1::1708311576::0::1::::WeaponFactory<>Node2D<>::
 weapon_base.gd::GDScript::-1::1708345935::0::1::::Weapon_base<>Node2D<>::
-weapon_base.tscn::PackedScene::2729328000727944811::1708353806::0::1::::<><>::res://Scenes/Components/Weapon/weapon_base.gd
+weapon_base.tscn::PackedScene::2729328000727944811::1708359282::0::1::::<><>::res://Scenes/Components/Weapon/weapon_base.gd
 weapon_factory.tscn::PackedScene::4990660069314177287::1708261178::0::1::::<><>::res://Scenes/Components/Weapon/WeaponFactory.gd
 ::res://Scenes/Effects/::1708109611
 CameraController.gd::GDScript::-1::1708109611::0::1::::CameraController<>Node2D<>::
@@ -117,8 +117,8 @@ GUI.tscn::PackedScene::923190596574730097::1707217578::0::1::::<><>::uid://2jlr7
 P_Healthbar.gd::GDScript::-1::1707289727::0::1::::<>TextureProgressBar<>::
 ui.tscn::PackedScene::8418796288678933686::1708352261::0::1::::<><>::uid://dck8pju3wy0qo::::res://Sprites/Characters/New Character/new character healthbar_under.png<>res://Scenes/GUI/ui_control.gd<>uid://bndmvodnupexf::::res://Sprites/Characters/New Character/new character healthbar_fill.png<>uid://co8yqe4jnv1j1::::res://Sprites/Characters/New Character/new character healthbar_back.png<>res://Scenes/GUI/P_Healthbar.gd<>uid://bwof5nvmgs6js::::res://Sprites/Characters/Boss/Rabiking/Boss healthbar_under.png<>uid://1ruc8q7qqqhh::::res://Sprites/Characters/Boss/Rabiking/Boss healthbar_fill.png<>res://Scenes/GUI/B_Healthbar.gd<>uid://bnscf7qmv1pbi::::res://Sprites/Characters/Boss/Rabiking/Boss healthbar_underl.png<>uid://b0x34cj8gbmey::::res://Scenes/GUI/game_over.tscn<>uid://davyeuw4w2s71::::res://Sprites/GUI/Button/panel-border-010.png<>uid://do5fyogt4wywd::::res://Sprites/GUI/Button/panel-border-016.png<>uid://bwrx8lmdcaw3l::::res://Sprites/GUI/Button/dash icon.png<>uid://dmr0fcamx7t56::::res://joystick/virtual_joystick.tscn<>uid://dbp84dl0i7wk5::::res://Sprites/GUI/Button/attack icon.png<>uid://c446g0jwosvei::::res://Scenes/Components/Global variables/energy_bar.tscn
 ui_control.gd::GDScript::-1::1707388260::0::1::::<>CanvasLayer<>::
-::res://Scenes/Health/::1708353807
-boss_health.tscn::PackedScene::5693335063668096820::1708353807::0::1::::<><>::res://Scenes/Boss/RabiKing/b_health.gd
+::res://Scenes/Health/::1708359283
+boss_health.tscn::PackedScene::5693335063668096820::1708359283::0::1::::<><>::res://Scenes/Boss/RabiKing/b_health.gd
 enemy_health.gd::GDScript::-1::1706978115::0::1::::<>HealthSystem<>::
 enemy_health.tscn::PackedScene::2850416543474039336::1706132844::0::1::::<><>::uid://cu10b5j6wv23g::::res://Scenes/Health/health.tscn<>res://Scenes/Health/enemy_health.gd
 E_HealthBar.tscn::PackedScene::1914378133189564770::1706279060::0::1::::<><>::
@@ -134,16 +134,16 @@ map.tscn::PackedScene::3930656566134431109::1706903018::0::1::::<><>::uid://ceys
 ::res://Scenes/menu/::1708261178
 main_menu.gd::GDScript::-1::1708260386::0::1::::<>CanvasLayer<>::
 main_menu.tscn::PackedScene::7933902634968629899::1708261178::0::1::::<><>::res://Scenes/menu/main_menu.gd<>uid://dea25ieec60gf::::res://Sprites/Icons/Ekchan background.png<>uid://cqldpscmokii8::::res://Sprites/Icons/Ekchan icon.png<>uid://cnvk4bj6t3xci::::res://Sprites/Icons/Ekchan slide.png
-::res://Scenes/Player/::1708353807
+::res://Scenes/Player/::1708384643
 AnimationControl.gd::GDScript::-1::1707668021::0::1::::Animation_Control<>Node2D<>::
 assist_aim.tscn::PackedScene::4896120558956582578::1707927241::0::1::::<><>::uid://ctttnc1u1mqcp::::res://Sprites/Characters/New Character/assist_aim.png
 Hitbox.gd::GDScript::-1::1706099420::0::1::::<>Area2D<>::
-Player.gd::GDScript::-1::1708351397::0::1::::Player<>CharacterBody2D<>::
-Player.tscn::PackedScene::217374126445323869::1708353806::0::1::::<><>::res://Scenes/Player/Player.gd<>uid://c8w5c01pmgme6::::res://Sprites/Characters/Player/Shadow_player.png<>uid://cyov8qq87sp5t::::res://Scenes/Components/Slot/p_slot.tscn<>uid://de2k2witts1wp::::res://Scenes/StateMachine Manage/state_machine.tscn<>uid://dch8cf4hj10dp::::res://Scenes/Components/Weapon/lighting_sword.tscn<>res://Scenes/Player/P_hurt.gdshader<>uid://6icvun5ewdlo::::res://Sprites/Characters/New Character/new character attack.png<>uid://cka8u5p0674wt::::res://Sprites/Characters/New Character/new character dash.png<>uid://dcx18ckrc61xk::::res://Sprites/Characters/New Character/hurt_down.png<>uid://d1qsw5xvrr4fr::::res://Sprites/Characters/New Character/idle_down.png<>uid://ba5u0e1se508q::::res://Scenes/Health/player_health.tscn<>uid://cwllq8sc1rq8n::::res://Sprites/Characters/New Character/idle_left.png<>uid://ddu3haod2pvrj::::res://Sprites/Characters/New Character/idle_left_down.png<>uid://dtscjsn8ys726::::res://Sprites/Characters/New Character/idle_left_up.png<>uid://b1ypvfdy7gjjf::::res://Sprites/Characters/New Character/idle_right.png<>uid://ck0vc678j486h::::res://Sprites/Characters/New Character/idle_right_down.png<>uid://cc6lrsqvxtyuf::::res://Sprites/Characters/New Character/idle_right_up.png<>res://Scenes/Player/AnimationControl.gd<>uid://dyiophimr0p2x::::res://Sprites/Characters/New Character/idle_up.png<>uid://bbgnu1jjlgest::::res://Sprites/Characters/New Character/new character run.png<>uid://f6lx75kg4jxj::::res://Sprites/Characters/New Character/new character attack_ek.png<>uid://70kci1x6807t::::res://Sprites/Characters/New Character/new character ek.png<>uid://dwk10smag2c10::::res://Sprites/Characters/New Character/ek_idle_d.png<>uid://blxwy8dld1u6c::::res://Sprites/Characters/New Character/ek_idle_l.png<>uid://7r1yo3gw8r0v::::res://Scenes/Components/Global variables/ek_mode.tscn<>uid://dv3ll0k6hxksr::::res://Sprites/Characters/New Character/ek_idle_u.png<>uid://36iyakeodkc1::::res://Sprites/Characters/New Character/ek_idle_r.png<>uid://djwtadd1kussw::::res://Sprites/Characters/New Character/ek_run_d.png<>uid://cg6j41f0viiej::::res://Sprites/Characters/New Character/ek_run_l.png<>uid://ccssb0agbtqqk::::res://Sprites/Characters/New Character/ek_run_r.png<>uid://d0geqnbee0xev::::res://Sprites/Characters/New Character/ek_run_u.png<>uid://h76osfy61jqb::::res://Scenes/Components/Weapon/aim_system.tscn
+Player.gd::GDScript::-1::1708383673::0::1::::Player<>CharacterBody2D<>::
+Player.tscn::PackedScene::217374126445323869::1708384392::0::1::::<><>::res://Scenes/Player/Player.gd<>uid://c8w5c01pmgme6::::res://Sprites/Characters/Player/Shadow_player.png<>uid://cyov8qq87sp5t::::res://Scenes/Components/Slot/p_slot.tscn<>uid://de2k2witts1wp::::res://Scenes/StateMachine Manage/state_machine.tscn<>uid://dch8cf4hj10dp::::res://Scenes/Components/Weapon/lighting_sword.tscn<>res://Scenes/Player/P_hurt.gdshader<>uid://6icvun5ewdlo::::res://Sprites/Characters/New Character/new character attack.png<>uid://cka8u5p0674wt::::res://Sprites/Characters/New Character/new character dash.png<>uid://dcx18ckrc61xk::::res://Sprites/Characters/New Character/hurt_down.png<>uid://d1qsw5xvrr4fr::::res://Sprites/Characters/New Character/idle_down.png<>uid://ba5u0e1se508q::::res://Scenes/Health/player_health.tscn<>uid://cwllq8sc1rq8n::::res://Sprites/Characters/New Character/idle_left.png<>uid://ddu3haod2pvrj::::res://Sprites/Characters/New Character/idle_left_down.png<>uid://dtscjsn8ys726::::res://Sprites/Characters/New Character/idle_left_up.png<>uid://b1ypvfdy7gjjf::::res://Sprites/Characters/New Character/idle_right.png<>uid://ck0vc678j486h::::res://Sprites/Characters/New Character/idle_right_down.png<>uid://cc6lrsqvxtyuf::::res://Sprites/Characters/New Character/idle_right_up.png<>res://Scenes/Player/AnimationControl.gd<>uid://dyiophimr0p2x::::res://Sprites/Characters/New Character/idle_up.png<>uid://bbgnu1jjlgest::::res://Sprites/Characters/New Character/new character run.png<>uid://f6lx75kg4jxj::::res://Sprites/Characters/New Character/new character attack_ek.png<>uid://70kci1x6807t::::res://Sprites/Characters/New Character/new character ek.png<>uid://dwk10smag2c10::::res://Sprites/Characters/New Character/ek_idle_d.png<>uid://blxwy8dld1u6c::::res://Sprites/Characters/New Character/ek_idle_l.png<>uid://7r1yo3gw8r0v::::res://Scenes/Components/Global variables/ek_mode.tscn<>uid://dv3ll0k6hxksr::::res://Sprites/Characters/New Character/ek_idle_u.png<>uid://36iyakeodkc1::::res://Sprites/Characters/New Character/ek_idle_r.png<>uid://djwtadd1kussw::::res://Sprites/Characters/New Character/ek_run_d.png<>uid://cg6j41f0viiej::::res://Sprites/Characters/New Character/ek_run_l.png<>uid://ccssb0agbtqqk::::res://Sprites/Characters/New Character/ek_run_r.png<>uid://d0geqnbee0xev::::res://Sprites/Characters/New Character/ek_run_u.png<>uid://h76osfy61jqb::::res://Scenes/Components/Weapon/aim_system.tscn
 p_detect_zone.gd::GDScript::-1::1707021741::0::1::::<>Area2D<>::
 p_detect_zone.tscn::PackedScene::71961007863847758::1706656408::0::1::::<><>::res://Scenes/Player/p_detect_zone.gd
-P_hurt.gdshader::Shader::-1::1708353807::0::1::::<><>::
-::res://Scenes/StateMachine Manage/::1708352173
+P_hurt.gdshader::Shader::-1::1708384622::0::1::::<><>::
+::res://Scenes/StateMachine Manage/::1708382852
 base_state.gd::GDScript::-1::1706876715::0::1::::BaseState<>Node2D<>::
 base_state.tscn::PackedScene::525763276783624959::1706876758::0::1::::<><>::res://Scenes/StateMachine Manage/base_state.gd
 b_state_machine.gd::GDScript::-1::1706877132::0::1::::<>StateMachine<>::
@@ -152,12 +152,12 @@ e_state_machine.gd::GDScript::-1::1706099420::0::1::::<>StateMachine<>::
 e_state_machine.tscn::PackedScene::4944174343815016601::1706099420::0::1::::<><>::res://Scenes/StateMachine Manage/e_state_machine.gd<>uid://hqxikqctx60j::::res://Scenes/StateMachine Manage/base_state.tscn<>uid://bgaoofghqts2e::::res://Scenes/StateMachine Manage/state_factory.tscn
 State_factory.gd::GDScript::-1::1707169014::0::1::::StateFactory<>Node2D<>::
 state_factory.tscn::PackedScene::2808429056760469466::1707173966::0::1::::<><>::res://Scenes/StateMachine Manage/State_factory.gd<>uid://bxtaqi2gxur3w::::res://Scenes/StateMachine Manage/States/Player states/P_run.tscn<>uid://sb710li3ncy1::::res://Scenes/StateMachine Manage/States/Player states/P_idle.tscn<>uid://bo6b0pe2c5k5::::res://Scenes/StateMachine Manage/States/Player states/P_dash.tscn<>uid://dioexnoxqdrh::::res://Scenes/StateMachine Manage/States/Player states/P_attack.tscn<>uid://d1kd8xe8pktd3::::res://Scenes/StateMachine Manage/States/Enemy states/E_dead.tscn<>uid://c1t45s4fo2kuk::::res://Scenes/StateMachine Manage/States/Player states/p_hurt.tscn<>uid://chlp7p1b0wggb::::res://Scenes/StateMachine Manage/States/Enemy states/E_chase.tscn<>uid://b4h3epwkefxcu::::res://Scenes/StateMachine Manage/States/Enemy states/E_Attack.tscn<>uid://dxu2j8wppf8ja::::res://Scenes/StateMachine Manage/States/Boss states/b_chase.tscn<>uid://l1sjisaiaxmi::::res://Scenes/StateMachine Manage/States/Boss states/b_idle.tscn<>uid://bf7fex0gpyoyn::::res://Scenes/StateMachine Manage/States/Boss states/b_sweep.tscn<>uid://72ugapgdc8t8::::res://Scenes/StateMachine Manage/States/Boss states/b_hurt.tscn<>uid://bii87hhh2y7xn::::res://Scenes/StateMachine Manage/States/Boss states/b_attack.tscn
-State_machine.gd::GDScript::-1::1708352173::0::1::::StateMachine<>Node2D<>::
+State_machine.gd::GDScript::-1::1708382852::0::1::::StateMachine<>Node2D<>::
 state_machine.tscn::PackedScene::7496412180115683715::1706648673::0::1::::<><>::res://Scenes/StateMachine Manage/State_machine.gd<>uid://hqxikqctx60j::::res://Scenes/StateMachine Manage/base_state.tscn<>uid://bgaoofghqts2e::::res://Scenes/StateMachine Manage/state_factory.tscn
 ::res://Scenes/StateMachine Manage/States/::1706350531
-::res://Scenes/StateMachine Manage/States/Boss states/::1708353806
-b_attack.gd::GDScript::-1::1708350218::0::1::::<>BaseState<>::
-b_attack.tscn::PackedScene::2966507639828280363::1708353806::0::1::::<><>::res://Scenes/StateMachine Manage/States/Boss states/b_attack.gd
+::res://Scenes/StateMachine Manage/States/Boss states/::1708359283
+b_attack.gd::GDScript::-1::1708355563::0::1::::<>BaseState<>::
+b_attack.tscn::PackedScene::2966507639828280363::1708359283::0::1::::<><>::res://Scenes/StateMachine Manage/States/Boss states/b_attack.gd
 b_chase.gd::GDScript::-1::1708345658::0::1::::<>BaseState<>::
 b_chase.tscn::PackedScene::8816550208743145390::1706903017::0::1::::<><>::res://Scenes/StateMachine Manage/States/Boss states/b_chase.gd
 b_hurt.gd::GDScript::-1::1706986558::0::1::::<>BaseState<>::
@@ -175,10 +175,10 @@ E_dead.gd::GDScript::-1::1706099420::0::1::::<>BaseState<>::
 E_dead.tscn::PackedScene::9005058061122004014::1706350524::0::1::::<><>::uid://hqxikqctx60j::::res://Scenes/StateMachine Manage/base_state.tscn<>res://Scenes/StateMachine Manage/States/Enemy states/E_dead.gd
 E_Idle.gd::GDScript::-1::1706099420::0::1::::<>BaseState<>::
 E_Idle.tscn::PackedScene::1238032109800183312::1706350524::0::1::::<><>::res://Scenes/StateMachine Manage/States/Enemy states/E_Idle.gd
-::res://Scenes/StateMachine Manage/States/Player states/::1708352260
-P_attack.gd::GDScript::-1::1708350194::0::1::::<>BaseState<>::
+::res://Scenes/StateMachine Manage/States/Player states/::1708383818
+P_attack.gd::GDScript::-1::1708358802::0::1::::<>BaseState<>::
 P_attack.tscn::PackedScene::227939962807900741::1708352260::0::1::::<><>::uid://hqxikqctx60j::::res://Scenes/StateMachine Manage/base_state.tscn<>res://Scenes/StateMachine Manage/States/Player states/P_attack.gd
-P_dash.gd::GDScript::-1::1708350850::0::1::::<>BaseState<>::
+P_dash.gd::GDScript::-1::1708383818::0::1::::<>BaseState<>::
 P_dash.tscn::PackedScene::100975481238290794::1708108621::0::1::::<><>::uid://hqxikqctx60j::::res://Scenes/StateMachine Manage/base_state.tscn<>res://Scenes/StateMachine Manage/States/Player states/P_dash.gd
 P_hurt.gd::GDScript::-1::1707490864::0::1::::<>BaseState<>::
 p_hurt.tscn::PackedScene::6638789836376144114::1708261178::0::1::::<><>::res://Scenes/StateMachine Manage/States/Player states/P_hurt.gd

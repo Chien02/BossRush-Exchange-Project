@@ -3572,7 +3572,6 @@ material = SubResource("ShaderMaterial_r7vog")
 position = Vector2(1, -6)
 sprite_frames = SubResource("SpriteFrames_7ejdp")
 animation = &"idle_down"
-frame = 3
 
 [node name="Ek Mode" type="AnimatedSprite2D" parent="Animation"]
 position = Vector2(0.8, -6.4)
@@ -3611,18 +3610,4 @@ parameters/Dash/blend_position = Vector2(0.00177932, 0.0291005)
 parameters/Hurt/blend_position = Vector2(0.0019573, 0.198678)
 parameters/Idle/blend_position = Vector2(-0.00177938, 1.06508)
 parameters/Run/blend_position = Vector2(-0.00177938, 0.00582004)
-parameters/ek_attack/blend_position = Vector2(-0.00177938, 0.216981)
-parameters/ek_idle/blend_position = Vector2(0, 0)
-parameters/ek_run/blend_position = Vector2(0, 0)
-
-[node name="Player Health" parent="." node_paths=PackedStringArray("character") instance=ExtResource("8_qynjs")]
-character = NodePath("..")
-max_health = 120
-
-[node name="Ek_mode" parent="." node_paths=PackedStringArray("player") instance=ExtResource("23_iff04")]
-player = NodePath("..")
-
-[node name="Aim system" parent="." instance=ExtResource("32_qnpps")]
-position = Vector2(5.96046e-08, -2.38419e-07)
-
-[connection signal="area_entered" from="Hurtbox" to="Player Health" method="_on_hurtbox_area_entered"]
+parameters/ek_atta

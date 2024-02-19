@@ -21,3 +21,10 @@ value = 100.0
 texture_under = ExtResource("1_rksut")
 texture_over = ExtResource("2_cs3s6")
 texture_progress = ExtResource("3_2d7h4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.733333)
+position = Vector2(53, 12.5)
+scale = Vector2(1, 1.3)
+texture = ExtResource("1_rksut")

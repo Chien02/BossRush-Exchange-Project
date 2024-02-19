@@ -18,7 +18,7 @@ func _process(_delta):
 	energy_bar.value = energy * 20
 
 func init_energy():
-	energy = 3
+	energy = 0
 
 func add_energy(value: int):
 	var tween = create_tween()
@@ -32,17 +32,22 @@ func add_energy(value: int):
 		energy = max_energy
 
 func decrease_energy(value: int):
-	scale_up()
 	energy -= value
-	#scale_down()
 	if (energy <= 0):
 		energy = 0
 
+func change_normal(): # In normal mode
+	$Sprite2D.visible = false
+	energy_bar.tint_over = Color(1, 1, 1)
 
-func scale_up():
-	pass
+func change_active(): # When active ek mode
+	$Sprite2D.visible = true
+	energy_bar.tint_over = Color(1, 1, 1)
 
-func scale_down():
-	var tween = create_tween()
-	tween.tween_property(energy_bar, "scale", Vector2(0.8, 0.8), 0.2).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)
+func change_success(): # After Ekchane successfully
+	$Sprite2D.visible = false
+	energy_bar.tint_over = Color("ffcb2b")
 
+func over_energy(): # Immediately turn back to normal mode
+	energy = 0
+	change_normal()

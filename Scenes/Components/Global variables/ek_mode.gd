@@ -3,15 +3,15 @@ extends Node2D
 class_name Ek
 
 @export var player : CharacterBody2D
-@export var ek_mode : bool = false
 
 var tranformation_finished : bool
 var deformation_fisnished : bool
-var can_ek : bool = true
+var ek_mode : bool = false
+var can_ek : bool = false
 var target
-
-var player_wpn
-var target_wpn
+var player_wpn : String
+var target_wpn : String
+var success : bool = false
 
 func _ready():
 	Global.player_ek_mode = self
@@ -24,6 +24,7 @@ func _process(_delta):
 		ek_mode = true
 		print("Change to Ek mode")
 	check_to_change()
+	ek_chane()
 
 func check_ek():
 	can_ek = true if Global.player_energy.energy >= 3 else false
@@ -35,18 +36,18 @@ func out_ek_mode():
 
 func check_to_change():
 	if (ek_mode):
+		if (!success): Global.player_energy.change_active()
 		player.get_node("Animation/Normal Mode").visible = false
 		player.get_node("Animation/Ek Mode").visible = true
 	else:
 		player.get_node("Animation/Normal Mode").visible = true
 		player.get_node("Animation/Ek Mode").visible = false
 
-
 func _on_ek_zone_area_entered(area):
 	if (area.owner.is_in_group("Enemy")):
-		ek_chane()
+		change_mode()
 
-func ek_chane():
+func change_mode():
 	if (!can_ek): return
 	can_ek = false
 	player_wpn = player.bag.weapon.wpn_name # Get player's weapon
@@ -65,3 +66,12 @@ func ek_chane():
 	
 	await get_tree().create_timer(0.2).timeout
 	$Ek_zone/CollisionShape2D.disabled = true
+
+func ek_chane():
+	if (ek_mode):
+		if Input.is_action_just_pressed("ek"):
+			pass
+			# Do the ek_chane move
+			# If success
+			#success = true
+			#Global.player_energy.change_success()

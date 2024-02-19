@@ -12,8 +12,8 @@ class_name Player
 @export var FRICTION := 500
 @export var maxHealth = 100
 @export var bag : Node2D
+@export var ek : Node2D
 var attack : bool = false
-var is_ek_change : bool
 var world # use for aim system
 var target # use for camear focus
 
@@ -23,7 +23,7 @@ func _ready():
 func _process(_delta):
 	direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down").normalized()
 	check_to_atk()
-	check_ek_change()
+	handle_ek() # for movement
 	
 func _physics_process(delta):
 	movement(delta)
@@ -37,10 +37,6 @@ func movement(delta):
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta) # Deceleration	move_and_slide() # Moving
 	move_and_slide()
 
-func check_ek_change():
-	if (Input.is_action_just_pressed("ek")):
-		is_ek_change = true
-	#handle_ek()
 
 func check_to_atk():
 	if (!bag.weapon): return
@@ -48,12 +44,10 @@ func check_to_atk():
 	if bag.weapon.can_attack or Input.is_action_just_pressed("attack"):
 		attack = true
 
-#func handle_ek():
-	#if (is_ek_change):
-		#SPEED = EK_SPEED
-		#if (bag.weapon):
-			#bag.weapon.process_mode = PROCESS_MODE_DISABLED
-	#else:
-		#SPEED = 100
-		#if (bag.weapon):
-			#bag.weapon.process_mode = PROCESS_MODE_INHERIT
+func handle_ek():
+	if (ek.ek_mode):
+		SPEED = EK_SPEED
+		#bag.weapon.process_mode = PROCESS_MODE_DISABLED
+	else:
+		SPEED = 100
+		#bag.weapon.process_mode = PROCESS_MODE_INHERIT
