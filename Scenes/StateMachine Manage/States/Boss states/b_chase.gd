@@ -27,11 +27,11 @@ func check_for_switch():
 
 func handle_chase():
 	var delta : float = 0.8
-	if (!character.player): return
-	var direction = (character.player.position - character.position).normalized()
+	if (!character.target): return
+	var direction = (character.target.position - character.position).normalized()
 	character.velocity = lerp(character.velocity, direction * character.SPEED, delta)
 	character.move_and_slide()
-	look_at(character.player.position)
+	look_at(character.target.position)
 
 func _on_timer_timeout():
 	chasing = false

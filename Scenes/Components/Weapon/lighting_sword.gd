@@ -1,58 +1,75 @@
 extends Weapon_base
+# Tree hammer
 
-var using_time : float = 0.5
+@export var p_damage : int
+@export var b_damage : int
+@export var p_time : float = 0.45 # use for set timer in attack state
+@export var b_time : float = 1.35 # use for set timer in attack state
+
+var anim_tree
+var atk_zone
+var collision : CollisionShape2D
+var anim_sprite
+var anim_player
+var is_playing : bool = false
 
 func _ready():
-	# character -> state machine
+	wpn_name = "LightingSword"
 	icon = preload("res://Sprites/GUI/Button/attack icon.png")
-	animation_tree = get_node("AnimationTree")
-	get_character()
-	if (!character): return
-	rotate_to_target(target)
-	state_machine = character.get_node("State Machine") 
 
-func _process(_delta):
-	if (!character): return
-	get_character()
-	if (state_machine.current_state._name != "attack"): # if player
-		hitbox.disabled = true
-	rotate_to_target(target)
-
-func play_animation():
-	if (!animation_tree): 
-		print("Didn't see animation_tree")
-		return
-	# Set up condition
+func hit():
+	collision.disabled = false
 	
-	animation_tree["parameters/conditions/is_player"] = check_user()
-#		animation_tree["parameters/conditions/is_boss"] = check_user()
-	# Set up direction for animation
-	animation_tree["parameters/player/blend_position"] = rotate_to_target(target)
-	#animation_tree["parameters/boss/blend_position"] = direction
+func end_hit():
+	collision.disabled = true
+	cancel = true
+	can_attack = false
+	animation_tree["parameters/conditions/can_attack"] = false
+	animation_tree["parameters/conditions/cancel"] = true
 
-func set_attack(_value):
-	animation_tree["parameters/conditions/can_attack"] = _value
-	animation_tree["parameters/conditions/cannot_attack"] = !_value
-	
-func rotate_to_target(_target):
-	if (!character): return
+func rotate_to_target(_target_pos, _is_player: bool):
 	var delta = 0.75
 	var angle_2
-	var rotation_speed = 5
-	if (is_player == false):
-		if !character.direction: return Vector2.ZERO
-		direction = character.direction
-		angle_2 = hitbox.get_parent().transform.x.angle_to(direction)
-		hitbox.get_parent().rotate(sign(angle_2) * min(delta * rotation_speed, abs(angle_2)))
-		return direction
+	var rotation_speed = 12
 	
-	if (_target):
-		direction = (_target.global_position - hitbox.get_parent().global_position).normalized()
-		angle_2 = hitbox.get_parent().transform.x.angle_to(direction)
-		hitbox.get_parent().rotate(sign(angle_2) * min(delta * rotation_speed, abs(angle_2)))
-		return direction
+	if (!_is_player): # is_boss
+		self.direction = Vector2.ZERO
+		collision.position = _target_pos
 	else:
-		direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-		angle_2 = hitbox.get_parent().transform.x.angle_to(direction)
-		hitbox.get_parent().rotate(sign(angle_2) * min(delta * rotation_speed, abs(angle_2)))
-		return direction
+		self.direction = (_target_pos - hitbox.position).normalized()
+		angle_2 = hitbox.transform.x.angle_to(self.direction)
+		hitbox.rotate(sign(angle_2) * min(delta * rotation_speed, abs(angle_2)))
+	return self.direction
+
+func animation(_input: bool, _is_player: bool):
+	animation_tree = $AnimationTree
+	atk_zone = null
+	animation_tree["parameters/conditions/can_attack"] = true
+	animation_tree["parameters/conditions/cancel"] = false
+	animation_tree["parameters/conditions/is_player"] = _is_player
+	animation_tree["parameters/conditions/is_boss"] = !_is_player
+	anim_sprite = get_node("Player/PlayerAnimated")
+	damage = p_damage if _is_player else b_damage
+	hitbox = get_node("Player/Hitbox")
+	collision = get_node("Player/Hitbox/Phitbox")
+	#atk_zone.get_child(0).disabled = false if (!_is_player) else true
+	anim_sprite.visible = true
+	collision.visible = true
+
+func set_direction(_target, _is_player):
+	if (_is_player):
+		animation_tree["parameters/player/blend_position"] = rotate_to_target(_target, _is_player)
+	else:
+		animation_tree["parameters/boss/blend_position"] = rotate_to_target(_target, _is_player)
+	
+# For input: boss
+func _on_atk_zone_area_entered(area):
+	if area.owner.is_in_group("Player"):
+		can_attack = true
+		cancel = false
+
+# For input: player
+func check_player_input():
+	if (Input.is_action_just_pressed("attack")):
+		can_attack = true
+		cancel = false

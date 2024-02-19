@@ -274,19 +274,21 @@ advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fy5c5"]
 advance_mode = 2
-advance_condition = &"cannot_attack"
+advance_condition = &"cancel"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_d1j3a"]
 advance_mode = 2
 advance_condition = &"can_attack"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_eajp0"]
+switch_mode = 2
 advance_mode = 2
-advance_condition = &"cannot_attack"
+advance_condition = &"cancel"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5p68k"]
+switch_mode = 2
 advance_mode = 2
-advance_condition = &"cannot_attack"
+advance_condition = &"cancel"
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_218l7"]
 states/End/position = Vector2(899, 100)
@@ -479,12 +481,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kygcm"]
 size = Vector2(29, 23.5)
 
-[node name="LightingSword" type="Node2D" node_paths=PackedStringArray("hitbox") groups=["Weapon"]]
+[node name="LightingSword" type="Node2D" groups=["Weapon"]]
 y_sort_enabled = true
 texture_filter = 1
 script = ExtResource("1_dlruu")
-damage = 35
-hitbox = NodePath("Player/Hitbox/CollisionShape2D")
+p_damage = 30
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -498,7 +499,7 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_218l7")
 anim_player = NodePath("../AnimationPlayer")
 parameters/conditions/can_attack = false
-parameters/conditions/cannot_attack = false
+parameters/conditions/cancel = false
 parameters/conditions/is_boss = false
 parameters/conditions/is_player = false
 parameters/boss/blend_position = Vector2(0, 0)
@@ -514,7 +515,7 @@ sprite_frames = SubResource("SpriteFrames_ldnms")
 collision_layer = 2
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Hitbox"]
+[node name="Phitbox" type="CollisionShape2D" parent="Player/Hitbox"]
 position = Vector2(21.25, -2.5)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_kygcm")

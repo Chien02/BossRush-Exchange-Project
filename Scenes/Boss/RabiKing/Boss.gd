@@ -8,28 +8,28 @@ class_name Boss
 @export var bag : Node2D
 
 const SPEED = 45.0
-var player : CharacterBody2D
+var target : CharacterBody2D
 var last_velocity = Vector2.ZERO
 var direction := Vector2.ZERO
-
 var attack : bool = false
 var sweep : bool = false
 
 
 func _ready():
-	player = get_tree().get_first_node_in_group("Player")
+	target = get_tree().get_first_node_in_group("Player")
 
 func _process(_delta):
 	handle_velocity()
-	print("Boss's weapon: ", bag.weapon.name)
+	check_to_atk()
 	animation_control.update_paramater_animation(direction)
 
 func handle_velocity():
 	if velocity != Vector2.ZERO:
 		last_velocity = velocity
 
-func _on_hammer_zone_area_entered(area):
-	if (area.owner.is_in_group("Player") and bag.weapon.name == "TreeHammer"):
+func check_to_atk():
+	if (bag.weapon == null): return
+	if (bag.weapon.can_attack):
 		attack = true
 
 func _on_sweep_zone_area_entered(area):
@@ -39,4 +39,4 @@ func _on_sweep_zone_area_entered(area):
 
 func _on_sweep_zone_area_exited(area):
 	if (area.owner.is_in_group("Player")):
-		sweep= false
+		sweep = false

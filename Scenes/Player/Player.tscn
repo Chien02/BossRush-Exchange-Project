@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c8w5c01pmgme6" path="res://Sprites/Characters/Player/Shadow_player.png" id="2_cidgh"]
 [ext_resource type="PackedScene" uid="uid://cyov8qq87sp5t" path="res://Scenes/Components/Slot/p_slot.tscn" id="2_vpxaf"]
 [ext_resource type="PackedScene" uid="uid://de2k2witts1wp" path="res://Scenes/StateMachine Manage/state_machine.tscn" id="3_bksxg"]
-[ext_resource type="PackedScene" uid="uid://dch8cf4hj10dp" path="res://Scenes/Components/Weapon/lighting_sword.tscn" id="3_fuvhg"]
+[ext_resource type="PackedScene" uid="uid://dch8cf4hj10dp" path="res://Scenes/Components/Weapon/lighting_sword.tscn" id="3_hq0t3"]
 [ext_resource type="Shader" path="res://Scenes/Player/P_hurt.gdshader" id="6_2u2vv"]
 [ext_resource type="Texture2D" uid="uid://6icvun5ewdlo" path="res://Sprites/Characters/New Character/new character attack.png" id="6_opd8b"]
 [ext_resource type="Texture2D" uid="uid://cka8u5p0674wt" path="res://Sprites/Characters/New Character/new character dash.png" id="8_6hrcv"]
@@ -3537,11 +3537,10 @@ bag = NodePath("P_slot")
 
 [node name="P_slot" parent="." instance=ExtResource("2_vpxaf")]
 
-[node name="LightingSword" parent="P_slot" instance=ExtResource("3_fuvhg")]
+[node name="LightingSword" parent="P_slot" instance=ExtResource("3_hq0t3")]
 
 [node name="CollisionShape2d" type="CollisionShape2D" parent="."]
 position = Vector2(0.8, 3.3)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_pgxju")
 
 [node name="Hurtbox" type="Area2D" parent="."]
@@ -3572,7 +3571,7 @@ material = SubResource("ShaderMaterial_r7vog")
 position = Vector2(1, -6)
 sprite_frames = SubResource("SpriteFrames_7ejdp")
 animation = &"idle_down"
-frame = 6
+frame = 5
 
 [node name="Ek Mode" type="AnimatedSprite2D" parent="Animation"]
 position = Vector2(0.8, -6.4)

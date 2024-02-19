@@ -9,9 +9,4 @@ script = ExtResource("1_pkbcb")
 wait_time = 1.375
 one_shot = true
 
-[node name="Ready2atk" type="Timer" parent="."]
-wait_time = 0.5
-one_shot = true
-
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="timeout" from="Ready2atk" to="." method="_on_ready_2_atk_timeout"]

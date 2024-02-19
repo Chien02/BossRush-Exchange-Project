@@ -1,4 +1,4 @@
-[gd_scene load_steps=128 format=3 uid="uid://dfx3fwmpsvnki"]
+[gd_scene load_steps=127 format=3 uid="uid://dfx3fwmpsvnki"]
 
 [ext_resource type="Script" path="res://Scenes/Boss/RabiKing/Boss.gd" id="1_5xg0j"]
 [ext_resource type="Texture2D" uid="uid://8w72pljrqcwq" path="res://Sprites/Characters/Boss/Rabiking/Character_sheet.png" id="1_bm7rk"]
@@ -910,9 +910,6 @@ height = 44.0
 radius = 21.0
 height = 68.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_u6wjq"]
-radius = 116.108
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0tcp0"]
 radius = 20.9677
 height = 65.8537
@@ -929,7 +926,7 @@ script = ExtResource("1_5xg0j")
 state_machine = NodePath("State Machine")
 animation_control = NodePath("Animation/AnimationControl")
 distance = 40.0
-damage = 8
+damage = 20
 bag = NodePath("b_slot")
 
 [node name="b_slot" parent="." instance=ExtResource("2_wtpm4")]
@@ -939,6 +936,7 @@ bag = NodePath("b_slot")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.5, 11)
 shape = SubResource("CapsuleShape2D_t85kg")
+debug_color = Color(0.721569, 0.47451, 0.12549, 0.419608)
 
 [node name="Animation" type="Node2D" parent="."]
 
@@ -952,7 +950,7 @@ material = SubResource("ShaderMaterial_3gfx5")
 position = Vector2(1, 0)
 sprite_frames = SubResource("SpriteFrames_xaatk")
 animation = &"idle"
-frame = 4
+frame = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Animation"]
 root_node = NodePath("../../CollisionShape2D")
@@ -989,14 +987,6 @@ debug_color = Color(0, 0.6, 0.701961, 0.239216)
 position = Vector2(2, 8)
 rotation = -1.5708
 shape = SubResource("CapsuleShape2D_7uf3w")
-
-[node name="Hammer Zone" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 4
-
-[node name="Hammer" type="CollisionShape2D" parent="Hammer Zone"]
-shape = SubResource("CircleShape2D_u6wjq")
-debug_color = Color(0.709804, 0.478431, 0.243137, 0.176471)
 
 [node name="Sweep Zone" type="Area2D" parent="."]
 collision_layer = 0
@@ -1035,6 +1025,5 @@ position = Vector2(4, 25)
 scale = Vector2(2.279, 1.3)
 
 [connection signal="area_entered" from="Hurtbox" to="Boss_health" method="_on_hurtbox_area_entered"]
-[connection signal="area_entered" from="Hammer Zone" to="." method="_on_hammer_zone_area_entered"]
 [connection signal="area_entered" from="Sweep Zone" to="." method="_on_sweep_zone_area_entered"]
 [connection signal="area_exited" from="Sweep Zone" to="." method="_on_sweep_zone_area_exited"]

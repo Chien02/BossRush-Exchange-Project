@@ -35,7 +35,7 @@ func check_for_switch():
 
 func handle_dash():
 	# For the next action
-	if (Input.is_action_just_pressed("attack")):
+	if (character.attack):
 		press_attack_while_dash = true
 	
 	get_tree().create_tween().tween_property(character, # For the real dash, do animation

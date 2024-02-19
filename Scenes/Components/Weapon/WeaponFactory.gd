@@ -9,7 +9,7 @@ var weapons = {
 func get_weapon(_name: String):
 	var weapon
 	if (_name == "LightingSword"):
-		weapon = weapons["lighting_sword"]
+		weapon = weapons["lighting_sword"].instantiate()
 	elif (_name == "TreeHammer"):
-		weapon = weapons["tree_hammer"]
-	return weapon.instantiate()
+		weapon = weapons["tree_hammer"].instantiate()
+	return weapon

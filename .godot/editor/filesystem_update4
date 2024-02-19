@@ -1,5 +1,23 @@
-res://Scenes/Components/Weapon/weapon_base.tscn
+res://Scenes/Health/boss_health.tscn
 res://Scenes/Player/P_hurt.gdshader
 res://addons/shaker/shaker.gd
+res://Scenes/StateMachine Manage/State_machine.gd
+res://Scenes/Boss/RabiKing/b_health.gd
+res://Scenes/Components/Weapon/weapon_base.tscn
 res://Scenes/Components/Weapon/tree_hammer.tscn
 res://Scenes/Components/Weapon/lighting_sword.tscn
+res://Scenes/Components/Slot/base_slot.tscn
+res://Scenes/Player/Player.tscn
+res://Scenes/Components/Global variables/ek_mode.tscn
+res://Scenes/test_ekchane.tscn
+res://Scenes/Components/Slot/p_slot.tscn
+res://Scenes/Boss/RabiKing/rabi_king.tscn
+res://Scenes/StateMachine Manage/States/Boss states/b_attack.tscn
+res://Scenes/Components/Slot/P_slot.gd
+res://Scenes/Components/Slot/b_slot.gd
+res://Scenes/Components/Global variables/ek_mode.gd
+res://Scenes/StateMachine Manage/States/Boss states/b_attack.gd
+res://Scenes/Boss/RabiKing/Boss.gd
+res://Scenes/Components/Slot/base_slot.gd
+res://Scenes/Components/Weapon/lighting_sword.gd
+res://Scenes/StateMachine Manage/States/Player states/P_attack.gd

@@ -24,15 +24,15 @@ func display():
 
 func get_weapon(name_group : String):
 	if (weapon): return
-	if (get_child_count() < 1): return
+	if (get_child_count() <= 0): return
 	var stuffs = get_children()
 	for object in stuffs:
-		if object.is_in_group("Weapon") and !weapon:
+		if object.is_in_group("Weapon"):
 			weapon = object
 	
 	# Add weapon to group
 	if (weapon == null): return
-	if (weapon.check_user()):
+	if (weapon.is_player):
 		weapon.get_node(name_group).get_node("Hitbox").add_to_group(name_group)
 	else:
 		weapon.get_node(name_group).get_node("Hitbox").add_to_group(name_group)
@@ -49,3 +49,6 @@ func discard(_old):
 
 func add(_new):
 	pass
+
+func check_weapon():
+	return weapon != null

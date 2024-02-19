@@ -9,7 +9,6 @@ func enter():
 	attacking = true
 	play_animation = false
 	$Timer.start()
-	$Ready2atk.start()
 
 func exit():
 	if (character):
@@ -20,31 +19,25 @@ func update():
 	check_for_switch()
 
 func check_for_switch():
-	if (!attacking):
+	if (!attacking or !character.attack):
 		if (character.sweep):
-			reset_atk_animation()
 			switch(state_factory.get_state("boss_sweep"))
 		else:
-			reset_atk_animation()
 			switch(state_factory.get_state("boss_idle"))
 
 func handle_atk():
 	if (!character.bag): return
 	if (!character.bag.weapon): return
-	character.bag.weapon.set_attack(true)
-	if (!play_animation):
-		play_animation = true
-		character.bag.weapon.play_animation()
+	var _direction = (character.target.position - character.position).normalized()
+	var weapon = character.bag.weapon
+	$Timer.wait_time = weapon.b_time
+	if (weapon.cancel):
+		weapon.cancel = false
+		attacking = false
+		return
 	
-	character.get_node("Hammer Zone/Hammer").disabled = attacking
-
-func reset_atk_animation():
-	if (character.bag.weapon): 
-		character.bag.weapon.set_attack(false)
+	weapon.animation(true, false) # true is normal atk, false is boss
+	weapon.set_direction(_direction, false) # false is boss
 
 func _on_timer_timeout():
 	attacking = false
-
-func _on_ready_2_atk_timeout():
-	if (character.bag.weapon):
-		character.bag.weapon.rotate_to_target(character.bag.weapon.target)

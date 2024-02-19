@@ -31,7 +31,7 @@ scale = Vector2(2.85175, 2.81814)
 value = 100.0
 texture_under = ExtResource("1_bf061")
 texture_progress = ExtResource("2_sm0t0")
-texture_progress_offset = Vector2(0.285, 0)
+texture_progress_offset = Vector2(0.01, 0)
 script = ExtResource("3_dvscv")
 
 [node name="TextureRect" type="TextureRect" parent="PlayerHealthbar"]

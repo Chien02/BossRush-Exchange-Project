@@ -20,7 +20,7 @@ func check_for_switch():
 	if (Input.is_action_just_pressed("dash")):
 		switch(state_factory.get_state("p_dash"))
 	# attack
-	if (Input.is_action_just_pressed("attack")): #esc
+	if (character.attack):
 		switch(state_factory.get_state("p_attack"))
 		
 	if (character.velocity == Vector2.ZERO):

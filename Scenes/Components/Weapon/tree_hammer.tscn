@@ -1,4 +1,4 @@
-[gd_scene load_steps=138 format=3 uid="uid://bc1vn7efaxtow"]
+[gd_scene load_steps=143 format=3 uid="uid://bc1vn7efaxtow"]
 
 [ext_resource type="Script" path="res://Scenes/Components/Weapon/tree_hammer.gd" id="1_dx00p"]
 [ext_resource type="Shader" path="res://Scenes/Player/P_hurt.gdshader" id="2_7sds7"]
@@ -10,21 +10,9 @@
 
 [sub_resource type="Animation" id="Animation_mme86"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Boss/Effect/ShadowHint:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
 
 [sub_resource type="Animation" id="Animation_37lrp"]
-length = 1.375
+length = 1.36
 step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -67,35 +55,6 @@ tracks/2/keys = {
 "method": &"end_hit"
 }]
 }
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath(".")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(1, 1.1),
-"transitions": PackedFloat32Array(1, 1),
-"values": [{
-"args": [],
-"method": &"skill"
-}, {
-"args": [],
-"method": &"play_impact"
-}]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Boss/Effect/ShadowHint:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0.55, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
 
 [sub_resource type="Animation" id="Animation_gparv"]
 length = 0.75
@@ -131,14 +90,11 @@ tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.3, 0.35, 0.65),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0.3, 0.65),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
 "method": &"hit"
-}, {
-"args": [],
-"method": &"play_impact"
 }, {
 "args": [],
 "method": &"end_hit"
@@ -179,14 +135,11 @@ tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.3, 0.35, 0.65),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0.3, 0.65),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
 "method": &"hit"
-}, {
-"args": [],
-"method": &"play_impact"
 }, {
 "args": [],
 "method": &"end_hit"
@@ -227,14 +180,11 @@ tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.2, 0.35, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0.2, 0.6),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
 "method": &"hit"
-}, {
-"args": [],
-"method": &"play_impact"
 }, {
 "args": [],
 "method": &"end_hit"
@@ -275,14 +225,11 @@ tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.3, 0.35, 0.65),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0.3, 0.65),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
 "method": &"hit"
-}, {
-"args": [],
-"method": &"play_impact"
 }, {
 "args": [],
 "method": &"end_hit"
@@ -376,6 +323,12 @@ min_space = Vector2(-1.1, -1.1)
 max_space = Vector2(1.1, 1.1)
 blend_mode = 1
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nlp6x"]
+animation = &"transition"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_j5y77"]
+animation = &"transition"
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_furpi"]
 animation = &"p_left"
 
@@ -410,41 +363,54 @@ animation = &"transition"
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xocry"]
 advance_mode = 2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_r15gn"]
-advance_mode = 2
-advance_condition = &"is_player"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7gr3r"]
-advance_mode = 2
-advance_condition = &"is_boss"
-
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ovpin"]
 advance_mode = 2
-advance_condition = &"cannot_attack"
+advance_condition = &"cancel"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_odur4"]
 advance_mode = 2
 advance_condition = &"can_attack"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_mxdos"]
+switch_mode = 2
 advance_mode = 2
-advance_condition = &"cannot_attack"
+advance_condition = &"cancel"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fiw3m"]
+switch_mode = 2
 advance_mode = 2
-advance_condition = &"cannot_attack"
+advance_condition = &"cancel"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jb07a"]
+advance_mode = 2
+advance_condition = &"is_player"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lbom7"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3nmwb"]
+advance_mode = 2
+advance_condition = &"is_boss"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_obf4n"]
+advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_mqv6i"]
+states/Start/position = Vector2(106, 107)
 states/boss/node = SubResource("AnimationNodeBlendSpace2D_mfe4s")
-states/boss/position = Vector2(510, 174)
+states/boss/position = Vector2(579, 196)
+states/is_boss/node = SubResource("AnimationNodeAnimation_nlp6x")
+states/is_boss/position = Vector2(411.527, 196)
+states/is_player/node = SubResource("AnimationNodeAnimation_j5y77")
+states/is_player/position = Vector2(411.527, 19)
 states/player/node = SubResource("AnimationNodeBlendSpace2D_jbc1k")
-states/player/position = Vector2(510, 39)
+states/player/position = Vector2(590, 19)
 states/transition/node = SubResource("AnimationNodeAnimation_tgdjx")
-states/transition/position = Vector2(351, 107)
+states/transition/position = Vector2(268, 107)
 "states/transition 2/node" = SubResource("AnimationNodeAnimation_ar7uf")
 "states/transition 2/position" = Vector2(718, 107)
-transitions = ["Start", "transition", SubResource("AnimationNodeStateMachineTransition_xocry"), "transition", "player", SubResource("AnimationNodeStateMachineTransition_r15gn"), "transition", "boss", SubResource("AnimationNodeStateMachineTransition_7gr3r"), "transition", "transition 2", SubResource("AnimationNodeStateMachineTransition_ovpin"), "transition 2", "transition", SubResource("AnimationNodeStateMachineTransition_odur4"), "player", "transition 2", SubResource("AnimationNodeStateMachineTransition_mxdos"), "boss", "transition 2", SubResource("AnimationNodeStateMachineTransition_fiw3m")]
-graph_offset = Vector2(3.52698, -17)
+transitions = ["Start", "transition", SubResource("AnimationNodeStateMachineTransition_xocry"), "transition", "transition 2", SubResource("AnimationNodeStateMachineTransition_ovpin"), "transition 2", "transition", SubResource("AnimationNodeStateMachineTransition_odur4"), "player", "transition 2", SubResource("AnimationNodeStateMachineTransition_mxdos"), "boss", "transition 2", SubResource("AnimationNodeStateMachineTransition_fiw3m"), "transition", "is_player", SubResource("AnimationNodeStateMachineTransition_jb07a"), "is_player", "player", SubResource("AnimationNodeStateMachineTransition_lbom7"), "transition", "is_boss", SubResource("AnimationNodeStateMachineTransition_3nmwb"), "is_boss", "boss", SubResource("AnimationNodeStateMachineTransition_obf4n")]
+graph_offset = Vector2(-23.473, -17)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dbhtk"]
 shader = ExtResource("2_7sds7")
@@ -937,6 +903,9 @@ animations = [{
 "speed": 24.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_y8idb"]
+radius = 200.0
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_i6nsm"]
 atlas = ExtResource("3_q23u6")
 region = Rect2(480, 160, 80, 80)
@@ -1316,21 +1285,11 @@ _data = {
 "impact": SubResource("Animation_okwms")
 }
 
-[node name="TreeHammer" type="Node2D" node_paths=PackedStringArray("p_animated", "p_hitbox", "b_animated", "b_hitbox", "animator", "effect", "impact", "shadow_hint", "player", "boss", "hitbox") groups=["Weapon"]]
+[node name="TreeHammer" type="Node2D" node_paths=PackedStringArray("hitbox") groups=["Weapon"]]
 texture_filter = 1
 script = ExtResource("1_dx00p")
-p_animated = NodePath("Player/PlayerAnimated")
-p_hitbox = NodePath("Player/Hitbox")
 p_damage = 100
-b_animated = NodePath("Boss/BossAnimated")
-b_hitbox = NodePath("Boss/Hitbox")
 b_damage = 30
-animator = NodePath("AnimationPlayer")
-effect = NodePath("Boss/Effect")
-impact = NodePath("Boss/Effect/Impact")
-shadow_hint = NodePath("Boss/Effect/ShadowHint")
-player = NodePath("Player")
-boss = NodePath("Boss")
 damage = 35
 hitbox = NodePath("Boss/Hitbox/Bhitbox")
 
@@ -1346,14 +1305,13 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_mqv6i")
 anim_player = NodePath("../AnimationPlayer")
 parameters/conditions/can_attack = false
-parameters/conditions/cannot_attack = false
+parameters/conditions/cancel = false
 parameters/conditions/is_boss = false
 parameters/conditions/is_player = false
 parameters/boss/blend_position = Vector2(0, 0.301587)
-parameters/player/blend_position = Vector2(0, 0)
+parameters/player/blend_position = Vector2(-0.00266194, 0.355026)
 
 [node name="Boss" type="Node2D" parent="."]
-visible = false
 
 [node name="BossAnimated" type="AnimatedSprite2D" parent="Boss"]
 material = SubResource("ShaderMaterial_dbhtk")
@@ -1365,6 +1323,7 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="Bhitbox" type="CollisionShape2D" parent="Boss/Hitbox"]
+visible = false
 position = Vector2(1, 88)
 scale = Vector2(0.25, 0.25)
 shape = SubResource("CircleShape2D_cddae")
@@ -1372,6 +1331,7 @@ disabled = true
 debug_color = Color(0.866667, 0.321569, 0.396078, 0.709804)
 
 [node name="Effect" type="AnimatedSprite2D" parent="Boss"]
+visible = false
 position = Vector2(1, 89)
 rotation = 3.14159
 scale = Vector2(0.590285, 0.626082)
@@ -1390,7 +1350,6 @@ libraries = {
 }
 
 [node name="ShadowHint" type="Sprite2D" parent="Boss/Effect"]
-visible = false
 modulate = Color(0.784314, 0.313726, 0.113725, 1)
 position = Vector2(-1.31077, 1.27625)
 scale = Vector2(0.964159, 0.972581)
@@ -1406,8 +1365,14 @@ sprite_frames = SubResource("SpriteFrames_um52a")
 animation = &"impact"
 frame = 16
 
+[node name="Atk_zone" type="Area2D" parent="Boss"]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boss/Atk_zone"]
+shape = SubResource("CircleShape2D_y8idb")
+
 [node name="Player" type="Node2D" parent="."]
-visible = false
 
 [node name="PlayerAnimated" type="AnimatedSprite2D" parent="Player"]
 visible = false
@@ -1421,6 +1386,7 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="Phitbox" type="CollisionShape2D" parent="Player/Hitbox"]
+visible = false
 position = Vector2(52, 0)
 scale = Vector2(3.3068, 3.52631)
 shape = SubResource("CircleShape2D_t2afw")
@@ -1436,3 +1402,5 @@ animation = &"impact"
 libraries = {
 "": SubResource("AnimationLibrary_bojmw")
 }
+
+[connection signal="area_entered" from="Boss/Atk_zone" to="." method="_on_atk_zone_area_entered"]

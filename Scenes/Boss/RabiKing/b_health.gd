@@ -31,17 +31,17 @@ func _on_hurtbox_area_entered(area):
 		Global.zoom(0.2)
 		var weapon = get_tree().get_first_node_in_group("Player").bag.weapon
 		hurt(weapon.damage)
-		knockback(weapon.get_parent().get_parent().velocity, 10)
-		
+		#knockback(weapon.get_parent().get_parent().velocity, 10)
+
 
 func handle_hurt():
 	var delta : float = 0.75
 	character.velocity = lerp(character.velocity, Vector2.ZERO, delta)
 	var _material = character.get_node("Animation/AnimatedSprite2D").material
 	if (character.bag.weapon):
-		if (character.bag.weapon.name == "TreeHammer"):
-			character.get_node("b_slot/TreeHammer/Boss/BossAnimated").material = _material
-			character.get_node("b_slot/TreeHammer/Boss/BossAnimated").material["shader_parameter/flash"] = flash
+		var weapon = character.bag.weapon
+		weapon.anim_sprite.material = _material
+		weapon.anim_sprite.material["shader_parameter/flash"] = flash
 	character.get_node("Animation/AnimatedSprite2D").material["shader_parameter/flash"] = flash
 
 func _on_timer_timeout():
