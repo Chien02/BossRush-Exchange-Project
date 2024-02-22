@@ -1,14 +1,15 @@
 extends BaseState
-# dash state
 
-@export var last_speed := 100
+# Ek dash
+
+@export var last_speed := 125
 var dashing : bool = false
 var shadow_clone # spawn a shadow behind player
-var dashing_speed := 500
+var dashing_speed := 50
 var press_attack_while_dash : bool = false
 
 func enter():
-	_name = "dash"
+	_name = "ek_dash"
 	dashing = true
 	$Timer.start()
 	$Timer2SpawnShadow.start()
@@ -24,16 +25,18 @@ func update():
 	check_for_switch()
 
 func check_for_switch():
+	if (character.ek.ek_mode == false):
+		dashing = false
+		$Timer.stop()
+		$Timer2SpawnShadow.stop()
+		switch(state_factory.get_state("ek_deform"))
 	if (!dashing):
 		$Timer2SpawnShadow.stop()
-		if (character.ek.ek_mode):
-			switch(state_factory.get_state("ek_transform"))
-		
 		if (press_attack_while_dash):
 			press_attack_while_dash = false
-			switch(state_factory.get_state("p_attack"))
+			switch(state_factory.get_state("ek_attack"))
 		else:
-			switch(state_factory.get_state("p_idle"))
+			switch(state_factory.get_state("ek_idle"))
 			
 
 func handle_dash():
@@ -43,9 +46,8 @@ func handle_dash():
 	
 	get_tree().create_tween().tween_property(character, # For the real dash, do animation
 		"position",
-		character.position + character.animation_control.animation_tree["parameters/Dash/blend_position"].normalized() * 18,
+		character.position + character.direction.normalized() * dashing_speed,
 		$Timer.wait_time).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
-	
 
 func _on_timer_timeout():
 	dashing = false # If time out, dashing cannot do anymore

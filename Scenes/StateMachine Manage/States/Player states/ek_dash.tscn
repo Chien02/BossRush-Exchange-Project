@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyae7evdpsi6x"]
+
+[ext_resource type="PackedScene" uid="uid://hqxikqctx60j" path="res://Scenes/StateMachine Manage/base_state.tscn" id="1_8jbvk"]
+[ext_resource type="Script" path="res://Scenes/StateMachine Manage/States/Player states/ek_dash.gd" id="2_kgj6s"]
+
+[node name="Ek_dash" instance=ExtResource("1_8jbvk")]
+script = ExtResource("2_kgj6s")
+last_speed = 125
+
+[node name="Timer" type="Timer" parent="." index="0"]
+wait_time = 0.3
+one_shot = true
+
+[node name="Timer2SpawnShadow" type="Timer" parent="." index="1"]
+wait_time = 0.1
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2SpawnShadow" to="." method="_on_timer_2_spawn_shadow_timeout"]

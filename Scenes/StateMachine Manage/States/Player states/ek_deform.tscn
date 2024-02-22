@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dude5cojnd4pf"]
+
+[ext_resource type="PackedScene" uid="uid://hqxikqctx60j" path="res://Scenes/StateMachine Manage/base_state.tscn" id="1_8m2ev"]
+[ext_resource type="Script" path="res://Scenes/StateMachine Manage/States/Player states/ek_deform.gd" id="2_e2ik7"]
+
+[node name="Ek_deform" instance=ExtResource("1_8m2ev")]
+script = ExtResource("2_e2ik7")
+time_deform = 1.6
+
+[node name="Timer" type="Timer" parent="." index="0"]
+wait_time = 1.7
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

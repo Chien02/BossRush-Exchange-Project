@@ -17,4 +17,9 @@ scale = Vector2(11.9, 11.5)
 shape = SubResource("CircleShape2D_2uum3")
 disabled = true
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
 [connection signal="area_entered" from="Ek_zone" to="." method="_on_ek_zone_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

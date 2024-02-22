@@ -14,16 +14,19 @@ var target_wpn : String
 var success : bool = false
 
 func _ready():
+	ek_mode = false
 	Global.player_ek_mode = self
 	if (player): target = player.target
+	player.get_node("Animation/Normal Mode").visible = true
+	player.get_node("Animation/Ek Mode").visible = false
 
 func _process(_delta):
 	if (player): target = player.target
 	
 	if (check_ek() and Input.is_action_just_pressed("ek")):
 		ek_mode = true
+		$Timer.start()
 		print("Change to Ek mode")
-	check_to_change()
 	ek_chane()
 
 func check_ek():
@@ -31,17 +34,20 @@ func check_ek():
 	return can_ek
 
 func out_ek_mode():
+	Global.player_energy.change_normal()
 	can_ek = false
 	ek_mode = false
 
-func check_to_change():
-	if (ek_mode):
-		if (!success): Global.player_energy.change_active()
-		player.get_node("Animation/Normal Mode").visible = false
-		player.get_node("Animation/Ek Mode").visible = true
-	else:
-		player.get_node("Animation/Normal Mode").visible = true
-		player.get_node("Animation/Ek Mode").visible = false
+func turn_to_ek():
+	if (!ek_mode): return
+	if (!success): Global.player_energy.change_active()
+	player.get_node("Animation/Normal Mode").visible = false
+	player.get_node("Animation/Ek Mode").visible = true
+
+func turn_to_normal():
+	if ek_mode: return
+	player.get_node("Animation/Normal Mode").visible = true
+	player.get_node("Animation/Ek Mode").visible = false
 
 func _on_ek_zone_area_entered(area):
 	if (area.owner.is_in_group("Enemy")):
@@ -75,3 +81,6 @@ func ek_chane():
 			# If success
 			#success = true
 			#Global.player_energy.change_success()
+
+func _on_timer_timeout():
+	out_ek_mode()

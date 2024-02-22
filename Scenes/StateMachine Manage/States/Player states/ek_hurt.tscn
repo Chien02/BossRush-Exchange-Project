@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs6j51ku14fmf"]
+
+[ext_resource type="PackedScene" uid="uid://hqxikqctx60j" path="res://Scenes/StateMachine Manage/base_state.tscn" id="1_w7s13"]
+[ext_resource type="Script" path="res://Scenes/StateMachine Manage/States/Player states/ek_hurt.gd" id="2_8v1jg"]
+
+[node name="Ek_hurt" instance=ExtResource("1_w7s13")]
+script = ExtResource("2_8v1jg")
+
+[node name="Timer" type="Timer" parent="." index="0"]
+wait_time = 0.5
+one_shot = true
+
+[node name="Flinch_time" type="Timer" parent="." index="1"]
+wait_time = 0.2
+one_shot = true
+
+[node name="Flash_time" type="Timer" parent="." index="2"]
+wait_time = 0.15
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Flinch_time" to="." method="_on_flinch_time_timeout"]
+[connection signal="timeout" from="Flash_time" to="." method="_on_flash_time_timeout"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bgaoofghqts2e"]
+[gd_scene load_steps=22 format=3 uid="uid://bgaoofghqts2e"]
 
 [ext_resource type="Script" path="res://Scenes/StateMachine Manage/State_factory.gd" id="1_5qt6m"]
 [ext_resource type="PackedScene" uid="uid://bxtaqi2gxur3w" path="res://Scenes/StateMachine Manage/States/Player states/P_run.tscn" id="2_te28c"]
@@ -8,11 +8,18 @@
 [ext_resource type="PackedScene" uid="uid://d1kd8xe8pktd3" path="res://Scenes/StateMachine Manage/States/Enemy states/E_dead.tscn" id="6_6gdbd"]
 [ext_resource type="PackedScene" uid="uid://c1t45s4fo2kuk" path="res://Scenes/StateMachine Manage/States/Player states/p_hurt.tscn" id="6_i0o23"]
 [ext_resource type="PackedScene" uid="uid://chlp7p1b0wggb" path="res://Scenes/StateMachine Manage/States/Enemy states/E_chase.tscn" id="7_us6js"]
+[ext_resource type="PackedScene" uid="uid://bgtxv61db6kwa" path="res://Scenes/StateMachine Manage/States/Player states/ek_idle.tscn" id="7_wk6ay"]
 [ext_resource type="PackedScene" uid="uid://b4h3epwkefxcu" path="res://Scenes/StateMachine Manage/States/Enemy states/E_Attack.tscn" id="8_4tmrc"]
+[ext_resource type="PackedScene" uid="uid://dlcxinmar2opc" path="res://Scenes/StateMachine Manage/States/Player states/ek_run.tscn" id="8_514oo"]
 [ext_resource type="PackedScene" uid="uid://dxu2j8wppf8ja" path="res://Scenes/StateMachine Manage/States/Boss states/b_chase.tscn" id="9_21fd8"]
+[ext_resource type="PackedScene" uid="uid://dyae7evdpsi6x" path="res://Scenes/StateMachine Manage/States/Player states/ek_dash.tscn" id="9_u30c1"]
 [ext_resource type="PackedScene" uid="uid://l1sjisaiaxmi" path="res://Scenes/StateMachine Manage/States/Boss states/b_idle.tscn" id="10_0f65r"]
+[ext_resource type="PackedScene" uid="uid://cnffogjv5mikw" path="res://Scenes/StateMachine Manage/States/Player states/ek_attack.tscn" id="10_8nobx"]
+[ext_resource type="PackedScene" uid="uid://cs6j51ku14fmf" path="res://Scenes/StateMachine Manage/States/Player states/ek_hurt.tscn" id="11_5lq0p"]
 [ext_resource type="PackedScene" uid="uid://bf7fex0gpyoyn" path="res://Scenes/StateMachine Manage/States/Boss states/b_sweep.tscn" id="11_84f5c"]
+[ext_resource type="PackedScene" uid="uid://ipscyw7hyvxf" path="res://Scenes/StateMachine Manage/States/Player states/ek_transform.tscn" id="12_ka0sc"]
 [ext_resource type="PackedScene" uid="uid://72ugapgdc8t8" path="res://Scenes/StateMachine Manage/States/Boss states/b_hurt.tscn" id="13_0xae7"]
+[ext_resource type="PackedScene" uid="uid://dude5cojnd4pf" path="res://Scenes/StateMachine Manage/States/Player states/ek_deform.tscn" id="13_qnhsh"]
 [ext_resource type="PackedScene" uid="uid://bii87hhh2y7xn" path="res://Scenes/StateMachine Manage/States/Boss states/b_attack.tscn" id="14_tbpsy"]
 
 [node name="StateFactory" type="Node2D"]
@@ -29,6 +36,20 @@ script = ExtResource("1_5qt6m")
 [node name="Attack state" parent="Player state" instance=ExtResource("5_2kh8m")]
 
 [node name="Hurt state" parent="Player state" instance=ExtResource("6_i0o23")]
+
+[node name="Ek_idle" parent="Player state" instance=ExtResource("7_wk6ay")]
+
+[node name="Ek_run" parent="Player state" instance=ExtResource("8_514oo")]
+
+[node name="Ek_dash" parent="Player state" instance=ExtResource("9_u30c1")]
+
+[node name="Ek_attack" parent="Player state" instance=ExtResource("10_8nobx")]
+
+[node name="Ek_hurt" parent="Player state" instance=ExtResource("11_5lq0p")]
+
+[node name="Ek_transform" parent="Player state" instance=ExtResource("12_ka0sc")]
+
+[node name="Ek_deform" parent="Player state" instance=ExtResource("13_qnhsh")]
 
 [node name="Enemy state" type="Node2D" parent="."]
 

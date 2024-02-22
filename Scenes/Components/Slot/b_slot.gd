@@ -14,7 +14,6 @@ func _ready():
 func _process(_delta):
 	get_weapon(name_group)
 	if (!weapon): return
-	print("Boss's weapon: ", weapon)
 	set_icon()
 
 func set_icon():

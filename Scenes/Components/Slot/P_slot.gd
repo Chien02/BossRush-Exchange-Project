@@ -11,7 +11,6 @@ func _ready():
 
 func _process(_delta):
 	get_weapon(name_group)
-	print("Player's weapon: ", weapon)
 	if (weapon == null): return
 	set_icon()
 
@@ -45,10 +44,12 @@ func get_weapon(_name_group : String):
 	# Add weapon to group
 	if (weapon == null): return
 	if (weapon.is_player):
-		weapon.hitbox.add_to_group(name_group)
-		if (weapon.hitbox.is_in_group("Boss")):
-			weapon.hitbox.remove_from_group("Boss")
+		if weapon.hitbox != null:
+			weapon.hitbox.add_to_group(name_group)
+			if (weapon.hitbox.is_in_group("Boss")):
+				weapon.hitbox.remove_from_group("Boss")
 	else:
-		weapon.hitbox.add_to_group(name_group)
-		if (weapon.hitbox.is_in_group("Player")):
-			weapon.hitbox.remove_from_group("PLayer")
+		if weapon.hitbox != null:
+			weapon.hitbox.add_to_group(name_group)
+			if (weapon.hitbox.is_in_group("Player")):
+				weapon.hitbox.remove_from_group("PLayer")

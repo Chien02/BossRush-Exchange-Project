@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnffogjv5mikw"]
+
+[ext_resource type="PackedScene" uid="uid://hqxikqctx60j" path="res://Scenes/StateMachine Manage/base_state.tscn" id="1_xlp7b"]
+[ext_resource type="Script" path="res://Scenes/StateMachine Manage/States/Player states/ek_attack.gd" id="2_oip13"]
+
+[node name="Ek_attack" instance=ExtResource("1_xlp7b")]
+script = ExtResource("2_oip13")
+speed_default = 100
+speed_when_attack = 50
+
+[node name="Timer" type="Timer" parent="." index="0"]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
