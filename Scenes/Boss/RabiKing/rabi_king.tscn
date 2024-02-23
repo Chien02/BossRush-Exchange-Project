@@ -930,6 +930,7 @@ damage = 20
 bag = NodePath("b_slot")
 
 [node name="b_slot" parent="." instance=ExtResource("2_wtpm4")]
+position = Vector2(-31, -21)
 
 [node name="TreeHammer" parent="b_slot" instance=ExtResource("3_33eab")]
 
@@ -950,7 +951,7 @@ material = SubResource("ShaderMaterial_3gfx5")
 position = Vector2(1, 0)
 sprite_frames = SubResource("SpriteFrames_xaatk")
 animation = &"idle"
-frame = 5
+frame = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Animation"]
 root_node = NodePath("../../CollisionShape2D")

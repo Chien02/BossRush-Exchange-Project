@@ -18,7 +18,7 @@ func _process(_delta):
 	energy_bar.value = energy * 20
 
 func init_energy():
-	energy = 0
+	energy = 3
 
 func add_energy(value: int):
 	var tween = create_tween()

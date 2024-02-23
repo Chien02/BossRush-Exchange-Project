@@ -1,7 +1,7 @@
 extends BaseState
 #attack state
 @export var speed_default := 100
-@export var speed_when_attack := 50
+@export var speed_when_attack := 30
 
 var input : bool = true # true = normal attack, false = skill
 var attacking : bool = false

@@ -124,8 +124,11 @@ func change_target():
 
 func exit_aim():
 	if (active == true):
+		user.bag.active_icon(false)
 		if (target):
 			target.get_node("Target_ring").visible = false
+			if (target.bag):
+				target.bag.active_icon(false)
 			target = null
 			user.target = null
 	return false

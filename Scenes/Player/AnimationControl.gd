@@ -25,7 +25,6 @@ func get_state():
 	elif (_state_name == "ek_dash"): set_up_ek_dash(true)
 	elif (_state_name == "ek_hurt"): set_up_ek_hurt(true)
 	elif (_state_name == "ek_attack"): set_up_ek_attack(true)
-	print("State: ", _state_name)
 
 func get_direction(direction):
 	if (direction != Vector2.ZERO):
@@ -35,7 +34,7 @@ func get_direction(direction):
 		animation_tree["parameters/Hurt/blend_position"] = direction
 		animation_tree["parameters/ek_idle/blend_position"] = direction
 		animation_tree["parameters/ek_run/blend_position"] = direction
-		animation_tree["parameters/ek_dash/blend_position"] = direction
+		#animation_tree["parameters/ek_dash/blend_position"] = direction
 		animation_tree["parameters/ek_hurt/blend_position"] = direction
 	
 

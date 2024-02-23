@@ -3,7 +3,7 @@ extends Node2D
 class_name Ek
 
 @export var player : CharacterBody2D
-
+@onready var ek_zone = $Ek_zone/CollisionShape2D
 var tranformation_finished : bool
 var deformation_fisnished : bool
 var ek_mode : bool = false
@@ -12,6 +12,7 @@ var target
 var player_wpn : String
 var target_wpn : String
 var success : bool = false
+var anim_flag = false
 
 func _ready():
 	ek_mode = false
@@ -24,9 +25,11 @@ func _process(_delta):
 	if (player): target = player.target
 	
 	if (check_ek() and Input.is_action_just_pressed("ek")):
-		ek_mode = true
-		$Timer.start()
-		print("Change to Ek mode")
+		if (!ek_mode):
+			ek_mode = true
+			player.bag.active_icon(ek_mode)
+			$Timer.start()
+			print("Change to Ek mode")
 	ek_chane()
 
 func check_ek():
@@ -34,9 +37,12 @@ func check_ek():
 	return can_ek
 
 func out_ek_mode():
-	Global.player_energy.change_normal()
+	Global.player_energy.over_energy()
 	can_ek = false
 	ek_mode = false
+	player.bag.active_icon(ek_mode)
+	if (player.target):
+		player.target.bag.active_icon(ek_mode)
 
 func turn_to_ek():
 	if (!ek_mode): return
@@ -75,12 +81,23 @@ func change_mode():
 
 func ek_chane():
 	if (ek_mode):
+		# Visible weapon slot
+		player.bag.active_icon(ek_mode)
+		ek_zone.disabled = !ek_mode
+		if (player.target):
+			player.target.bag.active_icon(ek_mode)
 		if Input.is_action_just_pressed("ek"):
 			pass
 			# Do the ek_chane move
 			# If success
 			#success = true
 			#Global.player_energy.change_success()
+	else:
+		player.bag.active_icon(ek_mode)
+		ek_zone.disabled = !ek_mode
+		if (player.target):
+			player.target.bag.active_icon(ek_mode)
+		
 
 func _on_timer_timeout():
 	out_ek_mode()

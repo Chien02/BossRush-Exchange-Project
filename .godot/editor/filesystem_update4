@@ -1,16 +1,9 @@
-res://Scenes/StateMachine Manage/States/Player states/ek_run.tscn
+res://Scenes/StateMachine Manage/States/Player states/ek_dash.tscn
 res://Scenes/Player/P_hurt.gdshader
 res://addons/shaker/shaker.gd
-res://Scenes/Player/Player.tscn
 res://Scenes/Components/Global variables/ek_mode.tscn
-res://Scenes/StateMachine Manage/States/Player states/ek_deform.tscn
-res://Scenes/Player/AnimationControl.gd
-res://Scenes/StateMachine Manage/State_machine.gd
-res://Scenes/StateMachine Manage/States/Player states/ek_idle.tscn
-res://Scenes/StateMachine Manage/States/Player states/Ek_idle.gd
-res://Scenes/StateMachine Manage/States/Player states/ek_dash.gd
+res://Scenes/Components/Global variables/energy_bar.gd
 res://Scenes/Components/Global variables/ek_mode.gd
-res://Scenes/StateMachine Manage/States/Player states/ek_dash.tscn
-res://Scenes/StateMachine Manage/States/Player states/P_dash.tscn
-res://Scenes/StateMachine Manage/States/Player states/ek_deform.gd
-res://Scenes/StateMachine Manage/States/Player states/Ek_run.gd
+res://Scenes/Player/Player.tscn
+res://Scenes/Boss/RabiKing/rabi_king.tscn
+res://Scenes/test_scene.tscn

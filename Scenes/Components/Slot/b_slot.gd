@@ -4,8 +4,8 @@ var name_group = "Boss"
 var has_changed : bool = false
 
 func _ready():
-	slot_sprite = $Slot
-	icon_sprite = $Icon
+	slot_sprite = $MainWeapon/Slot
+	icon_sprite = $MainWeapon/Icon
 	get_weapon(name_group)
 	if (check_weapon() == false):
 		return
@@ -14,15 +14,12 @@ func _ready():
 func _process(_delta):
 	get_weapon(name_group)
 	if (!weapon): return
+	set_weapon_pos()
 	set_icon()
 
 func set_icon():
 	if weapon:
 		icon_sprite.texture = weapon.icon
-
-func active_icon(value: bool):
-	slot_sprite.visible = value
-	icon_sprite.visible = value
 
 func discard(_old):
 	if (_old):

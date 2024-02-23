@@ -40,8 +40,9 @@ func handle_hurt():
 	var _material = character.get_node("Animation/AnimatedSprite2D").material
 	if (character.bag.weapon):
 		var weapon = character.bag.weapon
-		weapon.anim_sprite.material = _material
-		weapon.anim_sprite.material["shader_parameter/flash"] = flash
+		if (weapon.anim_sprite):
+			weapon.anim_sprite.material = _material
+			weapon.anim_sprite.material["shader_parameter/flash"] = flash
 	character.get_node("Animation/AnimatedSprite2D").material["shader_parameter/flash"] = flash
 
 func _on_timer_timeout():

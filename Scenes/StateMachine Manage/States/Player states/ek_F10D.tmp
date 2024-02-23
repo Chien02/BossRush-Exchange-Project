@@ -8,12 +8,7 @@ script = ExtResource("2_kgj6s")
 last_speed = 125
 
 [node name="Timer" type="Timer" parent="." index="0"]
-wait_time = 1.45
-one_shot = true
-
-[node name="TeleportTimer" type="Timer" parent="." index="1"]
-wait_time = 0.75
+wait_time = 1.84
 one_shot = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="timeout" from="TeleportTimer" to="." method="_on_teleport_timer_timeout"]

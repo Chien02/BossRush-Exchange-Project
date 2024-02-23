@@ -14,10 +14,10 @@ texture_filter = 1
 [node name="Map" parent="." instance=ExtResource("1_e1dan")]
 
 [node name="RabiKing" parent="." instance=ExtResource("5_g5wlx")]
-position = Vector2(378, 127)
+position = Vector2(380, 134)
 
 [node name="Player" parent="." instance=ExtResource("2_ce6bf")]
-position = Vector2(91, 142)
+position = Vector2(284, 150)
 scale = Vector2(1, 1)
 
 [node name="CameraShake" parent="Player" instance=ExtResource("3_sjcgn")]
@@ -25,10 +25,6 @@ position = Vector2(2, 0)
 zoom = Vector2(2.5, 2.5)
 limit_smoothed = true
 position_smoothing_enabled = true
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-enabled = false
-zoom = Vector2(2, 2)
 
 [node name="UI" parent="." instance=ExtResource("5_uptpn")]
 

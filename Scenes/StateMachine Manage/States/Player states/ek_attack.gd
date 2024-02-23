@@ -14,8 +14,8 @@ func enter():
 	$Timer.start()
 	
 func exit():
-	character.SPEED = speed_default
 	if (character):
+		character.SPEED = speed_default
 		character.attack = false
 
 func update():

@@ -5,15 +5,19 @@
 [ext_resource type="Texture2D" uid="uid://6nwbhw6d47tu" path="res://Sprites/Weapons/32 Free Weapon Icons/Icons/Iicon_32_26.png" id="3_yu5ng"]
 
 [node name="BaseSlot" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_rkkaf")
 
-[node name="Slot" type="Sprite2D" parent="."]
+[node name="MainWeapon" type="Node2D" parent="."]
+position = Vector2(1, 0)
+scale = Vector2(0.05, 0.05)
+
+[node name="Slot" type="Sprite2D" parent="MainWeapon"]
 modulate = Color(0, 0, 0, 0.478431)
 position = Vector2(-36, -51)
-scale = Vector2(0.160958, 0.144801)
 texture = ExtResource("2_nfnla")
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(-36.2995, -49.57)
-scale = Vector2(0.299529, 0.285999)
+[node name="Icon" type="Sprite2D" parent="MainWeapon"]
+position = Vector2(-36.3249, -49.6425)
+scale = Vector2(2.73729, 2.86025)
 texture = ExtResource("3_yu5ng")
