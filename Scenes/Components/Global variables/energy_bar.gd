@@ -37,6 +37,8 @@ func decrease_energy(value: int):
 		energy = 0
 
 func change_normal(): # In normal mode
+	var tween = create_tween().set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_OUT_IN)
+	tween.tween_property(energy_bar, "scale", Vector2(1, 1), 1)
 	$Sprite2D.visible = false
 	energy_bar.tint_over = Color(1, 1, 1)
 
@@ -45,7 +47,9 @@ func change_active(): # When active ek mode
 	energy_bar.tint_over = Color(1, 1, 1)
 
 func change_success(): # After Ekchane successfully
+	var tween = create_tween().set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT_IN)
 	$Sprite2D.visible = false
+	tween.tween_property(energy_bar, "scale", Vector2(1.5, 1.5), 0.5)
 	energy_bar.tint_over = Color("ffcb2b")
 
 func over_energy(): # Immediately turn back to normal mode

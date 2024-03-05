@@ -13,7 +13,7 @@ var last_velocity = Vector2.ZERO
 var direction := Vector2.ZERO
 var attack : bool = false
 var sweep : bool = false
-
+var be_eked : bool = false
 
 func _ready():
 	target = get_tree().get_first_node_in_group("Player")

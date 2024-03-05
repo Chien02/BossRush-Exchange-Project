@@ -16,6 +16,9 @@ func update():
 	check_for_switch()
 
 func check_for_switch():
+	if (character.be_eked):
+		sweeping = false
+		switch(state_factory.get_state("boss_be_eked"))
 	if (!sweeping):
 		switch(state_factory.get_state("boss_idle"))
 

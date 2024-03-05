@@ -22,6 +22,9 @@ func check_for_switch():
 	if (character.get_node("Player Health").is_hurting):
 		switch(state_factory.get_state("ek_hurt"))
 	
+	if (Input.is_action_just_pressed("ek")):
+		switch(state_factory.get_state("ek_special"))
+	
 	if (Input.is_action_just_pressed("dash")):
 		switch(state_factory.get_state("ek_dash"))
 	# attack

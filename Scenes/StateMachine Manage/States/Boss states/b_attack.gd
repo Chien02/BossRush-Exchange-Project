@@ -19,6 +19,12 @@ func update():
 	check_for_switch()
 
 func check_for_switch():
+	if (character.be_eked):
+		attacking = false
+		character.attack = false
+		if (character.bag.weapon):
+			character.bag.weapon.end_hit()
+		switch(state_factory.get_state("boss_be_eked"))
 	if (!attacking or !character.attack):
 		if (character.sweep):
 			switch(state_factory.get_state("boss_sweep"))

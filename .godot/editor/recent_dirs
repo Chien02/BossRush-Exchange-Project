@@ -1,3 +1,9 @@
+res://Sprites/GUI
+res://Sprites/Weapons/32 Free Weapon Icons/Icons
+res://Sprites/Weapons
+res://Sprites/Characters/Boss/Rabiking
+res://Scenes/StateMachine Manage/States/Boss states
+res://VFX/Impact
 res://Sprites/Characters/New Character
 res://Scenes/StateMachine Manage/States/Player states
 D:/Game Project/BossRush Exchange Project/Export/Ekchane_DemoCombat
@@ -5,18 +11,12 @@ res://Scenes/Components/Weapon
 res://Scenes
 res://Scenes/Effects
 res://Scenes/Components/Global variables
-res://VFX/Impact
 res://VFX
 res://Sprites/GUI/Button
 D:/Game Project/BossRush Exchange Project/Export
 res://VFX/Smoke
 res://Scenes/Player
 res://Scenes/Health
-res://Sprites/Characters/Boss/Rabiking
 res://Scenes/Components/Slot
-res://Sprites/Weapons
 res://Sprites/Icons
 res://Scenes/menu
-res://Scenes/StateMachine Manage/States/Boss states
-res://Scenes/enemy_v2
-res://Sprites/Characters/Enemy

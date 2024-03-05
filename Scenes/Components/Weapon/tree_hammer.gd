@@ -16,12 +16,14 @@ var is_playing : bool = false
 func _ready():
 	wpn_name = "TreeHammer"
 	icon = preload("res://Sprites/Weapons/Tree_hammer_icon.png")
+	initialize()
 
 func hit():
 	collision.disabled = false
 	
 func end_hit():
-	collision.disabled = true
+	if (collision):
+		collision.disabled = true
 	cancel = true
 	can_attack = false
 	animation_tree["parameters/conditions/can_attack"] = false
@@ -48,6 +50,7 @@ func animation(_input: bool, _is_player: bool):
 	animation_tree["parameters/conditions/can_attack"] = true
 	animation_tree["parameters/conditions/cancel"] = false
 	animation_tree["parameters/conditions/is_player"] = _is_player
+	animation_tree["parameters/conditions/attack"] = true
 	animation_tree["parameters/conditions/is_boss"] = !_is_player
 	anim_sprite = get_node("Player/PlayerAnimated") if _is_player else get_node("Boss/BossAnimated")
 	hitbox = get_node("Player/Hitbox") if _is_player else get_node("Boss/Hitbox")
@@ -73,3 +76,18 @@ func check_player_input():
 	if (Input.is_action_just_pressed("attack")):
 		can_attack = true
 		cancel = false
+
+func initialize():
+	animation_tree = $AnimationTree
+	is_player = true if get_parent().get_parent().is_in_group("Player") else false
+	collision = get_node("Player/Hitbox/Phitbox") if is_player else get_node("Boss/Hitbox/Bhitbox")
+	animation_tree["parameters/conditions/is_player"] = is_player
+	animation_tree["parameters/conditions/is_boss"] = !is_player
+	animation_tree["parameters/conditions/can_attack"] = false
+	animation_tree["parameters/conditions/cancel"] = true
+	animation_tree["parameters/conditions/attack"] = false
+	anim_sprite = get_node("Player/PlayerAnimated") if is_player else get_node("Boss/BossAnimated")
+	damage = p_damage if is_player else b_damage
+	hitbox = get_node("Player/Hitbox") if is_player else get_node("Boss/Hitbox")
+	can_attack = false
+	cancel = true

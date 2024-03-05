@@ -16,6 +16,8 @@ func update():
 	check_for_switch()
 
 func check_for_switch():
+	if (character.be_eked):
+		switch(state_factory.get_state("boss_be_eked"))
 	if (!idling):
 		if (character.sweep):
 			switch(state_factory.get_state("boss_sweep"))

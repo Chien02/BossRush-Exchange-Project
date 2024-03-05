@@ -1,9 +1,18 @@
-res://Scenes/StateMachine Manage/States/Player states/ek_dash.tscn
+res://Scenes/Player/Player.tscn
 res://Scenes/Player/P_hurt.gdshader
 res://addons/shaker/shaker.gd
 res://Scenes/Components/Global variables/ek_mode.tscn
-res://Scenes/Components/Global variables/energy_bar.gd
-res://Scenes/Components/Global variables/ek_mode.gd
-res://Scenes/Player/Player.tscn
+res://Scenes/StateMachine Manage/base_state.tscn
+res://Scenes/StateMachine Manage/States/Boss states/be_eked_state.tscn
+res://Scenes/StateMachine Manage/b_state_machine.tscn
+res://Scenes/StateMachine Manage/state_factory.tscn
 res://Scenes/Boss/RabiKing/rabi_king.tscn
-res://Scenes/test_scene.tscn
+res://Scenes/Components/Slot/b_slot.tscn
+res://Scenes/Components/Slot/base_slot.tscn
+res://Scenes/StateMachine Manage/state_machine.tscn
+res://Scenes/StateMachine Manage/States/Player states/ek_idle.tscn
+res://Scenes/StateMachine Manage/States/Player states/ek_special.tscn
+res://Scenes/GUI/ui.tscn
+res://Scenes/Components/Weapon/tree_hammer.tscn
+res://Scenes/Components/Weapon/weapon_base.tscn
+res://Scenes/Components/Weapon/lighting_sword.tscn

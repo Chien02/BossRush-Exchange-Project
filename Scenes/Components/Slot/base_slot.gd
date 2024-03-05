@@ -6,7 +6,7 @@ class_name Slot
 @export var scale_rate : float = 0.05
 
 @onready var main_weapon_sprite = $MainWeapon
-var slot_sprite : Sprite2D
+var slot_sprite : AnimatedSprite2D
 var icon_sprite : Sprite2D
 
 func _ready():
@@ -53,7 +53,7 @@ func active_icon(value: bool):
 		tween.tween_property(main_weapon_sprite, "scale", Vector2.ONE * scale_rate, 0.5)
 		tween.parallel().tween_property($MainWeapon/Slot, "rotation", 0, 1)
 		tween.parallel().tween_property($MainWeapon/Icon, "rotation", 0, 1)
-		
+		$MainWeapon/AnimationPlayer.play("slot")
 	else:
 		var tween = get_tree().create_tween()
 		$MainWeapon/Slot.rotation = -5

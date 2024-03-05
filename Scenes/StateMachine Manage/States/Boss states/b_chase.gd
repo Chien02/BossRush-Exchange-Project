@@ -18,6 +18,8 @@ func update():
 	check_for_switch()
 
 func check_for_switch():
+	if (character.be_eked):
+		switch(state_factory.get_state("boss_be_eked"))
 	if (character.attack):
 		switch(state_factory.get_state("boss_attack"))
 	if (character.sweep):

@@ -38,3 +38,6 @@ func animation(_input: bool, _is_player: bool):
 
 func set_direction(_target, _is_player: bool):
 	pass
+
+func initialize():
+	pass

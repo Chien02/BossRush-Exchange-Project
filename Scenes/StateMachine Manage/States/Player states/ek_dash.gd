@@ -10,6 +10,7 @@ var flag_direction = false
 var direction = Vector2.ZERO
 var dashing_speed := 100
 var press_attack_while_dash : bool = false
+var press_ek_while_dash : bool = false
 
 func enter():
 	_name = "ek_dash"
@@ -40,6 +41,9 @@ func check_for_switch():
 		if (press_attack_while_dash):
 			press_attack_while_dash = false
 			switch(state_factory.get_state("ek_attack"))
+		elif (press_ek_while_dash):
+			press_ek_while_dash = false
+			switch(state_factory.get_state("ek_special"))
 		else:
 			switch(state_factory.get_state("ek_idle"))
 			
@@ -55,6 +59,9 @@ func handle_dash():
 			flag_direction = true
 			direction = character.direction
 			character.animation_control.animation_tree["parameters/ek_dash/blend_position"] = direction
+	if (Input.is_action_just_pressed("ek")):
+		press_ek_while_dash = true
+		press_attack_while_dash = false
 	if (character.attack):
 		press_attack_while_dash = true
 

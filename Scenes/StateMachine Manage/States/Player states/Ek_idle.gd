@@ -20,6 +20,9 @@ func check_for_switch():
 	# ek time out
 	if (character.ek.ek_mode == false):
 		switch(state_factory.get_state("ek_deform"))
+	# ek special
+	if (Input.is_action_just_pressed("ek")):
+		switch(state_factory.get_state("ek_special"))
 	# dash
 	if (Input.is_action_just_pressed("dash")):
 		switch(state_factory.get_state("ek_dash"))

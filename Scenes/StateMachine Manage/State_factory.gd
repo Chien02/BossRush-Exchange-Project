@@ -16,6 +16,7 @@ class_name StateFactory
 	"ek_hurt": $"Player state/Ek_hurt",
 	"ek_transform": $"Player state/Ek_transform",
 	"ek_deform": $"Player state/Ek_deform",
+	"ek_special": $"Player state/Ek special",
 	"e_chase": $"Enemy state/EChase",
 	"e_attack": $"Enemy state/EAttack",
 	"e_dead": $"Enemy state/EDead",
@@ -24,6 +25,8 @@ class_name StateFactory
 	"boss_sweep" : $"Boss state/BSweep",
 	"boss_attack": $"Boss state/BAttack",
 	"boss_hurt": $"Boss state/BHurt",
+	"boss_be_eked": $"Boss state/BeEked state",
+	"boss_rage": null,
 	"boss_dead": "null"
 }
 

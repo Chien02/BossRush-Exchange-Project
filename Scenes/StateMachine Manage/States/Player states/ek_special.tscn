@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d162n67dbm4im"]
+
+[ext_resource type="PackedScene" uid="uid://hqxikqctx60j" path="res://Scenes/StateMachine Manage/base_state.tscn" id="1_770qn"]
+[ext_resource type="Script" path="res://Scenes/StateMachine Manage/States/Player states/ek_special.gd" id="2_de2ee"]
+
+[node name="Ek special" instance=ExtResource("1_770qn")]
+script = ExtResource("2_de2ee")
+special_time = 0.67
+
+[node name="Timer" type="Timer" parent="." index="0"]
+wait_time = 0.667
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

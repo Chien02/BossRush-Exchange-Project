@@ -25,14 +25,9 @@ func _ready():
 	visible = false
 
 func _process(_delta):
-	# test
-	#add_enemy()
-	#if (Input.is_action_just_pressed("dash")):
-		#$"../Enemy".queue_free()
-	# test
 	if (!root_node):
 		root_node = get_parent().world
-	control_aim()
+	enter_aim()
 	visible = active
 	if (active == false):
 		return
@@ -54,12 +49,9 @@ func add_enemy():
 		var enemy = preload("res://Scenes/enemy_v2/enemy_v2.tscn").instantiate()
 		root_node.add_child(enemy)
 
-func control_aim():
-	if (Input.is_action_just_pressed("aim")):
-		if (!active):
-			active = true
-
-
+func enter_aim():
+	if (!active):
+		active = true
 	if (Input.is_action_just_pressed("exit_aim")):
 		active = exit_aim()
 
@@ -148,3 +140,5 @@ func rotate_to_target():
 		var direction = (target.global_position - user.global_position).normalized()
 		angle_2 = $".".transform.x.angle_to(direction)
 		$".".rotate(sign(angle_2) * min(delta * rotation_speed, abs(angle_2)))
+		$"../Ek_mode".get_node("Ek_zone").rotate(sign(angle_2) * min(delta * rotation_speed, abs(angle_2)))
+		return direction

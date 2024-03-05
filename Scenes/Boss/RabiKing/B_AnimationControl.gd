@@ -14,6 +14,7 @@ func get_state():
 	elif (_state_name == "boss_sweep"): set_up_sweep(true)
 	elif (_state_name == "boss_hurt"): set_up_hurt(true)
 	elif (_state_name == "boss_attack"): set_up_atk(true)
+	elif (_state_name == "boss_be_eked"): set_up_anger(true)
 
 func get_direction(_direction):
 	if (_direction != Vector2.ZERO):
@@ -29,6 +30,7 @@ func set_up_atk(_value):
 	animation_tree["parameters/conditions/idle"] = not _value
 	animation_tree["parameters/conditions/chase"] = not _value
 	animation_tree["parameters/conditions/cancel"] = not _value
+	animation_tree["parameters/conditions/be_ek"] = not _value
 
 func set_up_sweep(_value):
 	animation_tree["parameters/conditions/sweep"] = _value
@@ -36,6 +38,7 @@ func set_up_sweep(_value):
 	animation_tree["parameters/conditions/chase"] = not _value
 	animation_tree["parameters/conditions/attack"] = not _value
 	animation_tree["parameters/conditions/cancel"] = not _value
+	animation_tree["parameters/conditions/be_ek"] = not _value
 
 func set_up_chase(_value):
 	animation_tree["parameters/conditions/chase"] = _value
@@ -43,10 +46,20 @@ func set_up_chase(_value):
 	animation_tree["parameters/conditions/idle"] = not _value
 	animation_tree["parameters/conditions/sweep"] = not _value
 	animation_tree["parameters/conditions/attack"] = not _value
+	animation_tree["parameters/conditions/be_ek"] = not _value
 
 func set_up_idle(_value):
 	animation_tree["parameters/conditions/idle"] = _value
 	animation_tree["parameters/conditions/cancel"] = _value
+	animation_tree["parameters/conditions/be_ek"] = not _value
+	animation_tree["parameters/conditions/chase"] = not _value
+	animation_tree["parameters/conditions/sweep"] = not _value
+	animation_tree["parameters/conditions/attack"] = not _value
+
+func set_up_anger(_value):
+	animation_tree["parameters/conditions/be_ek"] = _value
+	animation_tree["parameters/conditions/idle"] = not _value
+	animation_tree["parameters/conditions/cancel"] = not _value
 	animation_tree["parameters/conditions/chase"] = not _value
 	animation_tree["parameters/conditions/sweep"] = not _value
 	animation_tree["parameters/conditions/attack"] = not _value

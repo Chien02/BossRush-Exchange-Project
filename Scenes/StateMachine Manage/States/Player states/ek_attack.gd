@@ -7,6 +7,7 @@ var input : bool = true # true = normal attack, false = skill
 var attacking : bool = false
 var press_dash_while_attack : bool = false
 var press_attack_while_attack : bool = false
+var press_ek_while_attack = false
 
 func enter():
 	_name = "ek_attack"
@@ -37,6 +38,9 @@ func check_for_switch():
 		elif (press_attack_while_attack):
 			press_attack_while_attack = false
 			switch(state_factory.get_state("ek_attack"))
+		elif (press_ek_while_attack):
+			press_ek_while_attack = false
+			switch(state_factory.get_state("ek_special"))
 		else:
 			switch(state_factory.get_state("ek_idle"))
 
@@ -46,6 +50,8 @@ func handle_attack():
 		press_dash_while_attack = true
 	if (Input.is_action_just_pressed("attack")):
 		press_attack_while_attack = true
+	if (Input.is_action_just_pressed("ek")):
+		press_ek_while_attack = false
 	
 	# check if exsist target
 	if (!character.bag): return

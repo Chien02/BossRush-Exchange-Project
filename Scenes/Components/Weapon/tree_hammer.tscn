@@ -377,7 +377,6 @@ advance_mode = 2
 advance_condition = &"cancel"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fiw3m"]
-switch_mode = 2
 advance_mode = 2
 advance_condition = &"cancel"
 
@@ -387,6 +386,7 @@ advance_condition = &"is_player"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lbom7"]
 advance_mode = 2
+advance_condition = &"attack"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3nmwb"]
 advance_mode = 2
@@ -394,6 +394,7 @@ advance_condition = &"is_boss"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_obf4n"]
 advance_mode = 2
+advance_condition = &"attack"
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_mqv6i"]
 states/Start/position = Vector2(106, 107)
@@ -410,7 +411,7 @@ states/transition/position = Vector2(268, 107)
 "states/transition 2/node" = SubResource("AnimationNodeAnimation_ar7uf")
 "states/transition 2/position" = Vector2(718, 107)
 transitions = ["Start", "transition", SubResource("AnimationNodeStateMachineTransition_xocry"), "transition", "transition 2", SubResource("AnimationNodeStateMachineTransition_ovpin"), "transition 2", "transition", SubResource("AnimationNodeStateMachineTransition_odur4"), "player", "transition 2", SubResource("AnimationNodeStateMachineTransition_mxdos"), "boss", "transition 2", SubResource("AnimationNodeStateMachineTransition_fiw3m"), "transition", "is_player", SubResource("AnimationNodeStateMachineTransition_jb07a"), "is_player", "player", SubResource("AnimationNodeStateMachineTransition_lbom7"), "transition", "is_boss", SubResource("AnimationNodeStateMachineTransition_3nmwb"), "is_boss", "boss", SubResource("AnimationNodeStateMachineTransition_obf4n")]
-graph_offset = Vector2(-23.473, -17)
+graph_offset = Vector2(-155.473, -99)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dbhtk"]
 shader = ExtResource("2_7sds7")
@@ -1304,6 +1305,7 @@ libraries = {
 }
 tree_root = SubResource("AnimationNodeStateMachine_mqv6i")
 anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/attack = false
 parameters/conditions/can_attack = false
 parameters/conditions/cancel = false
 parameters/conditions/is_boss = false

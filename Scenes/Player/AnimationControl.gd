@@ -25,9 +25,11 @@ func get_state():
 	elif (_state_name == "ek_dash"): set_up_ek_dash(true)
 	elif (_state_name == "ek_hurt"): set_up_ek_hurt(true)
 	elif (_state_name == "ek_attack"): set_up_ek_attack(true)
+	elif (_state_name == "ek_special"): set_up_special(true)
 
 func get_direction(direction):
 	if (direction != Vector2.ZERO):
+		animation_tree["parameters/ek_special/blend_position"] = direction
 		animation_tree["parameters/Idle/blend_position"] = direction
 		animation_tree["parameters/Dash/blend_position"] = direction
 		animation_tree["parameters/Run/blend_position"] = direction
@@ -36,6 +38,7 @@ func get_direction(direction):
 		animation_tree["parameters/ek_run/blend_position"] = direction
 		#animation_tree["parameters/ek_dash/blend_position"] = direction
 		animation_tree["parameters/ek_hurt/blend_position"] = direction
+		#animation_tree["parameters/ek_special/blend_position"] = direction
 	
 
 func set_up_idle(value):
@@ -117,6 +120,7 @@ func set_up_ek_idle(value):
 	animation_tree["parameters/conditions/ek_run"] = not value
 	animation_tree["parameters/conditions/ek_idle"] = value
 	animation_tree["parameters/conditions/ek_hurt"] = not value
+	animation_tree["parameters/conditions/special"] = not value
 
 func set_up_ek_run(value):
 	animation_tree["parameters/conditions/exit_ek"] = not value
@@ -126,7 +130,7 @@ func set_up_ek_run(value):
 	animation_tree["parameters/conditions/ek_run"] = value
 	animation_tree["parameters/conditions/ek_idle"] = not value
 	animation_tree["parameters/conditions/ek_hurt"] = not value
-	
+	animation_tree["parameters/conditions/special"] = not value
 	animation_tree["parameters/conditions/dash"] = not value
 
 func set_up_ek_dash(value):
@@ -137,6 +141,7 @@ func set_up_ek_dash(value):
 	animation_tree["parameters/conditions/ek_run"] = not value
 	animation_tree["parameters/conditions/ek_idle"] = not value
 	animation_tree["parameters/conditions/ek_hurt"] = not value
+	animation_tree["parameters/conditions/special"] = not value
 
 func set_up_ek_attack(value):
 	animation_tree["parameters/conditions/exit_ek"] = not value
@@ -146,6 +151,7 @@ func set_up_ek_attack(value):
 	animation_tree["parameters/conditions/ek_run"] = not value
 	animation_tree["parameters/conditions/ek_idle"] = not value
 	animation_tree["parameters/conditions/ek_hurt"] = not value
+	animation_tree["parameters/conditions/special"] = not value
 
 func set_up_ek_hurt(value):
 	animation_tree["parameters/conditions/exit_ek"] = not value
@@ -155,3 +161,14 @@ func set_up_ek_hurt(value):
 	animation_tree["parameters/conditions/ek_run"] = not value
 	animation_tree["parameters/conditions/ek_idle"] = not value
 	animation_tree["parameters/conditions/ek_hurt"] = value
+	animation_tree["parameters/conditions/special"] = not value
+
+func set_up_special(value):
+	animation_tree["parameters/conditions/special"] = value
+	animation_tree["parameters/conditions/exit_ek"] = not value
+	animation_tree["parameters/conditions/ek_mode"] = not value
+	animation_tree["parameters/conditions/ek_attack"] = not value
+	animation_tree["parameters/conditions/ek_dash"] = not value
+	animation_tree["parameters/conditions/ek_run"] = not value
+	animation_tree["parameters/conditions/ek_idle"] = not value
+	animation_tree["parameters/conditions/ek_hurt"] = not value

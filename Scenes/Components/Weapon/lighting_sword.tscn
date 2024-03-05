@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://dch8cf4hj10dp"]
+[gd_scene load_steps=52 format=3 uid="uid://dch8cf4hj10dp"]
 
 [ext_resource type="Script" path="res://Scenes/Components/Weapon/lighting_sword.gd" id="1_dlruu"]
 [ext_resource type="Texture2D" uid="uid://6icvun5ewdlo" path="res://Sprites/Characters/New Character/new character attack.png" id="3_6vvgj"]
@@ -228,6 +228,12 @@ animation = &"default"
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7oqg5"]
 animation = &"default"
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xajus"]
+animation = &"default"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_iir7a"]
+animation = &"default"
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8chva"]
 animation = &"p_left"
 
@@ -251,42 +257,40 @@ blend_point_3/node = SubResource("AnimationNodeAnimation_xxhox")
 blend_point_3/pos = Vector2(1, 0)
 min_space = Vector2(-1, -1.1)
 max_space = Vector2(1, 1.1)
-blend_mode = 1
+blend_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lhnmt"]
 advance_mode = 2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3oacs"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ckfk8"]
 advance_mode = 2
 advance_condition = &"is_player"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_oa48o"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_n64hn"]
 advance_mode = 2
-advance_condition = &"is_boss"
+advance_condition = &"attack"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vlyri"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_o0p3i"]
 switch_mode = 2
 advance_mode = 2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_u0elr"]
-switch_mode = 2
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fy5c5"]
-advance_mode = 2
-advance_condition = &"cancel"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_d1j3a"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rab6u"]
 advance_mode = 2
 advance_condition = &"can_attack"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_eajp0"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_y1n2m"]
+advance_mode = 2
+advance_condition = &"is_boss"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_t3qhv"]
+advance_mode = 2
+advance_condition = &"attack"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vopk8"]
 switch_mode = 2
 advance_mode = 2
-advance_condition = &"cancel"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5p68k"]
-switch_mode = 2
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_oqibs"]
 advance_mode = 2
 advance_condition = &"cancel"
 
@@ -294,14 +298,18 @@ advance_condition = &"cancel"
 states/End/position = Vector2(899, 100)
 states/Start/position = Vector2(202, 100)
 states/boss/node = SubResource("AnimationNodeBlendSpace2D_wkwdi")
-states/boss/position = Vector2(570, 176)
+states/boss/position = Vector2(641, 172)
 states/default/node = SubResource("AnimationNodeAnimation_7oqg5")
 states/default/position = Vector2(375, 100)
 "states/default 2/node" = SubResource("AnimationNodeAnimation_ov26d")
 "states/default 2/position" = Vector2(761, 100)
+states/is_boss/node = SubResource("AnimationNodeAnimation_xajus")
+states/is_boss/position = Vector2(494, 172)
+states/is_player/node = SubResource("AnimationNodeAnimation_iir7a")
+states/is_player/position = Vector2(494, 41)
 states/player/node = SubResource("AnimationNodeBlendSpace2D_wi3lo")
-states/player/position = Vector2(570, 38)
-transitions = ["Start", "default", SubResource("AnimationNodeStateMachineTransition_lhnmt"), "default", "player", SubResource("AnimationNodeStateMachineTransition_3oacs"), "default", "boss", SubResource("AnimationNodeStateMachineTransition_oa48o"), "player", "default", SubResource("AnimationNodeStateMachineTransition_vlyri"), "boss", "default", SubResource("AnimationNodeStateMachineTransition_u0elr"), "default", "default 2", SubResource("AnimationNodeStateMachineTransition_fy5c5"), "default 2", "default", SubResource("AnimationNodeStateMachineTransition_d1j3a"), "player", "default 2", SubResource("AnimationNodeStateMachineTransition_eajp0"), "boss", "default 2", SubResource("AnimationNodeStateMachineTransition_5p68k")]
+states/player/position = Vector2(632, 41)
+transitions = ["Start", "default", SubResource("AnimationNodeStateMachineTransition_lhnmt"), "default", "is_player", SubResource("AnimationNodeStateMachineTransition_ckfk8"), "is_player", "player", SubResource("AnimationNodeStateMachineTransition_n64hn"), "player", "default 2", SubResource("AnimationNodeStateMachineTransition_o0p3i"), "default 2", "default", SubResource("AnimationNodeStateMachineTransition_rab6u"), "default", "is_boss", SubResource("AnimationNodeStateMachineTransition_y1n2m"), "is_boss", "boss", SubResource("AnimationNodeStateMachineTransition_t3qhv"), "boss", "default 2", SubResource("AnimationNodeStateMachineTransition_vopk8"), "default", "default 2", SubResource("AnimationNodeStateMachineTransition_oqibs")]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nax84"]
 atlas = ExtResource("3_6vvgj")
@@ -498,6 +506,7 @@ libraries = {
 }
 tree_root = SubResource("AnimationNodeStateMachine_218l7")
 anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/attack = false
 parameters/conditions/can_attack = false
 parameters/conditions/cancel = false
 parameters/conditions/is_boss = false

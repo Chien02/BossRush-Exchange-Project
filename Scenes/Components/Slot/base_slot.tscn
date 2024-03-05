@@ -1,8 +1,70 @@
-[gd_scene load_steps=4 format=3 uid="uid://c1mfqny2dfurv"]
+[gd_scene load_steps=10 format=3 uid="uid://c1mfqny2dfurv"]
 
 [ext_resource type="Script" path="res://Scenes/Components/Slot/base_slot.gd" id="1_rkkaf"]
-[ext_resource type="Texture2D" uid="uid://ctu7og6ik5jk1" path="res://icon.svg" id="2_nfnla"]
+[ext_resource type="Texture2D" uid="uid://4x6rxgol3a7y" path="res://Sprites/GUI/slot.png" id="2_a7r6v"]
 [ext_resource type="Texture2D" uid="uid://6nwbhw6d47tu" path="res://Sprites/Weapons/32 Free Weapon Icons/Icons/Iicon_32_26.png" id="3_yu5ng"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tymla"]
+atlas = ExtResource("2_a7r6v")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fqlym"]
+atlas = ExtResource("2_a7r6v")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hf2jc"]
+atlas = ExtResource("2_a7r6v")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ad7p4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tymla")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fqlym")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hf2jc")
+}],
+"loop": true,
+"name": &"slot",
+"speed": 6.0
+}]
+
+[sub_resource type="Animation" id="Animation_rq761"]
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Slot:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Slot:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["slot"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dam60"]
+_data = {
+"slot": SubResource("Animation_rq761")
+}
 
 [node name="BaseSlot" type="Node2D"]
 texture_filter = 1
@@ -12,12 +74,20 @@ script = ExtResource("1_rkkaf")
 position = Vector2(1, 0)
 scale = Vector2(0.05, 0.05)
 
-[node name="Slot" type="Sprite2D" parent="MainWeapon"]
-modulate = Color(0, 0, 0, 0.478431)
+[node name="Slot" type="AnimatedSprite2D" parent="MainWeapon"]
+modulate = Color(1, 1, 1, 0.862745)
 position = Vector2(-36, -51)
-texture = ExtResource("2_nfnla")
+scale = Vector2(7.16, 7.16)
+sprite_frames = SubResource("SpriteFrames_ad7p4")
+animation = &"slot"
+frame_progress = 0.750566
 
 [node name="Icon" type="Sprite2D" parent="MainWeapon"]
 position = Vector2(-36.3249, -49.6425)
 scale = Vector2(2.73729, 2.86025)
 texture = ExtResource("3_yu5ng")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MainWeapon"]
+libraries = {
+"": SubResource("AnimationLibrary_dam60")
+}

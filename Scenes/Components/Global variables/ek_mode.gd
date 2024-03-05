@@ -4,6 +4,8 @@ class_name Ek
 
 @export var player : CharacterBody2D
 @onready var ek_zone = $Ek_zone/CollisionShape2D
+@onready var animator = $AnimationPlayer
+@export var bonus_time : float = 12
 var tranformation_finished : bool
 var deformation_fisnished : bool
 var ek_mode : bool = false
@@ -13,6 +15,7 @@ var player_wpn : String
 var target_wpn : String
 var success : bool = false
 var anim_flag = false
+var slow_effect : bool = false
 
 func _ready():
 	ek_mode = false
@@ -29,8 +32,12 @@ func _process(_delta):
 			ek_mode = true
 			player.bag.active_icon(ek_mode)
 			$Timer.start()
-			print("Change to Ek mode")
 	ek_chane()
+	if (slow_effect):
+		var tween = create_tween().set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT_IN)
+		tween.tween_property(Engine, "time_scale", 1, 0.5)
+		await tween.finished
+		slow_effect = false
 
 func check_ek():
 	can_ek = true if Global.player_energy.energy >= 3 else false
@@ -40,6 +47,7 @@ func out_ek_mode():
 	Global.player_energy.over_energy()
 	can_ek = false
 	ek_mode = false
+	anim_flag = false
 	player.bag.active_icon(ek_mode)
 	if (player.target):
 		player.target.bag.active_icon(ek_mode)
@@ -57,9 +65,14 @@ func turn_to_normal():
 
 func _on_ek_zone_area_entered(area):
 	if (area.owner.is_in_group("Enemy")):
-		change_mode()
+		success = true
+		target = area.owner
+		$Timer.wait_time = bonus_time
+		$Timer.start()
+		ek_effect(area.global_position)
+		print("Success")
 
-func change_mode():
+func switch_weapon():
 	if (!can_ek): return
 	can_ek = false
 	player_wpn = player.bag.weapon.wpn_name # Get player's weapon
@@ -75,29 +88,64 @@ func change_mode():
 	target.bag.add(new_b_wpn)
 	player.bag.discard(player.bag.weapon)
 	target.bag.discard(target.bag.weapon)
-	
-	await get_tree().create_timer(0.2).timeout
-	$Ek_zone/CollisionShape2D.disabled = true
 
 func ek_chane():
 	if (ek_mode):
 		# Visible weapon slot
 		player.bag.active_icon(ek_mode)
-		ek_zone.disabled = !ek_mode
 		if (player.target):
 			player.target.bag.active_icon(ek_mode)
-		if Input.is_action_just_pressed("ek"):
-			pass
-			# Do the ek_chane move
-			# If success
-			#success = true
-			#Global.player_energy.change_success()
+		if (success):
+			Global.player_energy.change_success()
 	else:
 		player.bag.active_icon(ek_mode)
-		ek_zone.disabled = !ek_mode
 		if (player.target):
 			player.target.bag.active_icon(ek_mode)
-		
 
 func _on_timer_timeout():
 	out_ek_mode()
+
+func rotate_ek_zone(value):
+	ek_zone.rotation = value
+
+func ek_zone_on():
+	ek_zone.disabled = false
+
+func ek_zone_off():
+	ek_zone.disabled = true
+
+func ek_effect(_position):
+	$"Lightning Fx".global_position = _position
+	$"Lightning Fx".visible = true
+	animator.play("lightning")
+
+func switch_screen_appear():
+	var b_wpn
+	var p_wpn = player.bag.icon_sprite.texture
+	if (target): b_wpn = target.bag.icon_sprite.texture
+	$CanvasLayer/Control/P_wpn.texture = p_wpn
+	$CanvasLayer/Control/B_wpn.texture = b_wpn
+	animator.play("switch")
+
+func shake():
+	Global.camera.shake(0.3, 5)
+	
+func shake2():
+	Global.camera.shake(0.2, 5)
+
+func slow_mo():
+	Engine.time_scale = 0.1
+
+func normal_mo():
+	Engine.time_scale = 1
+
+func paused_game():
+	get_tree().paused = !get_tree().paused
+
+func slow_after_switch():
+	slow_effect = true
+	Engine.time_scale = 0.5
+
+func make_target_anger():
+	if (!target): return
+	target.be_eked = true
